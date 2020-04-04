@@ -148,7 +148,7 @@
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-dashboard": "^1.0.0-5",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "start": "DEBUG=express:* node ./server",
