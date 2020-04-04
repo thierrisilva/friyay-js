@@ -1,0 +1,218 @@
+.calendar-view {
+  height: 100%;
+
+  .planning-view__timeline.planning-grid {
+    width: 100%;
+  }
+
+  .planning-grid .planning-grid__row {
+    width: 100%;
+  }
+
+  .planning-grid .planning-grid__header {
+    // width: fit-content;
+    // overflow: hidden;
+  }
+
+  .planning-grid .planning-grid__cards {
+    // width: fit-content;
+  }
+}
+
+.calendar-view__no-due-panel {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 0 0px 40px;
+  // background-color: $lightGreyViewPanelBackground;
+  overflow: auto;
+  height: calc(100vh - 150px);
+  .dark-grey-link {
+    color: currentColor !important;
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+  .add-card-card_section {
+    form {
+      padding-left: 15px;
+    }
+  }
+  .calendar-view__no-due-header {
+    margin: 0;
+    padding: 0 15px;
+    font-weight: bold;
+    color: #aaa;
+    line-height: 65px;
+    min-height: 65px;
+  }
+
+  .calendar-card__main {
+    padding-left: 15px;
+  }
+}
+
+.calendar-view__cell-day {
+  font-size: 16px;
+  // color: #aaa;
+  text-align: right;
+  margin: 4px 5px 0px 0px;
+}
+
+.calendar-view__cell {
+  min-width: 150px !important;
+  min-height: 140px !important;
+}
+
+.calendar-view__cell--header {
+  min-width: 150px !important;
+}
+
+// calendar-card styling, copied from timeline-card
+
+.calendar-card {
+  &:hover {
+    .calendar-card__nested-cards-add,
+    .calendar-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret {
+    .calendar-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  .calendar-card__border {
+    width: 7px;
+    border-radius: 2px;
+    cursor: col-resize;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  .calendar-card__completion {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .calendar-card__content {
+    flex-grow: 1;
+    padding: 10px 5px;
+
+    &:hover {
+      > .calendar-card__extra {
+        display: flex;
+      }
+    }
+
+    // &:only-child {
+    //   padding: 10px 12px;
+    // }
+  }
+
+  .calendar-card__extra {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+
+  .calendar-card__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .calendar-card__nested-card {
+    font-weight: normal;
+  }
+
+  .calendar-card__nested-cards {
+  }
+
+  .calendar-card__nested-cards-add {
+    visibility: hidden;
+  }
+
+  .calendar-card__nested-cards-caret {
+    width: 20px;
+  }
+
+  .calendar-card__plan-label {
+    margin-right: 5px;
+  }
+
+  .calendar-card__title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .card-title {
+      min-width: 50px; // override minwidth for calendar view
+    }
+  }
+
+  .calendar-card__wrapper {
+    display: flex;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+
+    &.calendar-card--compact {
+      .calendar-card__content {
+        padding: 10px 12px;
+      }
+    }
+
+    .nest-card-zone {
+      height: 53px;
+      margin-top: -32px;
+      margin-bottom: -32px;
+      margin-left: -12px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.calendar-view__drop-zone {
+  flex-grow: 1;
+  padding: 18px 10px 10px 0;
+  margin: -10px 10px 10px;
+  overflow: scroll;
+
+  &.highlight-drop-zone {
+    background-color: #eee;
+  }
+}
+
+.calendar-card-date-drag {
+  width: 150px;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #fff;
+  font-weight: bold;
+  color: #666;
+  z-index: 100;
+
+  &.calendar-card-date-drag--due {
+    text-align: right;
+  }
+}
+
+.calendar-card-drag-preview {
+  width: 300px;
+  z-index: 100;
+}
+
+.custom-drag-preview {
+  .planning-view__no-due-card {
+    width: 300px;
+    .calendar-card__wrapper {
+      background: transparent;
+      margin: 3px;
+    }
+  }
+}

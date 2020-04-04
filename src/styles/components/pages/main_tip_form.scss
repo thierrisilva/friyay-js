@@ -1,0 +1,55 @@
+#main-tip-form,
+#main-item-form {
+  input#tip_expiration_date {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color ease-in-out 0.15s;
+    &:focus {
+      border-color: $brand-primary;
+    }
+  }
+  #tip-expiration-label {
+    float: left;
+    font-weight: 300;
+    color: $gray-light;
+    margin-right: 10px;
+    padding-top: 7px;
+  }
+}
+
+.add-topic-main {
+  margin: 10px;
+  color: #369acf;
+}
+
+.add-topic-btn {
+  border: 0px;
+  background: transparent;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.topics-menu-selectize .selectize-input {
+  border: 1px solid $gray-lighter;
+  padding: 10px;
+  min-height: 53px;
+  max-height: 85px;
+  overflow-y: auto;
+  vertical-align: middle;
+}
+
+.selectize-input:focus-within {
+  border: 1px solid #f2ab13;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.tooltip.top > .tooltip-arrow {
+  border-top: 5px solid #000;
+}

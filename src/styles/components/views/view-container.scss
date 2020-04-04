@@ -1,0 +1,212 @@
+.view-container {
+  display: flex;
+  // flex: 1;
+  flex-flow: column nowrap;
+  margin-left: 15px;
+  margin-right: 15px;
+  // border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-bottom: 10px;
+  overflow: auto;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  // margin-bottom: 10px;
+  color: #555;
+  &-grey {
+    background-color: #fafafa;
+  }
+  &-white {
+    background-color: #fff;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .activate-highlight-upload {
+    border-color: #000 !important;
+  }
+
+  .activate-highlight-link {
+    border-color: #000 !important;
+  }
+
+  .content-container {
+    // display: flex;
+    // flex: 1;
+    /* position: absolute; */
+    /* margin-top: 100px; */
+    /* width: calc(100% - 30px); */
+    /* overflow: auto; */
+    /* left: 15px; */
+    /* height: calc(100% - 100px); */
+    /* margin-bottom: 10px; */
+
+    &-grey {
+      background: #fafafa;
+    }
+    &-white {
+      background: #fff;
+    }
+
+    &.more-bottom {
+      top: 110px;
+    }
+
+    &.extra-top {
+      margin-top: 140px;
+    }
+    &.ws-page {
+      height: calc(100% - 151px);
+    }
+
+    &.zero-top {
+      top: 0;
+
+      .right-action-bar-container_submenu-outer-container,
+      .right-action-bar {
+        border-top: 1px solid $colour-grey-light-1;
+      }
+    }
+
+    .content-main {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      transition: width 0.33s, margin-right 0.33s;
+      position: relative;
+
+      .add-card-card_section {
+        margin-top: 10px;
+      }
+
+      &.right-menu-expanded {
+        overflow-y: auto;
+      }
+      h3.subtopic-header-text {
+        padding: 5px 40px 0px;
+        display: flex;
+        // color: #b5b5b5;
+        margin-bottom: 0px;
+        font-size: 18px;
+        margin-top: 5px;
+        font-weight: 400;
+        .subtopics-filter {
+          .icon-container i.current-view .fa {
+            font-size: 20px;
+          }
+        }
+        span {
+          margin-left: 10px;
+          line-height: 19px;
+          .glyphicon {
+            line-height: 0;
+          }
+        }
+        &:hover {
+          .grey-icon-button.current-view,
+          .more_vert,
+          .revolving-toggle-button {
+            visibility: visible;
+          }
+        }
+        .revolving-toggle-button {
+          margin-left: 10px;
+        }
+        .grey-icon-button.current-view,
+        .more_vert,
+        .revolving-toggle-button {
+          visibility: hidden;
+        }
+        .grey-icon-button.current-view,
+        .revolving-toggle-button {
+          color: #f2ab13 !important;
+        }
+        .dropdown-menu {
+          left: 0px;
+          right: auto;
+          margin-top: -5px;
+          li > a {
+            display: flex;
+            color: #aaa;
+            .icon-container:hover {
+              color: #f2ab13;
+            }
+            span {
+              margin-left: 0;
+            }
+          }
+        }
+        .dropdown-option-item {
+          & > span {
+            padding-left: 8px;
+          }
+
+          .revolving-toggle-button {
+            margin-left: -2px;
+            color: #2a2a2a;
+          }
+        }
+      }
+    }
+  }
+
+  .new-card-dropzone-overlay {
+    background-color: #e2e2e2;
+    z-index: 2;
+    position: fixed;
+    bottom: 0px;
+    width: calc(100% - 640px);
+    height: 15%;
+
+    .add-card-card_section {
+      margin-top: 10px;
+      .add-card-card_content {
+        display: inline-block;
+        text-align: center;
+
+        a {
+          margin: auto;
+          display: inline-block;
+        }
+        .grid-attachment-options {
+          .attachment-optionbottom-dropzone-overlay {
+            display: inline-block;
+            padding: 15px 20px 15px 20px;
+            border: 2px dotted #cacac9;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #cacac9;
+            text-align: center;
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-container_topic-minimize-button-container {
+  height: 0px;
+  margin: -15px auto 15px;
+  z-index: 3;
+}
+.full-height a {
+  padding-top: 10px;
+}
+
+.view-container_topic-minimize-button {
+  transition: all 0.33s ease-in-out;
+
+  &.rotated {
+    transform: rotate(540deg);
+  }
+}

@@ -1,0 +1,61 @@
+.user-page {
+  min-height: 100vh;
+  background-color: #FAFAFA;
+  .user-info-section {
+    background-color: white;
+    padding: 25px 15px 0 25px;
+    .edit-link {
+      font-size: 20px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .user-info-counts {
+    margin-left: 138px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $gray-60;
+  }
+  .user-info-avatar {
+    margin: 0 25px 0 0;
+  }
+  .user-info-text {
+    .user-info-text-content {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      h3 {
+        margin-top: 0px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        color: $color-1;
+      }
+      .edit-link {
+        color: $gray-75;
+      }
+      .user-follow-link {
+        color: $gray-60;
+      }
+      .user-follow-link:hover {
+        color: darken($gray-60, 10%);
+      }
+      .edit-link:hover {
+        color: darken($gray-lighter, 10%);
+      }
+    }
+    .user-info-desc {
+      color: $gray-60;
+      font-size: 13px;
+    }
+  }
+}
+
+.user-page-container {
+  .labels-filter-panel {
+    .labels-filter-panel-body {
+      top: 50px;
+    }
+  }
+}

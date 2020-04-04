@@ -1,0 +1,4 @@
+export default {
+  add: 'DB_ATTACHMENTS__ADD_ATTACHMENTS',
+  delete: 'DB_ATTACHMENTS__DELETE_ATTACHMENT',
+};

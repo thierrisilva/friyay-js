@@ -1,0 +1,13 @@
+.complete-checkbox {
+  width: 30px;
+  margin-right: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+
+  .complete-checkbox__icon {
+    position: relative;
+    top: 3px;
+    color: #333;
+  }
+}

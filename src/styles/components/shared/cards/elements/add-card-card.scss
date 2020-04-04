@@ -1,0 +1,78 @@
+.add-card-card_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // width: calc(100% - 10px);
+  form {
+    margin-left: 40px;
+  }
+}
+
+.add-card-input-wrapper {
+  flex: 1;
+}
+
+.attachment-optiongrid-new {
+  height: 85px;
+  border: 2px dashed #d6d6d6;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #d6d6d6;
+  font-weight: bolder;
+  line-height: 75px;
+}
+
+.attachment-optiondocument-new {
+  display: inline;
+  border: 2px dotted #d6d6d6;
+  margin: 10%;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: #d6d6d6;
+  font-weight: bolder;
+}
+
+.attachment-optionsmall-grid-new {
+  height: 45px;
+  border: 2px dashed #d6d6d6;
+  margin: auto;
+  width: 70%;
+  margin-bottom: 25px;
+  color: #d6d6d6;
+  line-height: 45px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.add-card-card__edit-btn {
+  position: absolute;
+  right: 5px;
+  border: none;
+  background: none;
+}
+
+.add-card-input {
+  &-wrapper {
+    flex: 1;
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 11px;
+    color: #bbbbbb;
+
+    a {
+      color: currentColor;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+}

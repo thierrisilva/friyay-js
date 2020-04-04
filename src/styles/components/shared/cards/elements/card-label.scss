@@ -1,0 +1,96 @@
+.card-label {
+  align-items: center;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  height: 30px;
+  padding: 6px;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  width: 100px;
+
+  &.color-0 {
+    color: lighten($colour-grey-1, 40%);
+    background-color: $colour-grey-1;
+  }
+  &.color-1 {
+    color: lighten($color-1, 40%);
+    background-color: $color-1;
+  }
+  &.color-2 {
+    color: lighten($color-2, 35%);
+    background-color: $color-2;
+  }
+  &.color-3 {
+    color: lighten($color-3, 35%);
+    background-color: $color-3;
+  }
+  &.color-4 {
+    color: lighten($color-4, 35%);
+    background-color: $color-4;
+  }
+  &.color-5 {
+    color: lighten($color-5, 35%);
+    background-color: $color-5;
+  }
+  &.color-6 {
+    color: lighten($color-6, 35%);
+    background-color: $color-6;
+  }
+  &.color-7 {
+    color: lighten($color-7, 35%);
+    background-color: $color-7;
+  }
+}
+
+.card-label-color-0 {
+  color: lighten($colour-grey-1, 40%);
+  background-color: $colour-grey-1;
+}
+.card-label-color-1 {
+  color: lighten($color-1, 40%);
+  background-color: $color-1;
+}
+.card-label-color-2 {
+  color: lighten($color-2, 35%);
+  background-color: $color-2;
+}
+.card-label-color-3 {
+  color: lighten($color-3, 35%);
+  background-color: $color-3;
+}
+.card-label-color-4 {
+  color: lighten($color-4, 35%);
+  background-color: $color-4;
+}
+.card-label-color-5 {
+  color: lighten($color-5, 35%);
+  background-color: $color-5;
+}
+.card-label-color-6 {
+  color: lighten($color-6, 35%);
+  background-color: $color-6;
+}
+.card-label-color-7 {
+  color: lighten($color-7, 35%);
+  background-color: $color-7;
+}
+
+.card-label_title {
+  flex: 1 1 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-right: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-label_remove {
+  color: #fff;
+  opacity: 0.75;
+  &:hover {
+    opacity: 1;
+  }
+}

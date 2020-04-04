@@ -1,0 +1,20 @@
+.close {
+  color: $close-color;
+  float: right;
+  font-size: $font-size-base * 4;
+  font-weight: $close-font-weight;
+  line-height: 1;
+  margin-top: -20px;
+  outline: 0;
+  text-shadow: $close-text-shadow;
+
+  &:hover,
+  &:focus {
+    color: $close-color;
+    text-decoration: none;
+    cursor: pointer;
+    @include opacity(.5);
+  }
+
+  // [converter] extracted button& to button.close
+}

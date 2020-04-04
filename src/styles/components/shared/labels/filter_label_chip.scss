@@ -1,0 +1,61 @@
+.filter-label-chip {
+  @extend .flex-r-center-spacebetween;
+
+  max-width: 100px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 2px;
+  background-color: #bbb;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+
+  &.filter-label-chip--stretching {
+    max-width: none;
+
+    .filter-label-chip__title {
+      max-width: none;
+    }
+  }
+
+  $colors: $color-1 $color-2 $color-3 $color-4 $color-5 $color-6 $color-7
+    $color-8;
+  @each $color in $colors {
+    $index: index($colors, $color);
+
+    &.filter-label-chip--color-#{$index} {
+      color: lighten($color, if($index == 1, 45%, 35%));
+      background-color: $color;
+
+      .filter-label-chip__remove {
+        color: darken($color, 15%);
+
+        &:hover {
+          color: darken($color, 20%);
+        }
+      }
+    }
+  }
+
+  .filter-label-chip__remove {
+    width: 30px;
+    height: 30px;
+    margin-right: -8px;
+    border: none;
+    background: none;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .filter-label-chip__title {
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,250 @@
+.grid-view {
+  // background-color: $colour-grey-light-1;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  //   min-height: 100%;
+
+  .view-top-bar {
+    min-height: 50px;
+  }
+}
+
+.grid_view_outer-container {
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+}
+
+.grid-view_items-container {
+  align-items: flex-start;
+  // background-color: $colour-grey-light-1;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 30px 40px;
+  width: 100%;
+}
+
+.grid-view_card-container {
+  margin: 10px 20px 10px 0px;
+  &:hover {
+    .tile-info {
+      .more_vert,
+      .topic-star-icon {
+        display: block;
+      }
+      a:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+
+  .add-card-card_section {
+    margin-top: 0 !important;
+    padding: 0 20px 0 0;
+  }
+
+  .yay-bottom-icons {
+    a {
+      &:nth-child(2) {
+        margin-left: auto;
+        display: none;
+      }
+    }
+  }
+
+  .tile-info {
+    .topic-star-icon,
+    .more_vert {
+      display: none;
+    }
+  }
+}
+
+.grid-card_body-link {
+  flex: 1;
+  color: unset;
+}
+
+.card-actions-container__onhover {
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.grid-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
+  display: flex;
+  flex: 0 0 300px;
+  flex-flow: column nowrap;
+  height: 400px;
+  width: 300px;
+  position: relative;
+  .nest-card-zone {
+    position: absolute;
+    right: 15px;
+    display: none;
+  }
+
+  &:hover {
+    .nest-card-zone {
+      display: inline;
+    }
+    .card-actions-container__onhover {
+      visibility: visible;
+    }
+  }
+
+  .add-card-card_content {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.grid-card__add-card {
+  margin-top: 10px;
+
+  .add-card-card_content {
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+}
+
+.custom-drag-preview .grid-card {
+  @extend .dragging-shadow;
+}
+
+.grid-card-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: white;
+}
+
+.grid-card_section {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: 30px;
+  padding: 0 15px;
+
+  &.top-of-bottom {
+    border-top: 1px solid $colour-grey-light-2;
+    padding: 5px 10px;
+    .card-labels {
+      margin-left: 10px;
+    }
+  }
+}
+.grid-card_content-panel {
+  position: relative;
+  cursor: pointer;
+  height: 260px;
+  overflow: hidden;
+  text-align: justify;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.grid-card_content-doc-links {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 0 10px 0;
+  box-shadow: inset 0 -47px 0 0 #fff;
+  overflow-x: auto;
+}
+
+.grid-plan-buttons.card-footer_flex-container {
+  align-self: flex-end;
+  margin: auto 0 0.55em auto;
+  width: auto;
+  position: relative;
+
+  .link-tooltip-container {
+    position: unset;
+  }
+
+  .link-tooltip {
+    right: 0;
+    left: auto;
+  }
+}
+
+.grid-card_content-doc-link {
+  padding: 0 7px;
+  font-size: 20px;
+
+  &:first-of-type {
+    padding-left: 9px;
+  }
+  &:first-child .link-tooltip {
+    left: 0;
+  }
+
+  .link-tooltip {
+    top: -25px;
+  }
+}
+
+.grid-card_content-link {
+  padding: 0 4px;
+}
+
+.grid-card__nested-card {
+}
+
+.grid-card__nested-cards {
+  position: absolute;
+  top: 63px;
+  width: 100%;
+  height: 260px;
+  padding: 8px 15px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.grid-card__nested-cards-caret {
+  visibility: visible;
+}
+
+.close-labels-listing {
+  color: #fff;
+  background-color: $color-1;
+  border-color: $color-1;
+  font-size: 18px;
+}
+
+.attachment-option {
+  height: 85px;
+  border: 2px dashed #d6d6d6;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #d6d6d6;
+  font-weight: bolder;
+  line-height: 75px;
+}
+
+.grid-attachment-options > p {
+  text-align: center;
+  margin-top: 20px;
+  color: #d6d6d6;
+  font-weight: bolder;
+}

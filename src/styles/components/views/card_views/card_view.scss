@@ -1,0 +1,396 @@
+.card-view {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: row nowrap;
+  min-width: 0;
+  // background-color: $colour-grey-light-1;
+
+  .view-top-bar {
+    position: absolute;
+    right: 40px;
+    padding-top: 12px;
+    width: auto;
+  }
+}
+
+.card-view-list {
+  width: 0;
+  margin: 15px 15px 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  // background: $colour-grey-light-1;
+
+  &.presented {
+    width: 350px;
+    margin-top: 3px;
+    height: calc(100vh - 150px);
+  }
+}
+
+.card-view-main-section {
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  min-width: 0;
+  overflow: auto;
+  margin-top: 19px;
+  margin-left: 0px;
+  border-radius: 4px;
+  margin-top: 10px;
+  height: calc(100vh - 160px);
+  .card-details {
+    margin-right: 30px;
+    // margin-bottom: 30px;
+    .fr-toolbar {
+      &.custom-theme.fr-top.fixed {
+        position: fixed;
+        top: 190px;
+      }
+    }
+  }
+}
+
+.card-view-list-toggle {
+  padding: 0;
+  margin: 15px 0 0 0;
+  background-color: transparent;
+  transition: left 0.33s;
+
+  &.pl10 {
+    left: 0;
+  }
+}
+
+.card-view-list-toggle--icon-btn {
+  color: #bbb;
+}
+
+.card-details {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  transition: margin 0.3s ease;
+  padding: 30px;
+
+  .btn {
+    border-radius: 2px;
+
+    &.btn-default {
+      border-color: #369acf;
+      min-width: 120px;
+    }
+  }
+}
+
+.card-details-header {
+  align-items: center;
+  color: $colour-grey-1;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: auto;
+}
+
+.card-details-header_title-container {
+  align-items: center;
+  display: flex;
+  color: silver;
+}
+
+.card-details-header_buttons-container {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  justify-content: flex-end;
+  &.dots-layer-container {
+    .dots-layer {
+      width: 100%;
+    }
+  }
+}
+
+/* Why this weird selector?
+  Because the package we using for split screen doesn't give className to secondary pane
+  and also doesn't provide prop to pass one.
+  But it does assign assign .layout-pane-primary to primary pane and .layout-pane to both panes
+  So ¯\_(ツ)_/¯
+*/
+
+.layout-pane:not(.layout-pane-primary) {
+  .card-details-header_buttons-container {
+    &.dots-layer-container {
+      top: -14px;
+    }
+    .dots-layer {
+      width: 70px;
+    }
+  }
+
+  .card-details {
+    padding: 24px 16px;
+    .card-details-footer {
+      .card-details-header_title-container {
+        flex-basis: 250px;
+        justify-content: space-around;
+      }
+      .card-details-footer__gutter {
+        flex-grow: 5;
+      }
+      .card-details-footer__actions {
+        flex-grow: 1;
+        flex-basis: auto;
+        justify-content: space-around;
+        padding-top: 2px;
+      }
+
+      // styles for split screen
+      // THIS IS QUICK FIX AND SHOULD BE REMOVED
+      // Todo: @abdullah
+      &.hide-for-split-screen-view {
+        display: none;
+      }
+
+      &.hide-for-full-screen-view {
+        display: flex;
+      }
+    }
+  }
+  .card-details-editor,
+  .card-details-preview {
+    margin-top: 10px;
+  }
+  .card-details-editor_title-input,
+  .card-details-preview_title {
+    font-size: 28px;
+  }
+}
+
+.card-details-preview {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.card-details-preview_content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  td {
+    //width: auto !important;  If width is auto, user set column width is overridden
+    border: solid 1px #dddddd;
+    min-width: 10px;
+  }
+}
+
+.card-details-preview_title {
+  color: #252525;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 5px 0 15px 0;
+  // width: calc(100% - 150px);
+}
+
+del.differ {
+  color: #c33b3b;
+}
+
+.card-details-preview_body {
+  color: $colour-grey-dark-2;
+  font-size: 15px;
+}
+
+.card-details-preview_placeholder-text {
+  margin: 15px 0px;
+  display: inline-block;
+}
+
+.card-details-editor {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 50px);
+
+  .fr-wrapper {
+    box-shadow: none !important;
+  }
+  .fr-toolbar {
+    box-shadow: none !important;
+  }
+}
+
+.card-details-editor_title-input {
+  border: none;
+  color: $colour-grey-dark-2;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+}
+
+.card-card {
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  transition: 0.33s ease-in-out;
+
+  .card-title {
+    color: #777;
+  }
+
+  &.is-selected,
+  &:hover {
+    background-color: #ddd;
+  }
+
+  &:hover {
+    .card-card__nested-cards-add {
+      display: initial;
+    }
+    .card-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret .card-card__nested-cards-caret {
+    visibility: visible;
+  }
+
+  .nest-card-zone {
+    margin-left: 0;
+    height: 75px;
+    height: 53px;
+    margin-top: 8px;
+    margin-left: -5px;
+    &.highlight-drop-zone.is-over {
+      border: dotted 1px orange;
+    }
+    .nest-zone {
+      margin-top: 10px;
+    }
+  }
+}
+
+.card-card__content {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  padding: 0;
+  width: 100%;
+}
+
+.card-card_title {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-card__nested-cards-add {
+  display: none;
+  margin-left: 5px;
+}
+
+.card-card__nested-cards-caret {
+  visibility: hidden;
+  margin-right: -12px;
+  width: 25px;
+}
+
+.card-card__nested-cards {
+  padding: 0 15px 8px 54px;
+}
+
+.card-card__nested-card {
+  font-weight: normal;
+}
+
+.card-details-footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  // styles for full screen
+  // THIS IS QUICK FIX AND SHOULD BE REMOVED
+  // Todo: @abdullah
+  &.hide-for-split-screen-view {
+    display: flex;
+  }
+
+  &.hide-for-full-screen-view {
+    display: none;
+  }
+}
+
+.card-nested-cards {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 40px 15px 20px;
+  background-color: #fafafa;
+  border: 1px solid #f2f2f2;
+  border-left: none;
+  border-right: none;
+
+  .card-nested-cards__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+    height: 26px;
+
+    &:hover {
+      background-color: #f0f0f0;
+
+      .card-nested-cards__card-options {
+        visibility: visible;
+      }
+    }
+  }
+
+  .card-nested-cards__card-options {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+  }
+
+  .card-nested-cards__dropdown {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+  }
+}
+
+.custom-drag-preview {
+  .card-card {
+    width: 250px;
+  }
+}
+
+.left-section-icon {
+  position: fixed;
+  left: 4px;
+  width: 24px;
+  border-radius: 50%;
+  height: 24px;
+  transition: all 0.3s;
+  &-container {
+    position: absolute;
+    left: -1px;
+  }
+}

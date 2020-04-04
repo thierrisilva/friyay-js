@@ -1,0 +1,21 @@
+.comment-box {
+  padding: 2px;
+
+  .fr-toolbar {
+    border: 1px solid rgba(0,0,0, .12) !important;
+    border-bottom: none !important;
+    border-radius: 2px 2px 0 0 !important;
+  }
+
+  .fr-wrapper {
+    border: 1px solid rgba(0,0,0, .12) !important;
+    // box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+.comment-box_buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-top: 15px;
+}

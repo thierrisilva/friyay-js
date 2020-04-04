@@ -1,0 +1,437 @@
+// http://www.queness.com/post/13901/create-beautiful-hexagon-shapes-with-pure-css3
+
+.hex-grid-wrapper {
+  position: relative;
+}
+
+.hex-grid-small {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-self: center;
+  margin: 0 0;
+  padding: 43px 40px;
+
+  .hex-grid-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin-right: -10px;
+  }
+
+  .hex-inner-wrapper {
+    .item-container {
+      &:hover {
+        .hex-item-dropdown-button {
+          display: initial;
+        }
+      }
+    }
+
+    .subtopics-hex-list {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 0;
+      justify-content: flex-start;
+      min-height: 0;
+      overflow-y: initial;
+    }
+
+    .small-hex_draggable-topic {
+      &.is-dragging {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+// HEXAGON STARTS HERE
+.hex-grid-small {
+  .hex,
+  .hex-wrapper,
+  .subtopics-hex-list > div {
+    &:nth-child(2) {
+      margin-left: 24px;
+    }
+  }
+  width: 1300px;
+
+  @media (max-width: 1380px) and (min-width: 1031px) {
+    /* <- 4-3  hexagons per row */
+    width: 950px;
+  }
+
+  @media (max-width: 1030px) and (min-width: 851px) {
+    /* <- 4-3  hexagons per row */
+    width: 770px;
+  }
+
+  @media (max-width: 850px) and (min-width: 731px) {
+    /* <- 4-3  hexagons per row */
+    width: 650px;
+  }
+
+  @media (max-width: 730px) and (min-width: 601px) {
+    /* <- 3-2  hexagons per row */
+    width: 520px;
+  }
+
+  @media (max-width: 600px) {
+    /* <- 2-1  hexagons per row */
+    width: 360px;
+  }
+
+  .hex {
+    background: #f4f4f4 no-repeat 50% 50%;
+    background-size: auto 100px;
+    float: left;
+    height: 66px;
+    margin: 23px 6px;
+    position: relative;
+    text-align: center;
+    width: 115px;
+    zoom: 1;
+    border-radius: 5px;
+
+    .hex-gap {
+      margin-left: 86px;
+    }
+
+    a > div {
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      text-indent: -9999em;
+      top: 0;
+      width: 100%;
+    }
+
+    .corner-1,
+    .corner-2 {
+      @include backface-visibility(hidden);
+      background: inherit;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .corner-1 {
+      @include rotate(60deg);
+      z-index: 1;
+    }
+
+    .corner-2 {
+      @include rotate(-60deg);
+    }
+
+    .corner-1::before,
+    .corner-2::before {
+      @include backface-visibility(hidden);
+      background: inherit;
+      background-repeat: no-repeat;
+      content: '';
+      height: 173px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 173px;
+      z-index: 1;
+    }
+
+    .corner-1::before {
+      @include rotate(-60deg);
+      @include translate(-87px, 0);
+      @include transform-origin(0);
+    }
+
+    .corner-2::before {
+      @include rotate(60deg);
+      @include translate(-48px, -11px);
+      bottom: 0;
+    }
+
+    &.big {
+      background-size: auto 265px; // 173px;
+      display: inline-block;
+      height: 132px; // 86px
+      float: none;
+      margin: 38px 8px;
+      width: 230px; // 150px;
+
+      .hex-gap {
+        margin-left: 132px; // 86px
+      }
+
+      .corner-1::before,
+      .corner-2::before {
+        height: 265px; // 173px;
+        width: 265px; // 173px;
+      }
+
+      .corner-1::before {
+        @include translate(-133px, 0); // -87px
+      }
+
+      .corner-2::before {
+        @include translate(-48px, -11px);
+      }
+
+      &:nth-child(7n-2) {
+        margin-left: 132px; // 86px
+      }
+
+      .inner {
+        padding: 40px 10px 10px;
+      }
+    }
+
+    .inner {
+      padding: 0 10px;
+      z-index: 1;
+
+      ::-webkit-input-placeholder {
+        color: #808080;
+      }
+      ::-moz-placeholder {
+        color: #808080;
+      }
+      :-ms-input-placeholder {
+        color: #808080;
+      }
+      :-moz-placeholder {
+        color: #808080;
+      }
+
+      input[type='text'] {
+        background-color: transparent;
+        text-align: center;
+      }
+    }
+
+    .dropdown-menu {
+      a {
+        display: block;
+        text-indent: 0;
+        position: relative;
+      }
+    }
+  }
+  .hex-wrapper {
+    position: relative;
+    float: left;
+    margin: 23px 6px;
+
+    .hex {
+      margin: 0;
+    }
+
+    .hex-item-dropdown-button {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      margin-left: -12px;
+      z-index: 2;
+      display: none;
+    }
+  }
+
+  .hex-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2000;
+    }
+
+    .topics-list-dropdown {
+      position: relative;
+      z-index: 2050;
+      top: 0;
+      left: 0;
+      display: block;
+
+      a.disabled {
+        background-color: $gray-default;
+        border-color: darken($gray-default, 5%);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @media (min-width: 1381px) {
+    .left-menu-root-container:not(.in-focus) {
+      & + .tiphive-outer-container {
+        .left-subtopic-menu:not(.in-focus) {
+          & + .tiphive-content {
+            .hex,
+            .hex-wrapper,
+            .subtopics-hex-list > div {
+              &:nth-child(18n + 20) {
+                /* first hexagon of even rows */
+                margin-left: 69px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(18n + 20) {
+        /* first hexagon of even rows */
+        margin-left: 69px;
+      }
+    }
+  }
+  @media (max-width: 1380px) and (min-width: 1031px) {
+    /* <- 4-3  hexagons per row */
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(12n + 14) {
+        /* first hexagon of even rows */
+        margin-left: 69px; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+  }
+  @media (max-width: 1030px) and (min-width: 851px) {
+    /* <- 4-3  hexagons per row */
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(9n + 11) {
+        /* first hexagon of even rows */
+        margin-left: 69px; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+  }
+
+  @media (max-width: 850px) and (min-width: 731px) {
+    /* <- 4-3  hexagons per row */
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(7n + 9) {
+        /* first hexagon of even rows */
+        margin-left: 69px; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+  }
+
+  @media (max-width: 730px) and (min-width: 601px) {
+    /* <- 3-2  hexagons per row */
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(5n + 7) {
+        /* first hexagon of even rows */
+        margin-left: 69px; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    /* <- 2-1  hexagons per row */
+    .hex,
+    .hex-wrapper,
+    .subtopics-hex-list > div {
+      &:nth-child(2n + 4) {
+        /* first hexagon of even rows */
+        margin-left: 25%; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+  }
+}
+
+@media (min-width: 1201px) {
+  .left-subtopic-menu.in-focus {
+    & + .tiphive-content {
+      .hex,
+      .hex-wrapper,
+      .subtopics-hex-list > div {
+        &:nth-child(14n + 16) {
+          /* first hexagon of even rows */
+          margin-left: 69px;
+        }
+      }
+    }
+  }
+  .left-menu-root-container.in-focus {
+    & + .tiphive-outer-container {
+      .hex,
+      .hex-wrapper,
+      .subtopics-hex-list > div {
+        &:nth-child(14n + 16) {
+          /* first hexagon of even rows */
+          margin-left: 69px;
+        }
+      }
+    }
+  }
+
+  .left-menu-root-container.in-focus {
+    & + .tiphive-outer-container {
+      .left-subtopic-menu.in-focus {
+        & + .tiphive-content {
+          .hex,
+          .hex-wrapper,
+          .subtopics-hex-list > div {
+            &:nth-child(10n + 12) {
+              /* first hexagon of even rows */
+              margin-left: 69px;
+            }
+            &:nth-child(14n + 16) {
+              /* first hexagon of even rows */
+              margin-left: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-drag-preview {
+  .hex-wrapper {
+    display: contents;
+    .hex {
+      background: black;
+      opacity: 0.7;
+      .line-clamp {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

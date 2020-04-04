@@ -1,0 +1,30 @@
+@include responsive-invisibility('.visible-xxlg');
+
+.visible-xxlg-block,
+.visible-xxlg-inline,
+.visible-xxlg-inline-block {
+  display: none !important;
+}
+
+@media (min-width: $screen-xxlg-min) {
+  @include responsive-visibility('.visible-xxlg');
+}
+.visible-xxlg-block {
+  @media (min-width: $screen-xxlg-min) {
+    display: block !important;
+  }
+}
+.visible-xxlg-inline {
+  @media (min-width: $screen-xxlg-min) {
+    display: inline !important;
+  }
+}
+.visible-xxlg-inline-block {
+  @media (min-width: $screen-xxlg-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xxlg-min) {
+  @include responsive-invisibility('.hidden-xxlg');
+}

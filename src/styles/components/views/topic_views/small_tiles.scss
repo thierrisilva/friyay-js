@@ -1,0 +1,157 @@
+.small-tiles-view {
+  width: 100%;
+  // border-bottom: 1px solid $colour-grey-light-1;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  padding: 0 40px;
+
+  &-grey {
+    background-color: $colour-grey-light-1;
+  }
+
+  &-white {
+    background-color: #fff;
+  }
+}
+
+.small-tiles-view_item-container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.img-placeholder {
+  width: 200px;
+  height: 120px;
+  background: $colour-grey-light-2;
+  border-radius: 5px;
+
+  &--large {
+    width: 200px;
+    height: 240px;
+    background: $colour-grey-light-2;
+    border-radius: 10px;
+  }
+
+  img.topic-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+  }
+}
+
+.tile-title {
+  font-weight: 500;
+  font-size: 16px;
+  // color: $colour-grey-dark-2;
+}
+
+.flex-wrap-container {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 0 0 200px;
+  margin: 10px 10px 10px 0px;
+  max-width: 200px;
+
+  &--large {
+    flex: 0 0 250px;
+    margin: 5px 10px;
+    max-width: 250px;
+    background: white;
+    border-radius: 10px;
+  }
+}
+
+.tiles-icon {
+  height: 17.2px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.add-subtopic-btn {
+  color: $greyButtonColor;
+  display: inline-block;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.add-subtopic-input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 10px 0 5px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  height: 25px;
+
+  &::placeholder {
+    color: $greyButtonColor;
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.tile-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  .topic-star-icon {
+    display: none;
+    margin-left: auto;
+    padding: 0;
+  }
+  .more_vert {
+    margin-right: -10px;
+  }
+}
+
+.m0 {
+  margin: 0;
+}
+
+.black {
+  color: #222;
+}
+
+.t30 {
+  top: 30;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.custom-drag-preview {
+  .img-placeholder {
+    background: transparent;
+  }
+}
+
+.task-view_drag-card.highlight-drop-zone {
+  .tile-info {
+    width: 130%;
+    margin-left: -10%;
+    padding: 0 20% 0 10%;
+  }
+  &.is-over {
+    .tile-info {
+      border: dotted 2px orange;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.selectable-user-list {
+  padding: 0px 5px;
+}
+
+.selectable-user-list_row {
+  border-bottom: 1px solid $colour-grey-light-1;
+  display: block;
+  padding: 5px;
+  
+  &:hover {
+    background-color: $colour-grey-light-1;
+  }
+}

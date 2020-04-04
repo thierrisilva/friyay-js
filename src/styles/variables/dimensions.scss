@@ -1,0 +1,7 @@
+$left-menu-width: 270px;
+$left-menu-max-width: 600px;
+$left-subtopic-menu-width: 270px;
+$right-menu-width: 40px;
+$right-menu-height: calc(100vh - 150px);
+$card-view-width: calc(100vh - #{$right-menu-width});
+$card-container-height: calc(100vh - 192px);

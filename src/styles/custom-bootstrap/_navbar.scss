@@ -1,0 +1,11 @@
+.navbar-inverse{
+  background-color: $gray-dark;
+
+  .text-muted {
+    color: $gray-75;
+  }
+
+  a.text-muted:hover {
+    color: $gray-light;
+  }
+}

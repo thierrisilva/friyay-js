@@ -1,0 +1,25 @@
+.grid-item-drop-menu {
+  color: $gray-default;
+  padding: 20px;
+
+  .file-drop-target {
+    margin-top: 40px;
+  }
+}
+
+.file-drop-target {
+  border: 1px dashed $gray-default;
+  padding: 40px 20px;
+}
+
+.file-drop-target.drop-highlighted {
+  @include transition(background-color, .5s);
+
+  background-color: darken($drag-highlight-color, 5%);
+}
+
+.file-drop-target.inline {
+  display: inline-block;
+  min-width: 150px;
+  padding: 20px;
+}

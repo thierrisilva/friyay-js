@@ -1,0 +1,103 @@
+.search-form {
+  .input-group-addon {
+    background-color: lighten($navbar-inverse-bg, 5%);
+    border: transparent;
+
+    .glyphicon {
+      color: $brand-primary;
+    }
+  }
+
+  .search-input {
+    background-color: $gray-dark;
+    background-image: url('/images/icon-search.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    border: transparent;
+    color: #ddd;
+    padding-left: 30px;
+  }
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+
+}
+
+.typeahead {
+
+}
+
+.tt-query {
+
+}
+
+.tt-hint {
+
+}
+
+.tt-menu {
+  @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+  background-clip: padding-box;
+  background-color: $dropdown-bg;
+  border: 1px solid $dropdown-fallback-border; // IE8 fallback
+  border: 1px solid $dropdown-border;
+  border-radius: $border-radius-base;
+  font-size: $font-size-base;
+  margin: 2px 0 0; // override default ul
+  min-width: 160px;
+  padding: 5px 0;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  z-index: $zindex-dropdown;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.tt-dataset {
+
+}
+
+.tt-suggestion {
+  a {
+    clear: both;
+    color: $dropdown-link-color;
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: $line-height-base;
+    padding: 5px 20px;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+    &:hover,
+    &:focus {
+      background-color: $dropdown-link-hover-bg;
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .item-kind {
+      color: $gray-light;
+      display: inline-block;
+      font-size: 14px;
+      position: relative;
+      vertical-align: middle;
+      width: 80px;
+    }
+
+    .item-topics {
+      color: $gray-light;
+      font-size: 14px;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.tt-suggestion.tt-cursor {
+
+}

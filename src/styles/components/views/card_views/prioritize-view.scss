@@ -1,0 +1,193 @@
+.prioritize-lane {
+  margin: 5px;
+  position: relative;
+  align-items: flex-end;
+  background-color: #f6f6f6;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 0px;
+  transition: all 0.3s ease-in-out;
+  max-width: calc(20% - 10px);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  min-width: 200px;
+
+  .kanban-view_lane-catchment {
+    padding-right: 0px;
+    margin-bottom: 15px;
+  }
+
+  &.horizontal {
+    .kanban-view_lane-catchment {
+      padding-right: 0px;
+      flex: 1 0 auto;
+    }
+    padding-top: 0;
+  }
+
+  .prioritize-card {
+    margin: 5px;
+  }
+}
+
+.prioritize-lane_header {
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 1.4em;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.prioritize-card {
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 0 8px 5px;
+  margin: 1px 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+
+  &.selected,
+  &:hover {
+    background-color: #ddd;
+  }
+  .add-card-card_content {
+    a {
+      padding: 3px;
+    }
+  }
+  .task-view_drag-card {
+    margin-left: 5px;
+    font-size: smaller;
+  }
+}
+
+.kanban-view_unlabelled-panel {
+  .prioritize-card {
+    margin: 3px 0;
+  }
+}
+
+.prioritize-view_lanes-container {
+  align-items: stretch;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: auto;
+  padding: 10px 20px;
+  height: 100%;
+  min-width: 50%;
+
+  .prioritize-lane {
+    width: 100%;
+    min-height: 200px;
+    &.horizontal {
+      max-width: 100%;
+    }
+  }
+
+  &.card-details {
+    width: 50%;
+  }
+
+  &.horizontal {
+    // height: auto;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    // background: #fafafa;
+
+    .card-title {
+      flex: 1;
+      line-height: 20px;
+      height: 20px;
+    }
+
+    .dropdown {
+      margin-right: 1em;
+    }
+  }
+}
+
+.prioritize-view_card-container {
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: row nowrap;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  height: calc(100vh - 150px);
+
+  .card-details {
+    padding-top: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+.card-footer_flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.prioritize-cycle-btn {
+  font-size: 24px;
+  color: #9b9b9b;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.prioritize-horizontal-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priority-selector {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priority-btn {
+  padding: 5px 10px;
+  margin: 0 3px;
+  border-radius: 3px;
+  background-color: $lightGreyViewPanelBackground;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+
+.kanban-view_unlabelled-panel,
+.prioritize-lane {
+  .prioritize-card {
+    .more_vert {
+      margin-left: auto;
+    }
+
+    .kanban-card__nested-cards-caret {
+      width: 20px;
+    }
+    &:hover {
+      .kanban-card__nested-cards-caret {
+        visibility: visible;
+      }
+    }
+    .card-title {
+      line-height: 23px;
+    }
+  }
+}

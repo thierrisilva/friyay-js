@@ -1,0 +1,13 @@
+.card-assignee-label {
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+  white-space: nowrap;
+
+  .card-assignee-label__icon {
+  }
+
+  .card-assignee-label__tooltip {
+    z-index: 20;
+  }
+}

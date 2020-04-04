@@ -1,0 +1,47 @@
+.items-top-bar {
+  .nav,
+  .nav.open {
+    > li {
+      > a {
+        background: none;
+        color: $text-color;
+        &:hover,
+        &:active,
+        &:focus {
+          background: none;
+        }
+      }
+    }
+  }
+  .switch-items-view-filter {
+    border: 1px solid rgba(51,51,51,0.15);
+    margin-top: 5px;
+    font-weight: 400;
+    button {
+      background: white;
+      padding: 3px 12px;
+      font-weight: 400;
+      box-shadow: none;
+      color: rgba(51,51,51,.8);
+    }
+    button:first-child {
+      border-right: 1px solid rgba(51,51,51,0.15);
+    }
+		button:last-child {
+      border-left: 1px solid rgba(51,51,51,0.15);
+    }
+    button.active,
+    button.active:focus {
+      color: rgba(51,51,51,.5);
+    }
+  }
+  .labels-filter-group {
+    .label-item-text {
+      display: block;
+      width: 70px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 5px;
+    }
+  }
+}

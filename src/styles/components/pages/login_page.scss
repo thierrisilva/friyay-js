@@ -1,0 +1,181 @@
+.join-section, .login-section {
+  text-align: center;
+
+  .form-heading {
+    margin-bottom: 30px;
+    color: $color-1;
+  }
+
+  .form-control {
+    color: $input-color;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    vertical-align: middle;
+    box-shadow: none;
+    padding: 6px 15px;
+  }
+
+  .form-more-actions {
+    margin-top: 50px;
+  }
+}
+
+.login-section {
+  float: none;
+  margin: auto;
+  max-width: 480px;
+}
+
+/* CSS */
+
+.separator {
+  height:2px;
+  width: 100%;
+  background: #ffc107;
+  display: block;
+  transform: scaleX(0) translateY(-2px);
+  transform-origin: 50%;
+  opacity: 0;
+  transition: all .15s linear;
+}
+
+.join-section {
+  width: 95%;
+  margin: 0 auto;
+  .title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #222222;
+  }
+  .title2{
+    font-size:20px;
+    font-weight:600;
+    color:#222222;
+  }
+  .inputGroup{
+    border:2px solid rgba(0,0,0,0.04);
+    border-radius:10px;
+    padding: 20px;
+    .form-control{
+      color: #555;
+      font-size: 18px;
+      height:50px;
+      font-weight: 300;
+      vertical-align: middle;
+      box-shadow: none;
+      padding: 0 0 10px 0;
+      border: none;
+      border-bottom: 2px solid rgba(0,0,0,0.04);
+    
+      &:focus + .separator{
+        transform: scaleX(1) translateY(-2px);   
+        opacity: 1;
+      }
+    }
+  }
+  button{
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    height: 110px;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+    background: url('../../public/images/buttons/1.png');
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transition: all .3s ease-in-out;
+    img {
+      width: 35px;
+      height: 20px;
+    }
+    p{
+      color:#fff;
+      letter-spacing:0.5px;
+      margin-top:-20px;
+      margin-bottom:0px;
+      i{
+        transition:all 0.3s ease-in-out;
+        margin-left:7px;
+      }
+    }
+    p:hover i{
+      margin-left:15px;
+    }
+    &:disabled {
+      p {
+        color: #ddd;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .sub-title{
+    color: #777; 
+  }
+  .link-avatar {
+    color: #aaa;
+    display: block;
+    height: 160px;
+    margin-right: 20px;
+    text-align: center;
+    width: 128px;
+
+    img {
+      border: 1px solid #e6e6e6;
+      margin-bottom: 5px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}
+
+.login-section .form-control {
+  font-size: 24px;
+}
+
+.form-more-actions {
+  color: #999;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.join-page-info {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  background-color: #6E5A97;
+  width: 100%;
+  p {
+    width: 75%;
+    margin: 20px auto 20px auto;
+  }
+  h2, a, a:hover {
+    font-weight: 100;
+    color: $color-1;
+  }
+  .main-graphic {
+    height: 450px;
+    background: #6E5A97 url('/images/intro/whatIsAHive.png') no-repeat center center;
+  }
+  .info ul {
+    padding: 0;
+    list-style-type: none;
+    li {
+      line-height: 1.75;
+      text-align: center;
+    }
+  }
+}

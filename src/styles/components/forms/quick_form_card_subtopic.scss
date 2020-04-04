@@ -1,0 +1,13 @@
+.quick-form-card-subtopic {
+  display: flex;
+  flex-direction: column;
+
+  &.quick-form-card-subtopic--reverse-order {
+    flex-direction: column-reverse;
+
+    .topic__quickForm {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+}

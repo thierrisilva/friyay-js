@@ -1,0 +1,23 @@
+.share-menu {
+  padding: 10px;
+  width: 100%;
+}
+
+.share-menu_chip-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.share-menu_search-container {
+  width: 100%;
+}
+
+.share-menu_search-results-container {
+  border: 1px solid $colour-grey-light-2;
+  border-radius: 2px;
+  flex: 1 0 200px;
+  overflow-y: auto;
+  width: 100%;
+}

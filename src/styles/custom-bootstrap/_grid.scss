@@ -1,0 +1,25 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+// CUSTOM: Add new xxl containter
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-xxlg-min) {
+    width: $container-xxlg;
+  }
+}
+
+// XXLarge grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-xxlg-min) {
+  @include make-grid(xxlg);
+}

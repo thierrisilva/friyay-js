@@ -1,0 +1,19 @@
+.large-topic-header {
+  background-color: $colour-grey-dark-1;
+  color: $colour-grey-light-4;
+  height: 300px;
+  padding: 60px;
+  width: 100%;
+}
+
+
+.large-topic-header_title-container {
+  align-items: center;
+  display: flex;
+}
+
+
+.large-topic-header_title {
+  font-size: 50px;
+  font-weight: 500;
+}

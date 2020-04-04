@@ -1,0 +1,181 @@
+.users-invitation-body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+  padding: 0;
+  letter-spacing: 0.5px;
+  .modal-title {
+    color: $color-1;
+    font-weight: 100;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #ccc;
+    font-weight: 300;
+  }
+  textarea {
+    border: 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color ease-in-out 0.15s;
+    &:focus {
+      border-color: #66afe9;
+    }
+  }
+  .input-file-box {
+    input[type='file'] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .invitation-emails {
+    display: flex;
+  }
+  .invitation-emails-invalids {
+    color: lighten(red, 20%);
+  }
+  .users-invitation-form {
+    border-top: 1px solid #ddd;
+    .users-details {
+      padding: 50px;
+      overflow-y: auto;
+      .selectize-input {
+        padding: 12px 15px;
+        border-bottom-color: transparent;
+        > input {
+          font-size: 14px;
+        }
+      }
+      .selectize-input.input-active {
+        border-bottom-color: #66afe9;
+      }
+      .btn {
+        padding: 11px 12px;
+        border-color: $brand-primary;
+        font-weight: 400;
+      }
+    }
+    .user-settings {
+      padding: 50px;
+      overflow-y: auto;
+      label.fw-xm {
+        font-weight: 300;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+      .Select-control {
+        border-radius: 0px;
+        padding: 5px 0;
+        .Select-placeholder {
+          display: flex;
+          align-items: center;
+        }
+        .Select-value {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        .Select-input {
+          padding-left: 0;
+        }
+      }
+      .user-roles {
+        .Select-control {
+          padding: 5px 12px;
+          .Select-value {
+            display: flex;
+            align-items: center;
+          }
+          .Select-input {
+            margin-left: -3px;
+          }
+        }
+        .role-suggestion {
+          font-weight: 300;
+        }
+      }
+
+      .user-hives {
+        .form-group {
+          margin-bottom: 0px;
+          .selectize-input {
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            *.item {
+              margin: 4px 2px;
+              border-width: 1px;
+            }
+            &.items.not-full::after {
+              content: '\f078';
+              display: inline-block;
+              float: right;
+              font: normal normal normal 14px/1 FontAwesome;
+              padding: 10px;
+              color: #ccc;
+              cursor: pointer;
+              & > input {
+                padding-top: 5px !important;
+              }
+            }
+          }
+        }
+        .Select {
+          width: 100%;
+          .Select-loading-zone,
+          .Select-arrow-zone,
+          .Select-noresults {
+            display: none;
+          }
+        }
+        .selectize-input {
+          & > span {
+            border: solid 1px lightgrey;
+            padding-right: 5px !important;
+            .item {
+              display: inline;
+              padding-right: 5px !important;
+            }
+          }
+        }
+        .topics-list-dropdown {
+          position: relative;
+          border: 0;
+          margin: 0;
+          background-clip: none;
+          box-shadow: none;
+          &.stay-open {
+            display: block;
+            width: 100%;
+          }
+          .panel-body {
+            padding: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.prefix {
+  border: 1px solid #ccc;
+  border-right: 0 none;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #f2f9fc;
+  padding: 0px 1rem;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  font-weight: 500;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

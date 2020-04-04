@@ -1,0 +1,184 @@
+.assigned-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &_main-section {
+    min-width: 800px !important;
+  }
+}
+
+.assigned-view-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.assigned-view_alpha-filter-bar {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-around;
+
+  a {
+    color: currentColor !important;
+  }
+}
+
+.assigned-lane_drag-preview {
+  background-color: #fff;
+  border: 2px solid $colour-grey-light-3;
+  border-radius: 3px;
+  padding: 10px 20px;
+  width: 200px;
+}
+
+.assigned-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.assigned-user-list {
+  max-height: 60vh;
+  overflow: scroll;
+}
+
+.assigned-view_unassigned-panel {
+  background-color: $lightGreyViewPanelBackground;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  transform: translateX(-300px);
+  transition: 0.2s ease-in-out;
+  padding: 20px;
+
+  &.panel-showing {
+    display: block;
+    transform: translateX(0px);
+  }
+}
+
+.assigned-view_unassigned-panel-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.assigned-view_unassigned-panel-btn {
+  color: $greyButtonColor;
+}
+
+.assigned-view_unassigned-panel-toggle {
+  color: black;
+}
+
+.assigned-view-filter {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: space-between;
+}
+
+.assigned-lane-collapse-btn {
+  display: inline-block;
+
+  span {
+    color: $greyButtonColor;
+  }
+}
+
+.assigned-view_title {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  color: $greyButtonColor;
+}
+
+.assigned-view-content {
+  width: 100%;
+  padding-left: 0px;
+  transition: 0.2s ease-in-out;
+
+  &.panel-showing {
+    padding-left: 300px;
+  }
+}
+
+.assigned-lane_btns {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+
+.greyButtonColor,
+.grey-button-color {
+  color: $greyButtonColor;
+}
+
+.assigned-view-lanes {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  align-items: stretch;
+}
+
+.assigned-lane-collapse {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  transition: 0.4s ease-in-out;
+
+  .assigned-lane-collapse-btn {
+    margin-top: 10px;
+  }
+}
+
+.assigned-lane-collapse-label {
+  color: $greyButtonColor;
+  display: inline-block;
+  transform-origin: 15px 15px;
+  transform: rotate(90deg);
+  margin-top: 20px;
+  margin-left: 8px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.assigned-lane-open {
+  width: 300px;
+  padding: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.assigned-lane {
+  margin: 10px;
+  background-color: $lightGreyViewPanelBackground;
+  border-radius: 5px;
+}
+
+.assigned-lane_items {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 5px auto;
+}
+
+.assigned-lane_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.assigned-card_hover-options {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.assigned-lane_content {
+  width: 90%;
+  margin: 0 auto;
+}

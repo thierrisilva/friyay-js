@@ -1,0 +1,122 @@
+#editor {
+  //remove border
+  .fr-box.fr-basic .fr-wrapper,
+  .fr-box.fr-basic .fr-toolbar,
+  .fr-box.fr-basic .second-toolbar {
+    border-color: transparent;
+  }
+
+  // icon color
+  .fr-box.fr-basic .fr-toolbar .fr-svg path {
+    fill: #b0b0b0;
+  }
+
+  // dropdown arrow color
+  .fr-modal .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-modal .fr-command.fr-btn.fr-dropdown:after,
+  .fr-popup .fr-command.fr-btn.fr-dropdown:after,
+  .fr-toolbar .fr-command.fr-btn.fr-dropdown:after {
+    border-top-color: #b0b0b0;
+    border-bottom-color: #b0b0b0;
+  }
+
+  // color of plain button like text
+  .fr-toolbar .fr-command.fr-btn {
+    color: #b0b0b0;
+  }
+
+  //first group of toolbar should be left aligned
+  .fr-toolbar .fr-btn-grp.fr-float-left:first-of-type {
+    margin-left: 0px;
+  }
+
+  // the actualy body content div
+  .fr-element {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  // toolbar bottom line
+  .fr-newline {
+    background-color: transparent;
+  }
+}
+
+// TODO: Clean out any styles not used by our new text editor
+// div.text-editor-root {
+//   background: #f00;
+//   border: 0 !important;
+//   border-radius: 0 !important;
+//   font-family: $font-family-sans-serif;
+//   font-size: $font-size-base;
+//   padding: 0;
+// }
+
+// .text-editor {
+//   border: none;
+//   cursor: text;
+//   margin-top: 0 !important;
+// }
+
+// .text-editor .public-DraftEditorPlaceholder-root,
+// .text-editor .public-DraftEditor-content {
+//   color: $input-color-placeholder;
+//   font-family: $font-family-sans-serif;
+//   font-size: $font-size-base;
+//   margin: 0 10px 10px 0 !important;
+//   // max-height: 400px;
+//   padding: 15px;
+// }
+
+// .text-editor .public-DraftEditor-content {
+//   color: #555;
+//   font-family: $font-family-sans-serif;
+//   font-size: $font-size-base;
+//   min-height: 150px;
+//   border-bottom: 1px solid transparent;
+//   transition: border-color ease-in-out 0.15s;
+//   // &:focus {
+//   //   border-color: #66afe9;
+//   // }
+// }
+
+// .RichTextEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+//   display: none;
+// }
+
+// .text-editor .RichTextEditor-blockquote {
+//   border-left: 5px solid #eee;
+//   color: #666;
+//   font-family: 'Hoefler Text', 'Georgia', serif;
+//   font-style: italic;
+//   margin: 16px 0;
+//   padding: 10px 20px;
+// }
+
+// .text-editor .public-DraftStyleDefault-pre {
+//   background-color: rgba(0, 0, 0, 0.05);
+//   font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+//   font-size: 16px;
+//   padding: 20px;
+// }
+
+// .RichTextEditor-controls {
+//   font-family: 'Helvetica', sans-serif;
+//   font-size: 14px;
+//   margin-bottom: 5px;
+//   user-select: none;
+// }
+
+// .RichTextEditor-styleButton {
+//   color: #999;
+//   cursor: pointer;
+//   margin-right: 16px;
+//   padding: 2px 0;
+//   display: inline-block;
+// }
+
+// .RichTextEditor-activeButton {
+//   color: #5890ff;
+// }

@@ -1,0 +1,7 @@
+export default {
+  add: 'DB_COMMENTS__ADD_COMMENTS',
+  delete: 'DB_COMMENTS__DELETE_COMMENT',
+  change: 'DB_COMMENTS__CHANGE_COMMENT',
+  changeMany: 'DB_COMMENTS__CHANGE_COMMENTS',
+  replace: 'DB_COMMENTS__REPLACE_COMMENT'
+};

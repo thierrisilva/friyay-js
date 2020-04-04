@@ -1,0 +1,444 @@
+.rab-content-panel {
+  @include transition(margin-right .2s);
+  background-color: #fff;
+  border-left: 1px solid $right-action-bar-border;
+  bottom: 0;
+  height: 100%;
+  margin-right: -$rab-content-panel-width;
+  margin-top: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: $rab-content-panel-width;
+  z-index: -10;
+
+  &.expanded {
+    margin-right: $right-action-bar-padding;
+  }
+}
+
+.grey {
+  color: #f2ab13;
+  text-decoration-color: #f2ab13;
+}
+
+.right-submenu_header {
+  .fa-dropbox.connected {
+    color: #007ee5;
+  }
+
+  .fa-google.connected {
+    color: #f65314;
+  }
+
+  .tiphive-bot-header {
+     cursor: pointer;
+     margin-left: 5px;
+     white-space: nowrap;
+     font-weight: bolder;
+  }
+}
+
+.rab-content-body {
+  height: calc(100% - 72px);
+  padding-left: 5px;
+
+  .header {
+    margin-top: 0;
+
+    span {
+      font-size: 16px;
+      font-weight: bolder;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  /////////////////////////////BOT-PANEL-START//////////////////////////////////
+
+  .bot-command-statuses {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .bot-notification-row-weekly {
+    padding: 15px;
+    border-bottom: 1px solid #f2f2f2;
+
+    .bot-notification-weekly-header {
+      font-weight: bolder;
+      display: inline;
+    }
+
+    .bot-notification-weekly-body {
+      padding: 5px;
+    }
+
+    .bot-notification-weekly-info {
+      margin-left: 16px;
+      font-weight: bolder;
+    }
+
+    .bot-notification-weekly-info-complete {
+      margin-left: 5px;
+      font-weight: bolder;
+    }
+  }
+
+  .bot-notification-date-row {
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    border-top: 1px solid  #f2f2f2;
+    border-bottom: 1px solid  #f2f2f2;
+    padding: 10px;
+  }
+
+  .bot-notification-time {
+    display: inline;
+    float: right;
+  }
+
+  .bot-command-input {
+    position: absolute;
+    bottom: 0;
+    width: 93%;
+    margin: 10px 0px 0;
+    border: 1px solid #f2f2f2;
+    border-radius: 6px;
+    padding: 8px;
+    z-index: 30;
+  }
+
+  .bot-notification-row {
+    padding: 15px;
+    border-bottom: 1px solid #f2f2f2;
+
+    .bot-notification-row-type {
+      font-weight: bolder;
+      display: inline;
+    }
+
+    .bot-notification-row-assignee {
+      display: inline;
+      font-weight: bolder;
+      margin-left: 10px;
+    }
+
+    .bot-notification-row-card-title {
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .bot-notification-cleanup {
+    padding: 15px;
+
+    a {
+      cursor: pointer;
+    }
+
+    .bot-notification-cleanup-header {
+      font-weight: bolder;
+      display: inline;
+    }
+
+    .bot-notification-cleanup-time {
+      display: inline;
+      float: right;
+    }
+
+    .bot-notification-cleanup-body {
+      padding: 5px;
+    }
+  }
+
+  .bot-notification-card-title-list {
+    padding-left: 30px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .bot-input-options-list {
+    position: absolute;
+    bottom: 25px;
+    width: 92%;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 6px;
+    padding: 8px;
+    list-style: none;
+    background-color: rgb(242, 242, 242);
+    z-index: 1;
+  }
+
+  .bot-input-options {
+    background-color: #fff;
+    height: auto;
+    padding: 3px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+
+  .bot-option-type-selection {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    background-color: #f2f2f2;
+    border-radius: 17px;
+    font-weight: bolder;
+    color: darkgrey;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  /////////////////////////////BOT-PANEL-END//////////////////////////////////
+
+
+  .connect-to-slack {
+
+    display: grid;
+
+    a {
+      margin: auto;
+      display: block;
+      margin-top: 10px;
+    }
+
+    h4 {
+      display: flex;
+      color: #a2a2a2;
+      font-weight: bolder;
+      margin: auto;
+      margin-top: 20px;
+
+      input {
+        margin-right: 6px;
+      }
+    }
+  }
+
+.workspaces-body {
+
+  .selected-workspace-header {
+    i {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .workspaces-list-dropdown {
+    margin-top: 20px;
+
+    .workspaces-label {
+      font-weight: bolder;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .workspace-list-dropdown {
+      list-style: none;
+      margin: 10px;
+    }
+
+    workspace-list {
+      border: 0px transparent;
+      margin-left: 30px;
+      margin-top: 10px;
+      width: 150px;
+      background-color: transparent;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .channel-connections {
+
+    .dropdown-menu-list {
+      li {
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+
+    .workspace-connections-header {
+      padding-bottom: 15px;
+
+      .connections-header {
+        margin-top: 40px;
+        margin-left: 20px;
+        display: flex;
+        font-weight: bolder;
+      }
+
+      small {
+        color: #bcbcbc;
+        margin-left: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+
+    .workspace-delete-connection {
+      cursor: pointer;
+      float: right;
+      padding: 10px;
+    }
+
+    .connections-item {
+
+      border-bottom: 1px solid #f2f2f2;
+      padding-bottom: 10px;
+      margin-top: 10px;
+
+      .conection-topic-dropdown {
+        list-style: none;
+        display: inline-block;
+        margin-left: -30px;
+
+        li {
+          ul {
+            max-height: 150px;
+            overflow: auto;
+          }
+        }
+      }
+
+      .conection-channel-dropdown {
+        list-style: none;
+        display: inline-block;
+        margin-left: -30px;
+
+        li {
+          ul {
+            max-height: 150px;
+            overflow: auto;
+          }
+        }
+      }
+
+      .connections-item-topic {
+        display: inline-block;
+
+        span {
+          margin-left: 20px;
+          display: inline-block;
+        }
+      }
+
+      .connections-item-channel {
+        margin-top: 10px;
+
+        span {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .workspace-add-connection {
+    padding-top: 10px;
+    display: inline-flex;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
+  .file-list-breadcrumb {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f2f2f2;
+    a : {
+      color: $gray-default;
+    }
+  }
+
+  .file-item {
+    cursor: pointer;
+    word-break: break-all;
+
+    &:hover {
+      background-color: $drag-highlight-color;
+    }
+  }
+
+  .integration-file {
+    color: $gray-default;
+    padding: 5px;
+  }
+
+  .integration-file.kind-folder {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .integration-file.kind-folder:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .rab-items-listing {
+    height: 100%;
+    overflow-y: auto;
+    // teefan: content overflow not displayed hack. Can't get height to fit browser.
+    padding-bottom: 10px;
+  }
+}
+
+.btn-close-rab-panel {
+  color: $gray-default;
+  position: relative;
+  right: $right-action-bar-padding;
+}
+
+.rab-main-content {
+  bottom: 0;
+  padding: 8px;
+  position: fixed;
+  top: 50px;
+  width: $rab-content-panel-width;
+
+  .header {
+    margin-top: 0;
+
+    span {
+      font-size: 16px;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  .file-list-breadcrumb {
+    padding: 10px 5px;
+  }
+
+  .file-item {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $drag-highlight-color;
+    }
+  }
+
+  .integration-file {
+    color: $gray-default;
+    padding: 5px;
+  }
+
+  .integration-file.kind-folder {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .integration-file.kind-folder:first-of-type {
+    border-top: 1px solid #f2f2f2;
+  }
+
+  .integration-file.kind-folder:last-of-type {
+    margin-bottom: 10px;
+  }
+}

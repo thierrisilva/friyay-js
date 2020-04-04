@@ -1,0 +1,141 @@
+//Custom overlay class is required to fix issue related to z-index
+.react-modal-overlay {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 15px;
+  background: rgba(51, 51, 51, 0.3);
+  .modal-content {
+    flex: 1;
+    display: flex;
+    border-radius: 15px;
+    border: none;
+    padding: 2px;
+    position: relative;
+    .add-item-btn {
+      background: #dedede;
+      color: #888888;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .close-icon {
+      position: absolute;
+      top: 8px;
+      right: 6px;
+    }
+    .rectangle-icon {
+      margin-left: -4px;
+      transform: scaleY(1.2);
+      color: #e1e1e1;
+    }
+    .ws-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: #333;
+      border-bottom: solid 1px #dedede;
+      padding: 15px 10px 10px 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+    }
+    .ws-guest-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: #333;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+    }
+    .ws-body {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      max-height: calc(100% - 50px);
+      > .ws-body-child {
+        flex: 2;
+        padding: 10px;
+        overflow: auto;
+        &.flex-1 {
+          flex: 1;
+        }
+        &.flex-5 {
+          flex: 5;
+        }
+        .highlight-drop-zone {
+          border: dotted 1px orange;
+        }
+        .ws-item {
+          display: flex;
+          flex: 1;
+          flex-direction: row;
+          align-items: center;
+          padding: 2px 0;
+          margin: 1px 0;
+          &.ws-item-selected {
+            background: #dedede;
+            border-radius: 5px;
+            a {
+              font-weight: bold;
+            }
+          }
+          span {
+            display: inline;
+            .left-menu__domain-icon {
+              margin: 4px; //fix: discard margin -6px from the generic component
+            }
+          }
+          a {
+            color: #333;
+          }
+        }
+        &:not(:last-child) {
+          border-right: solid 1px #dedede;
+        }
+      }
+      .rounded-icon {
+        border-radius: 50%;
+      }
+    }
+    .workspace-section {
+      min-width: 300px;
+      border-right: solid 1px #dedede;
+      display: flex;
+      flex-direction: column;
+      &.show-member {
+        flex: 1;
+        .ws-header {
+          > span {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+    .card-section {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.ws-drag-preview {
+  position: absolute;
+  padding: 10px 20px;
+  color: #333;
+  border: dashed 1px #ccc;
+}
+.flex-1 {
+  flex: 1;
+}

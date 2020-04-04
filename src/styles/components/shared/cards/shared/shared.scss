@@ -1,0 +1,230 @@
+//These classes all belong to components within the Components/shared/cards folder (not including classes for specific card views, which get their own .scss file)
+.card-action-button {
+  align-items: center;
+  display: flex;
+  height: 30px;
+  margin: 0 5px;
+
+  i {
+    font-size: 16px;
+  }
+  span {
+    // color: #b3b3b3;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+.card-actions-container {
+  align-items: center;
+  display: flex;
+  min-width: 105px;
+  justify-content: flex-end;
+}
+
+.card-actions-dropdown {
+  margin: 3px 0 0 5px;
+  min-width: 5px;
+}
+
+.card-labels {
+  align-items: center;
+  // color: #b3b3b3;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  width: 115px;
+  margin-right: 16px;
+}
+
+.card-label-container {
+  height: 30px;
+  position: relative;
+  width: 100px;
+
+  &:hover {
+    &.left {
+      @for $i from 2 through 15 {
+        .card-label:nth-child(#{$i}) {
+          transform: translateX(($i - 1) * -110px);
+        }
+      }
+    }
+    &.right {
+      @for $i from 2 through 15 {
+        .card-label:nth-child(#{$i}) {
+          transform: translateX(($i - 1) * 110px);
+        }
+      }
+    }
+    &.up {
+      @for $i from 2 through 15 {
+        .card-label:nth-child(#{$i}) {
+          transform: translateY(($i - 1) * -40px);
+        }
+      }
+    }
+    &.down {
+      @for $i from 2 through 15 {
+        .card-label:nth-child(#{$i}) {
+          transform: translateY(($i - 1) * 40px);
+        }
+      }
+    }
+  }
+}
+
+.card-title {
+  color: #555;
+  // font-weight: 500;
+  line-height: 20px;
+  max-width: 100%;
+  min-width: 135px;
+
+  &:hover {
+    color: $colour-yellow-1;
+    text-decoration: none;
+    text-decoration-color: $colour-yellow-1;
+  }
+
+  &.xl {
+    line-height: 21px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &.xxl {
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.card-title_link-tooltip {
+  left: 50% !important;
+  bottom: 110% !important;
+}
+
+.card-topic-link {
+  color: $text-color-grey;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  padding-right: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.lite {
+    font-size: 12px;
+  }
+
+  &:hover {
+    color: $colour-yellow-1;
+  }
+}
+
+.card-topic-link_container {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.card-created-date {
+  color: $text-color-grey;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.card-section-divider {
+  background-color: $colour-grey-light-2;
+  height: 1px;
+  width: 100%;
+}
+
+.min-menu-bar {
+  height: 30px;
+  border: solid 2px #dddddd;
+  width: 4px;
+  border-radius: 4px;
+  background: #dddddd;
+  cursor: pointer;
+}
+.cardTopicTitle {
+  font-size: 11px;
+}
+
+.left-list-header,
+.sheet-view__cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .quick-rightbar-actions .quick-right-action-bar_button {
+    display: none;
+  }
+
+  &:hover {
+    .quick-rightbar-actions .quick-right-action-bar_button {
+      display: initial;
+    }
+  }
+}
+
+.quick-rightbar-actions {
+  display: inline-flex;
+  margin-left: auto;
+  vertical-align: middle;
+}
+
+.add-card-title {
+  font-size: 14px;
+  color: #aaa;
+  padding: 0 5px 0 0;
+}
+
+.left-list {
+  .add-card-or-subtopic_button {
+    .material-icons.icon-fa.medium {
+      font-size: 11px;
+    }
+  }
+  .view-top-bar_element.right {
+    display: none;
+  }
+}
+
+.left-list-header {
+  line-height: 30px;
+  .add-card-card_content form {
+    margin-left: 0px;
+  }
+
+  + div .add-card-card_content {
+    width: 100%;
+    form {
+      margin-left: 0px;
+    }
+  }
+}
+
+.add-card-card-container {
+  flex-grow: 1;
+}
+
+.nest-card-zone.highlight-drop-zone.is-over {
+  border: dotted 2px orange;
+}
+
+[class$='__no-due-header'] {
+  .btn-noback {
+    float: right;
+    line-height: 60px;
+  }
+}
+
+.left-list-header {
+  .btn-noback {
+    float: right;
+  }
+}

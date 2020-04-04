@@ -1,0 +1,131 @@
+.btn {
+  border-radius: 0;
+}
+
+a.btn.btn-link.btn-sm {
+  padding: 0 20px 0 0 !important;
+  position: relative;
+
+  &.heart {
+    .count-indicator {
+      bottom: 1.5px;
+    }
+  }
+
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.btn-link:hover {
+  text-decoration: none;
+}
+
+.btn-close-side-left {
+  font-size: 25px;
+  left: -50px;
+  line-height: 32px;
+  position: fixed;
+  color: white !important;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.btn-default {
+  color: $brand-primary;
+}
+
+.btn-alternate {
+  color: white;
+  background-color: $color-1;
+}
+
+button.btn, a.btn {
+  i {
+    font-size: 1.25em;
+    line-height: 1.25;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+    font-weight: 500;
+  }
+}
+
+.navbar-btn.btn-default {
+  background-color: transparent;
+  &:hover, &:focus {
+    background-color: #999;
+    color: $gray-dark;
+  }
+}
+
+.btn-placeholder{
+  font-size: 15px;
+  font-weight: 400;
+  color: #a9a9a9;
+  padding:0;
+  &:hover, &:focus, &:active, &.active{
+    box-shadow: 0 0 0 rgba(#000,0);
+    background: 0;
+    color: darken(#a9a9a9, 10%);
+  }
+}
+
+.btn-alt{
+  box-shadow: 0px 0px 0px 1.5px #5fafd9;
+  border: none;
+  background: white;
+  color: #369acf;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    background: #eff7fb;
+    color: #369acf;
+  }
+
+  &:active, &.active{
+    box-shadow: 0 0 0 rgba(#000,0);
+  }
+}
+
+.btn-alt-sm {
+  padding: 5px 30px;
+}
+
+.btn-noback{
+  background: 0;
+  color: #9b9b9b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  vertical-align: baseline;
+  padding: 0px 2px;
+  margin: 0;
+  &:focus{
+    background: 0;
+    box-shadow: 0 0 0 rgba(#000,0);
+  }
+  &.active{
+    background: #eeeef3;
+    box-shadow: 0 0 0 rgba(#000,0);
+  }
+  &:active{
+    background:0;
+    box-shadow: 0 0 0 rgba(#000,0);
+  }
+  &:hover, &.active, &:focus, &:active{
+    color: #aaaab1;
+  }
+}

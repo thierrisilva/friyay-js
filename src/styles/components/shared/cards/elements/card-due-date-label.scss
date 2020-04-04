@@ -1,0 +1,18 @@
+.card-due-date-label {
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+  white-space: nowrap;
+  margin: 0 5px;
+
+  .card-due-date-label__icon {
+  }
+
+  .card-due-date-label__tooltip {
+    z-index: 20;
+  }
+
+  .card-due-date-label__value {
+    margin-left: 5px;
+  }
+}

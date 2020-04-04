@@ -1,0 +1,14 @@
+@import 'elements';
+@import 'sprintbar';
+
+.new-topic {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background: rgb(244, 244, 244);
+  border-radius: 20px;
+  &:hover {
+    background: #f2ab13;
+    color: white;
+  }
+}

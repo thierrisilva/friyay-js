@@ -1,0 +1,118 @@
+//
+// Custom Tutorialize
+// -----------------------------------------------------
+
+ /*
+  * General
+  */
+.tutorialize-slide{
+  box-shadow: 0px 0px 5px #999;
+  display:none;
+  position:absolute;
+  z-index: 199;
+}
+
+.tutorialize-slide-arrow{
+  background-repeat: no-repeat;
+  position:absolute;
+}
+
+.tutorialize-slide-content{
+  line-height:1.3;
+  padding:10px 0;
+  overflow-y:auto;
+}
+
+.tutorialize-slide-content img{
+  max-width: 100%;
+  height:100;
+}
+
+.tutorialize-slide-content-media{
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+}
+
+.tutorialize-slide-content-media embed,
+.tutorialize-slide-content-media iframe,
+.tutorialize-slide-content-media object,
+.tutorialize-slide-content-media video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.tutorialize-slide-control{
+  display:block;
+  list-style: none;
+  padding:10px 0 0 0;
+  margin:0;
+  overflow-y:auto;
+}
+
+.tutorialize-slide-control li{
+  float:right;
+  margin-left:5px;
+}
+
+.tutorialize-slide-control li:hover{
+  background-color: transparent !important;
+}
+
+.tutorialize-slide-control li.counter{
+  float:left;
+  margin-left:0;
+  background-color: transparent !important;
+  padding:5px 0;
+}
+
+.tutorialize-slide-control li.close{
+  font-size: 13px;
+  background-color: #0d8fbf;
+  font-weight: normal;
+  text-shadow: none;
+  margin-top: 0;
+  line-height: $line-height-base;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+.tutorialize-slide-control li span{
+  cursor:pointer;
+  display:inline-block;
+  padding:5px 8px;
+}
+
+.tutorialize-slide-close:hover{
+  cursor:pointer;
+  background-color: transparent !important;
+}
+
+.tutorialize-slide-overlay{
+  position:fixed;
+  z-index:198;
+}
+
+.tutorialize-slide-title{
+  font-weight:bold;
+}
+
+.tutorialize-slide.minWidthCSS .tutorialize-slide-control{
+  text-align:center;
+}
+
+.tutorialize-slide.minWidthCSS .tutorialize-slide-control li{
+  display:block;
+  float:none;
+  margin:5px 0;
+}

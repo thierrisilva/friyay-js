@@ -1,0 +1,171 @@
+// **********************************************
+// THE CUSTOMIZABLE PART OF THE THEME
+// **********************************************
+$menu-left-top-nav-background-color: #D8D8D8 !default; //#443862 !default;
+$menu-left-background-color:         #D8D8D8 !default;
+$menu-left-content-background-color: #D8D8D8 !default;
+$link-hover-decoration:              none !default;
+
+.menu-left {
+  background-color: $menu-left-background-color;
+}
+
+.menu-left .left-menu-content {
+  background-color: $menu-left-content-background-color;
+}
+
+// **********************************************
+// BASE COLORS - MOVE TO CUSTOM COLORS
+// SECTION IF IT IS MEANT TO BE CUSTOMIZABLE
+// **********************************************
+.menu-left {
+  z-index: 2000;
+
+  .form-control {
+    color: $gray-lighter;
+  }
+
+  a {
+    color: rgba(238, 238, 238, 0.7);
+    &:hover,&:focus,&:active,&.active {
+      color: $color-1;
+      text-decoration: none;
+    }
+  }
+
+  li.active {
+    a {color: $color-1;}
+  }
+
+  .dropdown a.btn-default {
+    color: $brand-primary;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  .icon path {
+    stroke: $gray-lighter;
+  }
+
+  .panel, .panel-heading {
+    background-color: transparent;
+    border-color: transparent;
+    @include box-shadow(none);
+
+    a:hover {
+      .icon path{
+        stroke: $color-1;
+      }
+    }
+  }
+  .panel-heading {
+    padding: 10px;
+  }
+
+  .panel-title {
+    font-size: 14px;
+    a.panel-header-title {
+      color: $left-menu-light-link-color;
+      .fa, .glyphicon, .material-icons {
+        color: $left-menu-dark-link-color;
+      }
+    }
+    a.panel-header-title:hover,
+    a.panel-header-title.active {
+      .hex-icon-12 {
+        background-color: $color-1;
+      }
+      .hex-icon-12:before {
+        border-bottom-color: $color-1;
+      }
+      .hex-icon-12:after {
+        border-top-color: $color-1;
+      }  
+    }
+    .hex-icon-12 {
+      background-color: $left-menu-dark-link-color;
+    }
+    .hex-icon-12:before {
+      border-bottom-color: $left-menu-dark-link-color;
+    }
+    .hex-icon-12:after {
+      border-top-color: $left-menu-dark-link-color;
+    }
+  }
+
+  .navbar-default,
+  .navbar-fixed-top {
+    background-color: $menu-left-content-background-color;
+    border-color: transparent;
+    .other-actions a {
+      color: $left-menu-dark-link-color;
+      &:hover {
+        color: $color-1;
+      }
+
+      i {
+        font-size: 1em;
+        line-height: 0.9em;
+      }
+    }
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    color: $left-menu-dark-link-color;
+  }
+
+  .navbar-nav > .open > a,
+  .navbar-nav > .open > a:hover,
+  .navbar-nav > .open > a:focus {
+    background-color: rgba(255,255,255,0.3);
+  }
+
+  .navbar-nav > li.active > a,
+  .navbar-nav > li > a:hover {
+    color: $color-1;
+  }
+
+  .navbar-fixed-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 4.5rem;
+    right: 0;
+    top: auto;
+    width: 100%;
+    padding: 0;
+
+    background-color: $menu-left-top-nav-background-color;
+    border-color: transparent;
+
+    .left-menu-bottom-nav {
+      background-color: $menu-left-top-nav-background-color;
+    }
+    .user-avatar-content {
+      margin-right: 0;
+    }
+  }
+
+  .nav.nav-pills {
+    li.active,
+    li:hover {
+      a {
+        color: $color-1;
+        background: none;
+      }
+    }
+  }
+
+  .list-group {
+    .list-group-item {
+      background-color: transparent;
+    }
+    .btn-outline {
+      color: $color-1;
+    }
+  }
+}
+
+.mlauto {
+  margin-left: auto !important;
+}

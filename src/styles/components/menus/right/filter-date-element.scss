@@ -1,0 +1,38 @@
+.filter-date_container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+
+.filter-date_filter-header {
+  border-bottom: 1px solid $colour-grey-1;
+  color: $colour-grey-1;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 5px 0;
+  text-align: center;
+  width: 90%;
+}
+
+.filter-date_filter {
+  color: $colour-grey-1;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 90%;
+
+  &.has-filter {
+    background-color: #F4F4F4;
+    justify-content: space-between;
+  }
+}
+
+.filter-date_tip {
+  color: #a2a2a2;
+  font-size: 12px;
+  font-style: italic;
+  margin: 50px 20px;
+  text-align: center;
+}

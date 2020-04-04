@@ -1,0 +1,168 @@
+.comments-box {
+  padding: 10px 0 50px;
+  min-height: 300px;
+
+  .comments-box-title {
+    font-weight: 400;
+    color: silver;
+  }
+  .custom-theme.fr-box.fr-basic {
+    font-size: 14px !important;
+  }
+
+  .media {
+    padding: 15px;
+    margin: 0 -15px;
+    border-top: 1px solid $gray-light-more;
+
+    .comment-actions {
+      display: none;
+      a {
+        margin-left: 5px;
+      }
+    }
+
+    &:hover {
+      .comment-actions {
+        display: inline-block;
+      }
+    }
+  }
+
+  .media-body {
+    height: auto !important;
+
+    .media-heading a {
+      color: silver;
+
+      &:hover {
+        color: darken(silver, 5%);
+      }
+    }
+  }
+
+  .media-body .alt {
+    height: 250px !important;
+  }
+
+  .comment-form-actions {
+    .btn {
+      margin-left: 5px;
+      margin-top: 15px;
+      outline: none;
+      letter-spacing: 1px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .comment-input {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#comment-form {
+  .form-control {
+    height: 50px !important;
+  }
+
+  // .mention {
+  //   color: $brand-primary;
+  //   background-color: white;
+  //   position: relative;
+  //   top: -3px;
+  //   right: -2px;
+  //   padding: 5px 0px;
+  //   z-index: 100;
+  // }
+}
+
+#comment-form {
+  .comment_body {
+    height: 100px !important;
+  }
+
+  .comment_body--multiLine {
+    height: 100px !important;
+  }
+}
+
+.comment_body__input {
+  border: 1px solid #CCCCCC;
+  height: 90px !important;
+  padding: 10px !important;
+  overflow-y: auto !important;
+
+  &:focus {
+    border: 1px solid #66AFE9;
+    outline: none;
+  }
+}
+.comment_body__highlighter {
+  height: 90px !important;
+}
+
+.comment_body__suggestions {
+  margin-top: 30px !important;
+  max-height: 89px !important;
+}
+
+.comment_body__suggestions__list {
+  border: 1px solid $color-1;
+  max-height: 91px !important;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.comment_body__suggestions__item {
+  border-bottom: 1px solid #F2F2F2;
+  padding: 5px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.comment_body__suggestions__item--focused {
+  background-color: #F2F2F2;
+}
+
+.comment_body__suggestions__item__highlight {
+  color: black;
+}
+
+/*
+*
+* Mentions-specific classes
+*
+*/
+
+.form-control__input {
+  border: none !important;
+  height: 50px !important;
+  outline: none;
+}
+
+.form-control__suggestions__list {
+  border: 2px solid $brand-warning;
+  position:relative;
+}
+
+.form-control__suggestions__item {
+  padding: 5px !important;
+  position: relative;
+  z-index: 50;
+  width: 100%;
+}
+
+.form-control__suggestions__item--focused {
+  background-color: rgba(0,0,0,.1);
+  // position:absolute;
+  // top: 0;
+  width: 100%;
+  z-index: 100;
+}

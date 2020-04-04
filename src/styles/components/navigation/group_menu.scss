@@ -1,0 +1,75 @@
+$group-menu-bg-color: #2c2540;
+$group-menu-item-bg-color: #3b3155;
+
+.group-menu {
+  background-color: $group-menu-bg-color;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  width: 40px;
+  z-index: 10;
+
+  .nav {
+    li {
+      a:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.group-menu-sidebar {
+  background-color: $group-menu-bg-color;
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  width: 40px;
+  z-index: 20;
+}
+
+.nav.nav-pills {
+  li.group-menu-item {
+    padding: 2px 4px;
+
+    a {
+      background-color: $group-menu-item-bg-color;
+      font-size: 18px;
+      padding: 9px 0 7px;
+    }
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+      a {
+        background-color: $color-1;
+        color: #fff;
+      }
+    }
+  }
+
+  li.group-menu-item-content {
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+.group-menu-content {
+  @include transition(margin-left 0.2s);
+
+  background-color: $group-menu-bg-color;
+  color: #fff;
+  height: 100%;
+  margin-left: -260px;
+  padding-left: 40px;
+  position: fixed;
+  top: 50px;
+  width: $left-menu-padding;
+  z-index: 10;
+
+  &.expanded {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,237 @@
+.top-search-bar {
+  // background-color: $workspace-background;
+  display: flex;
+  height: 48px;
+  padding-left: 10px;
+  width: 100%;
+  font-size: 13px;
+  &-radius {
+    border-top-left-radius: 20px;
+  }
+
+  & > .top-bar-right-menu {
+    display: inline-flex;
+    margin-left: auto;
+
+    .top-search-bar_right-button {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 40px;
+
+      &.notif-bell {
+        .has-unread {
+          opacity: 1 !important;
+          z-index: 1;
+        }
+      }
+
+      .green-add-box {
+        // color: $colour-green-2 !important;
+      }
+
+      .icon-users {
+        display: flex;
+
+        .icon-right {
+          margin-left: -15px;
+        }
+      }
+
+      .icon-people {
+        color: #60508e !important;
+        font-size: 18px;
+      }
+    }
+  }
+
+  & > .top-bar-left-menu {
+    display: inline-flex;
+
+    .breadcrumbs {
+      margin-top: 2px;
+    }
+  }
+
+  .btn-like-search-form {
+    margin-top: 6px;
+    border: none;
+    background-color: transparent;
+    color: #777;
+    .material-icons.icon-fa {
+      font-size: 18px;
+    }
+
+    & > .icon-container {
+      display: inline-block;
+      color: #63a0c3;
+    }
+  }
+}
+
+.search-result-modal {
+  &--notif-modal {
+    padding: 10px 0;
+    overflow: hidden;
+    .close-btn {
+      position: absolute;
+      right: 18px;
+      top: 15px;
+    }
+    .notification-listing {
+      min-height: 378px;
+      .notification-listing_header {
+        justify-content: start;
+        span {
+          padding: 0 5px;
+        }
+        .mark-all {
+          border: 0;
+        }
+      }
+      width: 100%;
+      overflow-y: auto;
+      li.activity-item {
+        list-style: none;
+      }
+    }
+  }
+  position: absolute;
+  top: 64px;
+  left: 42px;
+  right: 42px;
+  min-height: 400px;
+  max-height: calc(100vh - 128px);
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid $colour-grey-light-1;
+
+  &:focus {
+    outline: none;
+  }
+
+  .top-part {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid $colour-grey-light-1;
+
+    .flex-pull-left {
+      margin-right: auto;
+      width: 100%;
+
+      .form-group {
+        margin-bottom: 0;
+
+        .icon-container,
+        .search-field {
+          display: inline-block;
+        }
+
+        .icon-container {
+          color: #5cb3cb;
+        }
+
+        .search-field {
+          width: calc(100% - 24px);
+          display: inline-block;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-part {
+    padding: 16px;
+    color: #555;
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+
+    .search-result-item {
+      margin: 16px 0 8px;
+      font-weight: 500;
+      border-bottom: 1px solid $colour-grey-light-1;
+      padding-bottom: 8px;
+
+      a {
+        color: inherit;
+      }
+
+      &:first {
+        border-top: 1px solid $colour-grey-light-1;
+      }
+
+      & > .search-result-label {
+        display: inline-block;
+        min-width: 64px;
+        margin-right: 12px;
+        font-weight: 400;
+      }
+
+      & > .search-result-name {
+        margin: 0 12px;
+        font-size: 16px;
+        font-weight: 800;
+
+        .icon-container {
+          display: inline-block;
+
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+
+      & > .search-result-path {
+        margin-left: 12px;
+        font-weight: 400;
+      }
+
+      & > .card-body {
+        &.hidden {
+          display: none;
+        }
+        text-overflow: ellipsis;
+        line-height: 1.4em;
+        max-height: calc(1.4em * 8);
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+    }
+
+    .recent-search-title {
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .recent-search-item {
+      font-weight: 400;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $colour-grey-light-1;
+      cursor: pointer;
+    }
+  }
+}
+
+.search-result-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(100, 100, 100, 0.66);
+  z-index: 9999;
+}
+.notification-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(100, 100, 100, 0.66);
+  z-index: 9999;
+}

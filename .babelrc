@@ -1,0 +1,17 @@
+{
+  "presets": ["env", "react", "stage-2"],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.card-priority-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  .card-priority-control__hint {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 140px;
+    margin-top: -10px;
+    color: #555;
+    pointer-events: none;
+  }
+
+  .card-priority-control__option {
+    width: 24px;
+    color: #555;
+    cursor: pointer;
+
+    &.card-priority-control__option--active {
+      + .card-priority-control__hint {
+        display: initial;
+      }
+
+      ~ .card-priority-control__option {
+        color: #ccc;
+      }
+    }
+
+    &.card-priority-control__option--default {
+      position: absolute;
+      top: 50%;
+      left: 220px;
+      margin-top: -8px;
+      font-size: 16px;
+
+      &.card-priority-control__option--active {
+        display: none;
+      }
+    }
+  }
+
+  .card-priority-control__options {
+    display: flex;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+
+      .card-priority-control__hint {
+        display: none;
+      }
+
+      .card-priority-control__option {
+        color: #555;
+
+        &:hover {
+          + .card-priority-control__hint {
+            display: initial;
+          }
+
+          ~ .card-priority-control__option {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}

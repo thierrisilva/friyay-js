@@ -1,0 +1,116 @@
+.right-action-bar-container {
+  display: flex;
+  position: fixed;
+  right: 0;
+  transition: all 0.33s ease-in-out;
+  width: 0;
+  z-index: 22;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border: 1px solid #f2f2f2;
+  bottom: 0;
+
+  &.expanded {
+    width: 340px;
+    background-color: #fff;
+    & > .icon-container {
+      display: none;
+    }
+    .right-action-bar-container_submenu-outer-container {
+      flex: 1 0 0;
+      margin-right: 60px;
+      border-top-left-radius: 20px;
+    }
+    .right-action-bar {
+      display: flex;
+      border-left: 0px;
+      // border-top: 1px solid #f2f2f2;
+      .grey-icon-button {
+        width: 40px;
+      }
+    }
+    .right-action-bar_button {
+      // border-bottom: 1px solid #f2f2f2;
+    }
+  }
+
+  .right-action-bar_button.active,
+  .right-action-bar_button:not(.right-action-bar_button--disabled):hover {
+    color: $colour-yellow-1 !important;
+  }
+
+  .right-action-bar_button--disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover .right-action-bar {
+    display: flex;
+  }
+
+  &:hover > .icon-container {
+    display: none;
+  }
+
+  & > .icon-container {
+    position: fixed;
+    z-index: 999;
+    right: 3px;
+    width: 10px;
+    height: 50px;
+    border-radius: 5px;
+    background: #dddddd;
+    i {
+      font-size: 10px;
+      color: #999999;
+    }
+  }
+
+  .right-action-bar {
+    display: none;
+    .right-action-bar_button {
+      height: 40px;
+    }
+    & > .right-action-bar_button {
+      height: 60px;
+    }
+  }
+}
+
+.right-action-bar-container_submenu-outer-container {
+  display: flex;
+  flex: 0 0 0;
+  min-height: $right-menu-height;
+  overflow: hidden;
+  width: 300px;
+}
+
+.user-header {
+  + .content-container {
+    .right-action-bar-container_submenu-outer-container {
+      height: calc(100vh - 190px);
+    }
+  }
+}
+
+.right-action-bar_segment {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.right-action-bar_button-container {
+  display: block;
+  height: 40px;
+
+  &.min-height-1 {
+    @media (max-height: 600px) {
+      display: none;
+    }
+  }
+  &.min-height-2 {
+    @media (max-height: 725px) {
+      display: none;
+    }
+  }
+}

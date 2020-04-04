@@ -1,0 +1,71 @@
+.tip-details {
+	line-height: 40px;
+	width: 65%;
+	display: flex;
+	.avatar-wrapper {
+		.item-user-name {
+			display: block;
+			line-height: 36px;
+			padding-left: 5px;
+			padding-right: 5px;
+			.item-avatar {
+				width: 25px;
+				height: 25px;
+				border-radius: 15px;
+			}
+		}
+	}
+	.details-wrapper {
+		display: flex;
+		width: 100%;
+		cursor: pointer;
+
+		.item-title {
+			cursor: pointer;
+			margin: 0;
+			padding: 0 10px 0 5px;
+			line-height: 40px;
+			font-weight: 500;
+			color: #555;
+		}
+
+		.item-topic {
+			font-size: 12px;
+			margin-top: 1px;
+
+			a {
+				color: #888;
+				&:hover {
+					color: #555;
+				}
+			}
+		}
+		.item-user-name {
+			color: #555;
+		}
+	}
+}
+
+.card-details-preview_content {
+
+	.item-text {
+		flex: 1 0 auto;
+		font-size: 16px;
+		cursor: text;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%!important;
+
+			&.fr-fil {
+				margin-left: 0
+			}
+
+			&.fr-fir {
+				margin-right: 0
+			}
+		}
+	}
+
+}

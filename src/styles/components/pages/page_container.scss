@@ -1,0 +1,39 @@
+.left-menu-active {
+  .page-container {
+    padding-left: $left-menu-padding;
+  }
+}
+
+.right-bar-active {
+  .page-container {
+    padding-right: $right-action-bar-padding;
+  }
+}
+
+.expanded-right-bar {
+  .page-container {
+    padding-right: $right-action-bar-padding + $rab-content-panel-width;
+  }
+}
+
+.page-container {
+  @include transition(padding-left 0.2s);
+  @include transition(padding-right 0.2s);
+
+  min-width: 480px;
+  padding-left: 0;
+  padding-top: 50px;
+}
+
+.page-container-full {
+  height: 100%;
+  overflow: auto;
+
+  .full-height {
+    height: 100%;
+  }
+  .logout {
+    float: right;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,92 @@
+.icon-container {
+  align-items: center;
+  display: flex;
+  flex: 0 0 24px;
+  height: 25px;
+  justify-content: center;
+  width: 24px;
+
+  &.small {
+    height: 16px;
+    width: 16px;
+  }
+
+  &.medium {
+    height: 20px;
+    width: 20px;
+  }
+
+  &.large {
+    height: 30px;
+    width: 30px;
+  }
+
+  &.x-large {
+    height: 40px;
+    width: 40px;
+  }
+
+}
+
+.material-icons {
+  //without these it will be 24px;
+
+  &.small {
+    font-size: 16px;
+  }
+
+  &.medium {
+    font-size: 20px;
+  }
+
+  &.large {
+    font-size: 30px;
+  }
+
+  &.x-large {
+    font-size: 40px;
+  }
+
+
+  &.blue {
+    color: $colour-blue-1;
+  }
+  &.green {
+    color: $colour-green-1;
+  }
+  &.grey {
+    color: $colour-grey-light-3;
+  }
+  &.orange {
+    color: $colour-orange-1;
+  }
+  &.red {
+    color: $colour-red-1;
+  }
+}
+
+.material-icons {
+  &.icon-fa {
+    font-size: 14px;
+
+    &.small {
+      font-size: 13px;
+    }
+
+    &.medium {
+      font-size: 14px;
+    }
+
+    &.large {
+      font-size: 20px;
+    }
+
+    &.x-large {
+      font-size: 32px;
+    }
+  }
+}
+
+i.glyphicon {
+  font-size: 12px;
+}

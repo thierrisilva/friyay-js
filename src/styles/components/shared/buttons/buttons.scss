@@ -1,0 +1,72 @@
+@import "options-dropdown-button";
+
+
+.icon-button {
+  @extend .yellow-hover-link;
+  font-weight: 400;
+  justify-content: center;
+  width: 30px;
+
+  &.small {
+    width: 20px;
+  }
+  &.medium {
+    width: 24px;
+  }
+  &.large {
+    width: 36px;
+  }
+}
+
+.yellow {
+  color: $colour-yellow-1;
+}
+
+.yellow-hover {
+  &:hover{
+    color: $colour-yellow-1;
+    text-decoration-color: $colour-yellow-1;
+  }
+}
+
+
+.revolving-toggle-button {
+  position: relative;
+  width: 18px; 
+  height: 10.39px;
+  background-color: $colour-grey-1;
+  margin: 5.20px 0;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 5.20px solid $colour-grey-1;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 5.20px solid $colour-grey-1;
+  }
+
+  &:hover,
+  &.active {
+    background-color: $colour-yellow-1;
+
+    &:before {
+      border-bottom-color: $colour-yellow-1;
+    }
+
+    &:after {
+      border-top-color: $colour-yellow-1;
+    }
+  }
+}

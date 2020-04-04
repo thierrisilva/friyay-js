@@ -1,0 +1,10 @@
+.progress-bar {
+  .progress-bar__status {
+    max-width: 100%;
+
+    &.progress-bar__status--assigned {
+    }
+    &.progress-bar__status--completed {
+    }
+  }
+}

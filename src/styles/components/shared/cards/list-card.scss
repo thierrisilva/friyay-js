@@ -1,0 +1,107 @@
+.list-card {
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+
+  > .add-card-card_content {
+    height: 40px;
+  }
+
+  &:hover {
+    .list-card__nested-cards-add,
+    .list-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret .list-card__nested-cards-caret {
+    visibility: visible;
+  }
+
+  .nest-card-zone {
+    margin-left: -6px;
+    height: 65px;
+    padding-top: 18px;
+  }
+}
+
+.list-card__wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.list-card__nested-cards-add {
+  visibility: hidden;
+}
+
+.list-card__nested-cards-caret {
+  margin-right: -7px;
+}
+
+.list-card__nested-cards {
+  padding: 0 50px 8px 50px;
+}
+
+.list-card__nested-card {
+  font-weight: normal !important;
+}
+
+.custom-drag-preview .list-card {
+  @extend .dragging-shadow;
+  background: transparent !important;
+}
+
+.list-card_avatar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+}
+
+.list-card_title-topic-container {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 320px);
+}
+
+.list-card_title {
+  color: #555;
+  font-weight: 500;
+  line-height: 20px;
+  max-width: calc(100% - 150px);
+  overflow: hidden;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-card_topic-link {
+  color: #888;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 150px;
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:hover {
+    color: #555;
+  }
+}
+
+.list-card_label-container {
+  padding: 0 15px;
+  width: 150px;
+}
+
+.list-card_actions-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 120px;
+}

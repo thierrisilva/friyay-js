@@ -1,0 +1,28 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0);
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+
+  &.presented {
+    background-color: hsla(0,0%,83%,.9);
+  };
+}
+
+
+.modal-container_right {
+  background-color: #fff;
+  bottom: 0;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: all 0.45s ease-in-out;
+
+  &.presented {
+    right: 0;
+  }
+}

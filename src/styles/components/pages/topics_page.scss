@@ -1,0 +1,72 @@
+.topics-page {
+  padding-top: 25px;
+  min-height: 100vh;
+  background-color: #FFF;
+
+  h5 {
+    font-weight: 400;
+  }
+
+  .topics-page-title {
+    color: $gray;
+    font-size: 36px;
+    margin-top: 0;
+    font-weight: 500;
+  }
+  .hex-grid {
+    color: $gray-light;
+    transition: width 0.2s;
+    .btn-link {
+      color: $gray-light;
+      text-decoration: none;
+    }
+    .btn-link:hover {
+      color: darken($gray-light, 10%);
+    }
+    .create-hex {
+      .topic-title {
+        border: none;
+        border-bottom: 1px solid $gray-light;
+        width: 90%;
+        outline: none;
+        font-weight: 300;
+      }
+    }
+    .topic-link {
+      position: relative;
+      top: -10px;
+      text-decoration: none;
+      display: none;
+    }
+    .hex:not(.create-hex) {
+      &:hover {
+        background: $color-1;
+        color: white;
+        .topic-link {
+          color: white;
+          display: inline;
+        }
+        .inner {
+          h5,div {
+            color: white;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.app-container:not(.left-menu-active) {
+  .topics-page {
+    .hex-grid {
+      width: 1340px;
+      .hex:nth-child(9n-3) {
+        margin-left: 12px;
+      }
+      .hex:nth-child(13n-5) {
+        margin-left: 99px;
+      }
+    }
+   }
+}

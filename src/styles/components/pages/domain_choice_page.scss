@@ -1,0 +1,71 @@
+.choose-domain-page-header {
+  input {
+    border-radius: 4px;
+    padding-left: 32px;
+  }
+
+  .add-workspace-header-button {
+    float: right;
+    position: relative;
+    top: 32px;
+    font-size: 1.66rem;
+  }
+
+  .domain-page-title {
+    font-weight: 800;
+    color: #555;
+  }
+
+  .glyphicon {
+    &.glyphicon-search {
+      position: relative;
+      top: -24px;
+      left: 10px;
+      color: #555;
+    }
+  }  
+}
+.col-scrollable {
+  height: calc(100vh - 144px);
+  overflow: scroll;
+}
+
+.choose-domain-page-content{
+  .add-workspace-button {
+    margin-top: 16px;
+    font-size: 1.66rem;
+  }
+  .workspace-list {
+    .workspace-item {
+      border-bottom: 1px solid #fafafa;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      span {
+        display: inline-block;
+        padding: 4px;
+
+        a {
+          color: #555;
+          font-weight: 300;
+          font-size: 2rem;
+        }
+      }
+
+      .logo {
+        display: inline-block;
+        text-transform: capitalize;
+        width: 4rem;
+        height: 36px;
+        margin: 4px;
+        padding: 4px 0px;
+        background-color: #b366a4;
+        border-radius: 2px;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #eee;
+        text-align: center;
+      }
+    }
+  }
+}

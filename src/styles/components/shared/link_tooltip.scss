@@ -1,0 +1,39 @@
+.link-tooltip-container {
+  position: relative;
+  cursor: pointer;
+
+  .link-tooltip,
+  .link-tooltip.top {
+    display: none;
+    position: absolute;
+    width: auto;
+    white-space: nowrap;
+    background: $gray-dark;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid $gray-darker;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    z-index: 20;
+  }
+
+  .link-tooltip.left {
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    left: auto;
+  }
+  .link-tooltip.right {
+    left: calc(100% + 5px);
+    top: 0;
+  }
+  .link-tooltip.bottom {
+    top: calc(100% + 5px);
+  }
+}
+.link-tooltip-container:hover {
+  .link-tooltip {
+    display: block;
+  }
+}

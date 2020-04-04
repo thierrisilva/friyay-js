@@ -1,0 +1,28 @@
+.page-modal {
+  .navbar-fixed-top {
+    border-left: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 1px solid rgba(0, 0, 0, 0.8);
+  }
+
+  .tab-content#main-form-tab-content {
+    padding-top: 50px;
+  }
+}
+
+.page-modal-design-v2 {
+  padding: 20px;
+  .modal-content {
+    border: none;
+    border-radius: 15px;
+  }
+
+  .navbar-fixed-bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .navbar-fixed-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}

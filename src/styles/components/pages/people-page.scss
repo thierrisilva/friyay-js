@@ -1,0 +1,60 @@
+.person-card {
+  width: 200px;
+  height: 200px;
+  background: white;
+  margin: 0 15px 15px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: $gray;
+}
+
+.person-card_content {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 150px;
+  justify-content: space-between;
+  text-align: center;
+
+  h5 {
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $gray;
+    margin-top: 20px;
+  }
+}
+
+.person-card_link {
+  @extend .dark-grey-link;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px;
+}
+
+.person-card_footer {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+}
+
+.person-card_button-container {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+.person-card_info-row {
+  align-items: center;
+  background-color: $colour-yellow-1;
+  border-bottom: 1px solid white;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}

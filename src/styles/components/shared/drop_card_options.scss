@@ -1,0 +1,67 @@
+.drop-card-options {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	border-radius: 3px;
+	padding: 10px 5px;
+	background: $gray-dark;
+	width: 110px;
+	box-shadow: 0 2px 8px 2px rgba(0,0,0,0.2);
+
+	.drop-option-item.is-over {
+		opacity: 0.6;
+	}
+
+	.drop-option-item {
+		.btn {
+			width: 100%;
+			border-radius: 3px;
+			span {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.add-drop-option {
+		.btn-drop-target {
+			background: white;
+			color: $color-1 !important;
+		}
+	}
+
+	.move-drop-option {
+		margin-bottom: 10px;
+		.btn-drop-target {
+			background: $color-1;
+			color: white !important;
+		}
+	}
+}
+.menu-left {
+	.list-group-topics, .subhive-nav-row {
+		.drop-card-options {
+			position: fixed;
+			left: 180px;
+			z-index: 99;
+			width: 230px;
+			padding: 0;
+			.btn {
+				padding: 15px;
+				border-radius: 0;
+				font-size: 16px;
+			}
+			.move-drop-option {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.topic-page {
+	.hex-grid {
+		.drop-card-options {
+			right: 2px;
+			top: 40px;
+			z-index: 999;
+		}
+	}
+}

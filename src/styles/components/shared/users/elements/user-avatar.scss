@@ -1,0 +1,42 @@
+.avatar-letter {
+  width: 25px;
+  height: 25px;
+  background-color: #f4f4f4;
+  color: #777777;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 25px;
+  text-align: center;
+}
+
+.avatar-letter-user-tab {
+  width: 150px;
+  height: 150px;
+  background-color: #f4f4f4;
+  color: #777777;
+  border-radius: 50%;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 150px;
+  text-align: center;
+  font-size: 70px;
+}
+
+.avatar-big {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  line-height: 100px;
+  font-size: 70px;
+}
+
+.user-avatar_image {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.user-avatar_link {
+  // color: #8a8b8c;
+  display: block;
+}

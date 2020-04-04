@@ -1,0 +1,131 @@
+.timeline-card {
+  &:hover {
+    .timeline-card__nested-cards-add,
+    .timeline-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret {
+    .timeline-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  .timeline-card__border {
+    width: 10px;
+    border-radius: 2px;
+    cursor: col-resize;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  .timeline-card__completion {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .timeline-card__content {
+    flex-grow: 1;
+    padding: 10px 0;
+
+    &:hover {
+      > .timeline-card__extra {
+        display: flex;
+      }
+    }
+
+    &:only-child {
+      padding: 10px;
+    }
+  }
+
+  .timeline-card__extra {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+
+  .timeline-card__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .timeline-card__nested-card {
+    font-weight: normal;
+  }
+
+  .timeline-card__nested-cards {
+  }
+
+  .timeline-card__nested-cards-add {
+    visibility: hidden;
+  }
+
+  .timeline-card__nested-cards-caret {
+    width: 20px;
+  }
+
+  .timeline-card__plan-label {
+    margin-right: 5px;
+  }
+
+  .timeline-card__title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .timeline-card__wrapper {
+    display: flex;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+
+    &.timeline-card--compact {
+      .timeline-card__content {
+        padding: 10px 12px;
+      }
+    }
+
+    .nest-card-zone {
+      height: 53px;
+      margin-top: -32px;
+      margin-bottom: -32px;
+      margin-left: -12px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.timeline-card-date-drag {
+  width: 150px;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #fff;
+  font-weight: bold;
+  color: #666;
+  z-index: 100;
+
+  &.timeline-card-date-drag--due {
+    text-align: right;
+  }
+}
+
+.timeline-card-drag-preview {
+  width: 300px;
+  z-index: 100;
+}
+
+.custom-drag-preview {
+  .planning-view__no-due-card {
+    width: 300px;
+    .timeline-card__wrapper {
+      background: transparent;
+      margin: 3px;
+    }
+  }
+}

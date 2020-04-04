@@ -1,0 +1,36 @@
+.active-filters-panel {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  // background: #fafafa;
+  // padding: 10px;
+}
+
+.active-filters-panel_title {
+  color: $colour-grey-1;
+  font-size: 14px;
+  font-weight: 400;
+  //margin: 0 25px;// causes empty space when no content
+}
+
+.active-filter-chip {
+  align-items: center;
+  background-color: $colour-grey-light-2;
+  border-radius: 5px;
+  color: $colour-grey-1;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0 5px 10px;
+}
+
+.active-filter-chip_name {
+  display: flex;
+  flex: 1 0 0;
+}
+
+.active-filter-chip_remove-button {
+  color: $colour-grey-1;
+}

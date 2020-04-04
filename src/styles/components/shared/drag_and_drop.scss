@@ -1,0 +1,44 @@
+.custom-drag-preview {
+  padding: 3px;
+  & > div {
+    background: #bbbbbb;
+    opacity: 0.7;
+    color: white;
+  }
+  .nest-card-zone {
+    display: none;
+  }
+}
+
+.dragging-shadow {
+  box-shadow: 1px 1px 2px 2px $colour-grey-1;
+}
+
+.hide-dragged-item {
+  display: none;
+}
+
+.ctrl-key-drag-info {
+  align-items: center;
+  background-color: $colour-grey-dark-1;
+  border-radius: 5px;
+  bottom: -100px;
+  box-shadow: 0 3px 8px $colour-grey-dark-3;
+  color: #fff;
+  display: flex;
+  opacity: 0.9;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  transition: all 0.4s ease-in-out;
+  width: 300px;
+
+  &.on-screen {
+    bottom: 10px;
+  }
+}
+
+.ctrl-key-drag-info_icon {
+  color: #fff;
+  margin-right: 10px;
+}

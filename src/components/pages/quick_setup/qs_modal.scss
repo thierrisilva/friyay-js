@@ -1,0 +1,105 @@
+$highlightColor: #56ccf2;
+$defaultColor: #a0a0a0;
+
+.qs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 15px;
+  background: rgba(51, 51, 51, 0.3);
+  z-index: 101;
+  .qs-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: none;
+    background: #fafafa;
+    outline: none;
+    padding: 2px;
+    position: relative;
+    .no-quick-setup {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .header {
+      padding: 10px;
+      margin: 0 2px;
+      border-bottom: solid 1px $defaultColor;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .header-title {
+        padding-right: 25px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .tabs-list {
+        flex: 1;
+        display: flex;
+      }
+      .tab-item {
+        padding: 0 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: $defaultColor;
+        &.selected {
+          color: $highlightColor;
+        }
+      }
+    }
+    .body {
+      padding: 20px;
+      display: flex;
+      flex: 1;
+      height: 100%;
+      flex-direction: column;
+      .info-text {
+        font-size: 18px;
+        padding-bottom: 20px;
+      }
+    }
+    .footer-icon {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      width: 80px;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+    .footer-icon-arrow {
+      color: #ffffff;
+      font-size: 40px;
+    }
+    .prev {
+      left: 0;
+      z-index: 2;
+      padding-right: 15px;
+      background-color: #bb6bd9;
+      border-top-right-radius: 100%;
+    }
+    .next {
+      right: 0;
+      z-index: 5;
+      padding-left: 15px;
+      background-color: #6fcf97;
+      border-top-left-radius: 100%;
+    }
+    .qs-close-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+    }
+  }
+}

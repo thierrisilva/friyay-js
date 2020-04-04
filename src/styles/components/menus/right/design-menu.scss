@@ -1,0 +1,49 @@
+.Right-design {
+  display: flex;
+  &-picker-icon {
+    border: 1px solid black;
+  }
+  &-upload {
+    margin-bottom: 0;
+    button {
+      padding: 0;
+    }
+  }
+  &-name {
+    flex: 1;
+  }
+  &-color-popover {
+    position: absolute;
+    z-index: 2;
+    left: 50px;
+  }
+
+  &-color-cover {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  &-span {
+    display: none;
+    &-active {
+      display: block;
+    }
+  }
+  &-add {
+    &-color {
+      border-bottom: 0;
+    }
+    &-wrapper {
+      padding: 10px 20px;
+      input {
+        width: 100% !important;
+      }
+    }
+  }
+  &-btn-wrapper {
+    margin: 20px;
+    text-align: right;
+  }
+}

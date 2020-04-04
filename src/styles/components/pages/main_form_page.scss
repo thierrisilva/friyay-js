@@ -1,0 +1,227 @@
+@import './subtopic_form_page';
+
+/* Main form height setup for correct bottom navbar position */
+#main-form-tab-content {
+  height: 100%;
+  letter-spacing: 0.01em;
+  .tab-pane {
+    height: 100%;
+    form.main-form {
+      height: 100%;
+      .carousel {
+        height: 100%;
+        .carousel-inner {
+          height: 100%;
+          margin-top: -92px;
+          padding-top: 92px;
+          position: fixed;
+          overflow-x: hidden;
+          overflow-y: auto;
+          top: 92px;
+          .panel-body {
+            position: absolute;
+            width: 100%;
+            overflow-y: auto;
+            height: 100%;
+            padding-bottom: 70px;
+          }
+          .query-info {
+            color: $gray-light;
+
+            strong {
+              color: $text-color;
+            }
+
+            a.query-clear-link {
+              font-size: 11px;
+            }
+          }
+
+          .item {
+            min-height: 100%;
+          }
+
+          .topic-title-input-group {
+            position: relative;
+            width: 350px;
+            margin: 0 auto 0 auto;
+
+            #topic_title {
+              position: absolute;
+              top: 180px;
+              left: 0;
+              right: 0;
+              margin: 0 auto 0 50px;
+              width: 242px;
+              font-size: 24px;
+              font-weight: 100;
+              text-align: center;
+            }
+          }
+
+          .main-form-description {
+            height: 150px;
+            border: 1px solid #eee;
+            padding: 10px;
+          }
+
+          #topic_description {
+            height: 150px;
+            width: 95%;
+            border: 1px solid #eee;
+            margin: 20px;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    form.form-horizontal {
+      .carousel {
+        .carousel-inner {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .navbar-fixed-bottom {
+    border-top: 1px solid $gray-lighter;
+    padding: 15px;
+    .btn {
+      padding: 10px 12px;
+      text-decoration: none;
+      color: $brand-primary;
+    }
+    .btn {
+      color: $brand-primary;
+    }
+    .btn-save {
+      font-weight: 400;
+      border-radius: 1px;
+      box-shadow: 0px 0px 0px 1.5px #5fafd9;
+      border: none;
+      background: white;
+    }
+    .btn-save:hover {
+      background: lighten($brand-primary, 45%);
+    }
+  }
+}
+
+#main-form-tab-content {
+  &.tab-content.card-form-content {
+    padding-top: 0;
+    .carousel-inner {
+      padding-top: 43px !important;
+    }
+    .card-form-close-actions {
+      position: fixed;
+      left: -110px;
+      width: 110px;
+      .material-icons {
+        color: white;
+        font-size: 28px;
+      }
+      .btn-minimize {
+        padding: 15px 10px;
+        margin-right: 8px;
+        margin-bottom: 2px;
+        border-bottom: 2px solid white;
+      }
+      .btn-external-link {
+        transform: rotate(270deg);
+        padding-right: 15px;
+        .material-icons {
+          font-size: 23px;
+        }
+      }
+      .btn-close {
+        position: relative;
+        top: 10px;
+        padding-right: 5px;
+        right: 2px;
+      }
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.carousel {
+  .main-form-content-nav {
+    position: fixed;
+    padding-top: 5px;
+    width: 100%;
+    z-index: 10;
+    li {
+      a {
+        background: none;
+        color: $gray-75;
+        font-size: 14px;
+      }
+    }
+    li.active {
+      a {
+        background: none;
+        color: $color-1;
+      }
+    }
+  }
+}
+
+.plan-tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-bottom: 300px;
+
+  .plan-tab-content__date {
+    .SingleDatePicker_picker {
+      z-index: 20;
+    }
+  }
+
+  .plan-tab-content__input {
+    width: 60px;
+    height: 36px;
+    margin-right: 10px;
+    padding: 0 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+    text-align: center;
+  }
+
+  .plan-tab-content__input-margin-left {
+    margin-left: 2.5%;
+  }
+
+  .plan-tab-content__input-label {
+    color: #555;
+  }
+
+  .plan-tab-content__field {
+    width: 100%;
+    margin-top: 25px;
+
+    &.plan-tab-content__field--half {
+      width: 50%;
+    }
+  }
+
+  .plan-tab-content__label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #999;
+  }
+
+  .plan-tab-content__priority {
+    height: 36px;
+  }
+
+  .plan-tab-content__search {
+  }
+}

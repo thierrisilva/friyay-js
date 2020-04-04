@@ -1,0 +1,30 @@
+.tab-pane {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+
+  .is-over {
+    .tab-pane__tab {
+      color: #555;
+    }
+  }
+
+  .tab-pane__tab {
+    padding: 0 20px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &.tab-pane__tab--active {
+      font-size: 28px;
+      font-weight: bold;
+      color: #369acf;
+      overflow: visible;
+    }
+  }
+}

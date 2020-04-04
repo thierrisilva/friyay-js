@@ -1,0 +1,16 @@
+.card-progress-indicator {
+  background-color: $colour-grey-light-2;
+  display: flex;
+  flex: 1 1 0;
+  height: 2px;
+  margin: 5px 2px;
+  position: relative;
+}
+
+.card-progress-indicator_progress-bar {
+  background-color: $colour-green-1;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}

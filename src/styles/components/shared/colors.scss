@@ -1,0 +1,76 @@
+.bg-color-1 { background-color: $color-1 }
+.bg-color-2 { background-color: $color-2 }
+.bg-color-3 { background-color: $color-3 }
+.bg-color-4 { background-color: $color-4 }
+.bg-color-5 { background-color: $color-5 }
+.bg-color-6 { background-color: $color-6 }
+.bg-color-7 { background-color: $color-7 }
+
+.border-color-1 { border-color: $color-1 }
+.border-color-2 { border-color: $color-2 }
+.border-color-3 { border-color: $color-3 }
+.border-color-4 { border-color: $color-4 }
+.border-color-5 { border-color: $color-5 }
+.border-color-6 { border-color: $color-6 }
+.border-color-7 { border-color: $color-7 }
+
+.text-color-1 { color: $color-1; &:hover,&:active,&:focus { color: lighten($color-1, 10%) } }
+.text-color-2 { color: $color-2; &:hover,&:active,&:focus { color: lighten($color-2, 10%) } }
+.text-color-3 { color: $color-3; &:hover,&:active,&:focus { color: lighten($color-3, 10%) } }
+.text-color-4 { color: $color-4; &:hover,&:active,&:focus { color: lighten($color-4, 10%) } }
+.text-color-5 { color: $color-5; &:hover,&:active,&:focus { color: lighten($color-5, 10%) } }
+.text-color-6 { color: $color-6; &:hover,&:active,&:focus { color: lighten($color-6, 10%) } }
+.text-color-7 { color: $color-7; &:hover,&:active,&:focus { color: lighten($color-7, 10%) } }
+
+.btn-color-1 { background-color: $color-1; color: #fff; }
+.btn-color-1 { &:hover,&:active,&:focus { background-color: lighten($color-1, 10%); color: #fff; } }
+
+.btn-color-2 { background-color: $color-2; color: #fff; }
+.btn-color-2 { &:hover,&:active,&:focus { background-color: darken($color-2, 10%); color: #fff; } }
+
+.btn-color-3 { background-color: $color-3; color: #fff; }
+.btn-color-3 { &:hover,&:active,&:focus { background-color: darken($color-3, 10%); color: #fff; } }
+
+.btn-color-4 { background-color: $color-4; color: #fff; }
+.btn-color-4 { &:hover,&:active,&:focus { background-color: darken($color-4, 10%); color: #fff; } }
+
+.btn-color-5 { background-color: $color-5; color: #fff; }
+.btn-color-5 { &:hover,&:active,&:focus { background-color: darken($color-5, 10%); color: #fff; } }
+
+.btn-color-6 { background-color: $color-6; color: #fff; }
+.btn-color-6 { &:hover,&:active,&:focus { background-color: darken($color-6, 10%); color: #fff; } }
+
+.btn-color-7 { background-color: $color-7; color: #fff; }
+.btn-color-7 { &:hover,&:active,&:focus { background-color: darken($color-7, 10%); color: #fff; } }
+
+.color-block {
+  border: 1px solid #999;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  float: left;
+  height: 30px;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  width: 30px;
+  justify-content: center;
+}
+.colors-collection .color-block {
+  height: 18px;
+  width: 18px;
+}
+.colors-LC-form .color-block{
+  height: 23px;
+  width: 23px;
+}
+.color-block.color-1 { background-color: $color-1; border-color: darken($color-1, 10%) }
+.color-block.color-2 { background-color: $color-2; border-color: darken($color-2, 10%) }
+.color-block.color-3 { background-color: $color-3; border-color: darken($color-3, 10%) }
+.color-block.color-4 { background-color: $color-4; border-color: darken($color-4, 10%) }
+.color-block.color-5 { background-color: $color-5; border-color: darken($color-5, 10%) }
+.color-block.color-6 { background-color: $color-6; border-color: darken($color-6, 10%) }
+.color-block.color-7 { background-color: $color-7; border-color: darken($color-7, 10%) }
+
+
+$icon-color-grey: #D9D9D9;
+$text-color-grey: darken(#D9D9D9, 10%);

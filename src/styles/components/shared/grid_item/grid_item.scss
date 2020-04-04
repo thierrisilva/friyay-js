@@ -1,0 +1,231 @@
+.panel-default {
+  border: none !important;
+}
+
+.panel {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
+}
+
+.panel-body {
+  max-width: 100%;
+}
+
+.grid-item {
+  color: $gray;
+  border-radius:3px;
+
+  .panel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0 !important;
+    padding: 12px !important;
+    background-color: transparent;
+
+    a, i, .count-icon {
+      height: 2rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .close {
+    font-size: 21px;
+  }
+  .item-topic {
+    white-space: nowrap;
+  }
+  .item-title {
+    min-height: 52px;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.025em;
+    line-height: 1.25;
+  }
+  .item-body img,
+  .item-body iframe {
+    /* we have to use !important here to override element styling from editor */
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .item-body a {
+    color: #888;
+  }
+
+  .item-text {
+    margin-bottom: 15px;
+
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    h4, h5, h6 { font-size: 16px; }
+
+    &.item-text-expandable {
+      height: 100px;
+      transition: height 500ms;
+      &:hover {
+        height: 175px;
+        transition: height 500ms;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .fr-emoticon {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: baseline;
+      line-height: 1em;
+    }
+  }
+  .carousel {
+    //background: url(https://placehold.it/300x250?text=Image+is+being+processed.) no-repeat;
+    //background-size: cover;
+  }
+  .title-truncated {
+    display: inline-block;
+  }
+  .title-full {
+    display: none;
+  }
+  .item-images-preview-list {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+
+    .carousel-image-box {
+      background: no-repeat center center;
+      background-size: cover;
+      height: 128px;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    @for $i from 1 through 10 {
+      #carousel-image-preview-#{$i} {
+        border-radius: 3px !important;
+      }
+    }
+  }
+
+  .render-body {
+    margin-top: 5px;
+  }
+}
+
+.grid-item:hover {
+  .title-truncated {
+    display: none;
+  }
+  .title-full {
+    display: inline-block;
+  }
+}
+
+.grid-item.placeholder {
+  border-style: dashed;
+  border-width: 3px;
+}
+
+.placeholder.add-tip-placeholder {
+  @extend .flex-r-center-center;
+  &.small-grid-item {
+    height: 180px;
+  }
+}
+
+.grid-item-content {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+
+  .header-text {
+    margin-left: 7px;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+}
+
+.grid-item.border-color-1 { border-color: $color-1 }
+.grid-item.border-color-2 { border-color: $color-2 }
+.grid-item.border-color-3 { border-color: $color-3 }
+.grid-item.border-color-4 { border-color: $color-4 }
+.grid-item.border-color-5 { border-color: $color-5 }
+.grid-item.border-color-6 { border-color: $color-6 }
+.grid-item.border-color-7 { border-color: $color-7 }
+
+.count-icon {
+  padding: 0 2px;
+  display: inline-block;
+}
+
+.indicator-bar {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+}
+
+.label-bar {
+  height: 4px;
+  display: inline-block;
+}
+
+@for $i from 1 through 100 {
+  .labels-#{$i} {
+    width: 100% / $i;
+  }
+
+  .carousel-image-preview-#{$i} {
+    border-radius: 3px !important;
+  }
+}
+
+.grid-item.drop-highlighted {
+  @include transition(background-color, .5s);
+
+  background-color: $drag-highlight-color;
+}
+
+.grid-footer-options {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  z-index: 20;
+  width: 150px;
+  padding: 12px;
+  background-color: transparent;
+  color: #d9d9d9;
+}
+
+.h260 {
+  height: 260px;
+}
+
+.light-gray {
+  color: #d9d9d9;
+}
+
+.item-labels-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  height: 45px;
+  color: #d9d9d9;
+}
+
+.z2 {
+  z-index: 2;
+}

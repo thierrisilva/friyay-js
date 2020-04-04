@@ -1,0 +1,76 @@
+// .todo-card {
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   padding: 10px 5px;
+//   border-bottom: 1px solid #f2f2f2;
+//   background: #fff;
+//
+//   &:hover {
+//     .todo-card__link {
+//       display: initial;
+//     }
+//   }
+//
+//   .todo-card__date {
+//     display: inline-block;
+//     width: 50px;
+//     color: #aaa;
+//
+//     &:first-child {
+//       text-align: right;
+//     }
+//   }
+//
+//   .todo-card__dates {
+//     margin-right: 10px;
+//   }
+//
+//   .todo-card__dates-icon {
+//     position: relative;
+//     top: 3px;
+//     width: 30px;
+//     font-size: 16px;
+//     color: #aaa;
+//     text-align: center;
+//   }
+//
+//   .todo-card__edit-icon {
+//     width: 30px;
+//     margin-right: 10px;
+//     text-align: center;
+//   }
+//
+//   .todo-card__left {
+//     display: flex;
+//     align-items: center;
+//     flex-grow: 1;
+//   }
+//
+//   .todo-card__link {
+//     display: none;
+//     font-size: 20px;
+//     color: #ccc;
+//
+//     &:hover {
+//       color: #bbb;
+//     }
+//   }
+//
+//   .todo-card__title {
+//     height: 30px;
+//     margin-right: 10px;
+//     padding: 5px 0;
+//     border: none;
+//     outline: none;
+//     background: none;
+//     color: #666;
+//     cursor: text;
+//   }
+// }
+//
+// .todo-card {
+//   .card-labels {
+//     margin-right: 10px;
+//   }
+// }

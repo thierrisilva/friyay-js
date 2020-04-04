@@ -1,0 +1,50 @@
+.confidence-range {
+  display: flex;
+
+  &.confidence-range--compact {
+    .confidence-range__wrapper {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .confidence-range__emoji {
+    padding-top: 3px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .confidence-range__option {
+    flex: 1 0 0;
+    height: 26px;
+    margin: 0 2px;
+    padding: 0 6px;
+    border-radius: 4px;
+    background: #eee;
+    color: #666;
+    line-height: 26px;
+
+    &:hover {
+      background: #ccc;
+      color: #333;
+      cursor: pointer;
+    }
+
+    &.confidence-range__option--active {
+      background: #888;
+      color: #eee;
+    }
+  }
+
+  .confidence-range__value {
+    display: flex;
+    padding: 0 8px;
+  }
+
+  .confidence-range__wrapper {
+    display: flex;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,34 @@
+$new-tip-drop-zone-height: 150px;
+
+.new-tip-drop-zone {
+  @include transition(bottom .2s);
+  background-color: #fff;
+  border-top: 1px solid #f2f2f2;
+  bottom: -$new-tip-drop-zone-height;
+  box-shadow: 0 -4px 10px -6px rgba(0,0,0,0.3);
+  height: $new-tip-drop-zone-height;
+  left: 0;
+  padding: 20px 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 30;
+}
+
+.new-tip-drop-zone.drop-highlighted,
+.new-tip-drop-zone.uploading {
+  bottom: 0;
+}
+
+.left-menu-active {
+  .new-tip-drop-zone {
+    padding-left: $left-menu-padding;
+  }
+}
+
+.expanded-right-bar {
+  .new-tip-drop-zone {
+    padding-right: $right-action-bar-padding + $rab-content-panel-width;
+  }
+}

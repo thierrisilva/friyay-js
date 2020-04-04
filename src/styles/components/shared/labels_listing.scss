@@ -1,0 +1,183 @@
+.label-item {
+  background-color: #bbb;
+  border-radius: 2px;
+  bottom: 0;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  width: 100px;
+  padding: 0px 2px;
+  position: relative;
+  white-space: nowrap;
+  @extend .flex-r-center-spacebetween;
+  height: 30px;
+  .label-item-clear {
+    color: white;
+    font-size: 13px;
+    margin-right: 2px;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.labels-list {
+  display: inline;
+  letter-spacing: .05em;
+  overflow: hidden;
+  z-index: 200;
+
+  .labels-list-wrapper {
+    display: block;
+
+    .labels-list-content {
+      padding: 10px;
+      position: relative;
+      max-height: 400px;
+
+      .label-item {
+        position: absolute;
+        bottom: 0;
+        transition: all 300ms ease;
+        z-index: 10;
+
+        &:last-child {
+          z-index: 100;
+        }
+
+        &:first-child {
+          z-index: 90;
+        }
+      }
+    }
+  }
+
+  .label-item {
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.labels-box {
+  .label-action {
+    display: none;
+    font-size: 12px;
+    margin-left: 3px;
+  }
+
+  .list-group-item {
+    &:hover {
+      .label-action {
+        display: inline-block;
+      }
+    }
+  }
+}
+.label-item-container {
+  position: absolute;
+  width: 100px;
+  transition: all .3s ease-in-out;
+  bottom: 0;
+  &:last-child {
+    .label-item {
+      margin-bottom: 0;
+    }
+  }
+}
+.labels-list-content:hover {
+  .label-item-container {
+    &:not(:last-child) {
+      height: 40px;
+      padding-bottom: 10px;
+      bottom: 30px !important;
+      .label-item {
+        margin-bottom: 10px;
+      }
+    }
+    // this makes me very sad
+    @for $i from 2 through 5 {
+      &:nth-child(#{$i}) {
+        bottom: ($i * 40px - 10px) !important;
+      }
+    }
+    &:last-child {
+      padding-bottom: 0px;
+      bottom: 0 !important;
+    }
+  }
+}
+
+.labels-list-show-down {
+  .labels-list-content:hover {
+    .label-item-container {
+      &:not(:last-child) {
+        height: 40px;
+        bottom: -50px !important;
+        .label-item {
+          margin-top: 10px;
+        }
+      }
+
+      @for $i from 2 through 5 {
+        &:nth-child(#{$i}) {
+          bottom: -($i * 40px + 10px) !important;
+        }
+      }
+
+      &:last-child {
+        bottom: 0 !important;
+      }
+    }
+  }
+}
+
+.labels-filter-group {
+  .label-item {
+    display: inline-block;
+    margin: 10px 2px;
+    padding-right: 0;
+  }
+
+  .label-item-delete {
+    color: #ccc;
+    padding: 5px 3px;
+
+    &:hover {
+      color: #eee
+    }
+  }
+}
+
+.labels-count {
+  color: #b3b3b3;
+  font-size: 12px;
+  z-index: 100;
+  display: inline;
+  position: relative;
+  bottom: 24px;
+  left: 118px;
+}
+
+.labels-root {
+  position: relative;
+  top: -30px;
+  left: 10px;
+  max-width: 120px;
+}
+
+.label-item.color-1 { color: lighten($color-1, 40%); background-color: $color-1; }
+.label-item.color-2 { color: lighten($color-2, 35%); background-color: $color-2; }
+.label-item.color-3 { color: lighten($color-3, 35%); background-color: $color-3; }
+.label-item.color-4 { color: lighten($color-4, 35%); background-color: $color-4; }
+.label-item.color-5 { color: lighten($color-5, 35%); background-color: $color-5; }
+.label-item.color-6 { color: lighten($color-6, 35%); background-color: $color-6; }
+.label-item.color-7 { color: lighten($color-7, 35%); background-color: $color-7; }
+
+.label-item.color-1 { .label-item-delete { color: darken($color-1, 15%); &:hover { color: darken($color-1, 20%) } } }
+.label-item.color-2 { .label-item-delete { color: darken($color-2, 15%); &:hover { color: darken($color-2, 20%) } } }
+.label-item.color-3 { .label-item-delete { color: darken($color-3, 15%); &:hover { color: darken($color-3, 20%) } } }
+.label-item.color-4 { .label-item-delete { color: darken($color-4, 15%); &:hover { color: darken($color-4, 20%) } } }
+.label-item.color-5 { .label-item-delete { color: darken($color-5, 15%); &:hover { color: darken($color-5, 20%) } } }
+.label-item.color-6 { .label-item-delete { color: darken($color-6, 15%); &:hover { color: darken($color-6, 20%) } } }
+.label-item.color-7 { .label-item-delete { color: darken($color-7, 15%); &:hover { color: darken($color-7, 20%) } } }

@@ -1,0 +1,128 @@
+.timeline-grid {
+  width: 100%;
+  // overflow: auto;
+
+  .timeline-grid__card {
+    width: auto;
+    padding: 5px 10px 0 10px;
+
+    &:hover {
+      z-index: 10;
+    }
+  }
+
+  .timeline-grid__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: absolute;
+    height: 100%;
+    right: -10px;
+    left: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+  }
+
+  .timeline-grid__cell {
+    flex-basis: 250px;
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 5px;
+    border-left: 1px solid #eee;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &.timeline-grid__cell--header {
+      padding: 10px;
+      font-weight: bold;
+      // color: #aaa;
+      text-align: center;
+    }
+  }
+
+  .timeline-grid__columns {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .timeline-grid__content {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+
+    .timeline-grid__row {
+      height: 100%;
+    }
+  }
+
+  .timeline-grid__drop-zone {
+    flex-basis: 250px;
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 5px;
+
+    &.highlight-drop-zone {
+      z-index: 10;
+    }
+  }
+
+  .timeline-grid__drop-zones {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .timeline-grid__drop-zone-guide {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+
+    &.highlight-drop-zone {
+      background-color: #eee;
+    }
+  }
+
+  .timeline-grid__grid {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 100%;
+    height: 100%;
+    // background-color: #fafafa;
+  }
+
+  .timeline-grid__header {
+    border-bottom: 1px solid #eee;
+  }
+
+  .timeline-grid__row {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+.timeline-grid__add-card {
+  padding: 10px;
+  // opacity: 0.5;
+
+  .dark-grey-link {
+    color: currentColor !important;
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+}

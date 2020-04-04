@@ -1,0 +1,317 @@
+.kanban-view {
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: row nowrap;
+  // min-width: 800px;
+  height: calc(100vh - 150px);
+  overflow: auto;
+  padding-left: 10px;
+}
+
+.kanban-view_unlabelled-panel {
+  align-items: flex-end;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 0px;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+
+  &.presented {
+    min-width: 250px;
+    padding: 5px 10px 0px 10px;
+    width: 250px;
+    background: none;
+
+    + .kanban-view_main-section {
+      width: 100%;
+      overflow: auto;
+      margin-right: 10px;
+    }
+  }
+}
+
+.kanban-lane_unlabelled-title {
+  color: $greyButtonColor;
+  font-weight: 500;
+  padding: 0 0 10px;
+  width: 100%;
+}
+
+.kanban-view_main-section {
+  // background-color: #fafafa;
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  height: calc(100vh - 150px);
+  min-width: 0; //this to override flexbox default behaviour to expand to match children
+  .kanban-card {
+    padding: 0;
+    .kanban-card__title-wrapper {
+      .kanban-card__nested-cards-caret {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.kanban-view_top-bar {
+  align-items: center;
+  // background-color: #fafafa;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: 50px;
+
+  i {
+    color: $greyButtonColor;
+    font-size: 1em;
+  }
+}
+
+.kanban-view_lanes-container {
+  align-items: stretch;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: auto;
+  margin-right: 5px;
+  .kanban-view_lane-catchment {
+    margin-top: 10px;
+  }
+}
+
+.kanban-view_lanes {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+//These styles for the KanbanLane component:
+.kanban-lane_drag-container {
+  display: flex;
+  align-self: stretch;
+  &.is-dragging {
+    opacity: 0.7;
+  }
+}
+
+.kanban-lane {
+  @extend .kanban-view_unlabelled-panel;
+  border-radius: 5px;
+  margin: 5px 5px 0 5px;
+  min-width: 40px;
+  padding: 10px;
+  position: relative;
+  width: 40px;
+  transition: width 0.3s ease-in;
+  align-items: center;
+
+  &.is-open {
+    min-width: 250px;
+    width: 250px;
+  }
+  .label-select {
+    padding-right: 0px;
+  }
+}
+
+.kanban-lane_drag-preview {
+  @extend .dragging-shadow;
+  background-color: #fff;
+  overflow: hidden;
+  width: 200px;
+}
+
+.kanban-lane_drag-preview-title {
+  color: $colour-grey-light-3;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px 5px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.kanban-lane-label-indicator {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.kanban-lane_open-close-button {
+  align-items: center;
+  color: $greyButtonColor;
+  display: flex;
+  font-size: 1.333em;
+  height: 40px;
+  justify-content: center;
+  left: 0px;
+  // position: absolute;
+  top: 0px;
+  width: 40px;
+  z-index: 1;
+  &:hover {
+    color: $greyButtonColor;
+  }
+}
+
+.kanban-lane_open-header {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  left: 40px;
+  // position: absolute;
+  top: 0;
+  width: calc(100% - 45px);
+
+  .label-select_name {
+    font-weight: 400;
+  }
+}
+
+.kanban-lane_closed-header {
+  display: flex;
+  width: 30px;
+  & + .kanban-view_lane-catchment {
+    .show-caret {
+      display: none;
+    }
+  }
+}
+
+.kanban-lane_closed-label {
+  color: $greyButtonColor;
+  font-weight: 500;
+  // padding-left: 25px;
+  transform: rotate(90deg);
+  transform-origin: 15px 15px;
+  white-space: nowrap;
+}
+
+.kanban-view_lane-catchment {
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column;
+  padding-right: 5px; //keeps the scroll indicator from covering the card settings button
+  overflow-y: auto;
+  width: 100%;
+  .add-card-card_section {
+    margin-top: 0px !important;
+    .dark-grey-link {
+      // color: currentColor !important;
+    }
+  }
+}
+
+.kanban-card {
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 40px;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:hover {
+    .kanban-card_hover-section {
+      height: 60px;
+    }
+    .kanban-card__nested-cards-add,
+    .kanban-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret .kanban-card__nested-cards-caret {
+    visibility: visible;
+  }
+
+  .kanban-card__nested-cards-caret {
+    width: 20px;
+  }
+
+  .nest-card-zone {
+    height: 50px;
+    margin-top: -2px;
+    margin-left: -2px;
+    padding-top: 15px;
+  }
+}
+
+.custom-drag-preview .kanban-card {
+  @extend .dragging-shadow;
+  width: 220px !important;
+}
+
+.kanban-card_title-section {
+  align-items: center;
+  display: flex;
+  min-height: 40px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.kanban-card__title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kanban-card__nested-cards-add {
+  visibility: hidden;
+}
+
+.kanban-card__nested-cards-caret {
+  visibility: hidden;
+}
+
+.kanban-card__nested-cards {
+  padding-bottom: 10px;
+}
+
+.kanban-card__nested-card {
+  font-weight: normal;
+}
+
+.kanban-card_hover-section {
+  height: 0px;
+  overflow-y: hidden;
+  transition: height 0.4s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.kanban-card_avatar-container {
+  align-items: center;
+  color: #a9a9a9;
+  display: flex;
+  display: flex;
+  font-weight: 400;
+  height: 30px;
+}
+
+.kanban-card_due-date {
+  color: #a9a9a9;
+  font-weight: 400;
+  height: 30px;
+}
+
+.loadmore {
+  width: 100px;
+  height: 50px;
+  background-color: whitesmoke;
+}

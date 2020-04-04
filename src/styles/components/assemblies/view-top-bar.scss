@@ -1,0 +1,52 @@
+.view-top-bar {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: min-content;
+  // padding: 0px 5px 0px 40px;
+  width: 100%;
+  position: relative;
+
+  .upload-btn {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.btn-noback {
+  font-size: 25px;
+}
+
+.view-top-bar_element {
+  margin: 0 10px 0 5px;
+  // color: #a2a2a2;
+  line-height: 100%;
+
+  &.right {
+    margin: 0 0 0 10px;
+    flex-grow: 0;
+    flex: none;
+  }
+  &.pull-right {
+    margin: 0 0 0 10px;
+    flex-grow: 0;
+    flex: none;
+  }
+}
+
+.kanban-view_top-bar,
+.view-top-bar,
+.message-board-header,
+.planning-view__actions,
+.timeline-view__actions {
+  .quick-rightbar-actions .quick-right-action-bar_button {
+    visibility: hidden;
+  }
+  &:hover {
+    .quick-rightbar-actions .quick-right-action-bar_button {
+      visibility: visible;
+    }
+  }
+}

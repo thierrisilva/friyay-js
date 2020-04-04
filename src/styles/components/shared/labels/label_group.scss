@@ -1,0 +1,56 @@
+.label-group {
+    label {
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #aaa;
+      margin-bottom: 0;
+    }
+    .labels-list-section {
+      margin-bottom: 15px;
+    .labels-list {
+      display: block;
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .label-item {
+      margin-bottom: 8px;
+      width: 100%;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 0;
+      text-transform: capitalize;
+      a {
+        width: 100%;
+        color: white;
+        padding: 7px 0px 7px 10px;
+        @extend .flex-r-center-spacebetween;
+      }
+      .label-item-action {
+        display: none;
+      }
+    }
+    .label-item:hover {
+      .label-item-action {
+        display: block;
+      }
+    }
+    .label-item-form {
+      margin-bottom: 8px;
+      .label-input-container {
+        display: flex;
+        button {
+          background: white;
+          border: 1px solid #ccc;
+        }
+        button:hover {
+          background: lighten(#ccc, 15%);
+        }
+        button.label-submit-btn {
+          border-left: none;
+          border-right: none;
+        }
+      }
+    }
+  }
+}

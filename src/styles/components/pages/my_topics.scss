@@ -1,0 +1,22 @@
+.topics-column {
+  float: left;
+  width: 300px;
+
+  .list-group {
+    max-height: 540px;
+    overflow-y: auto;
+    .column-topic-item {
+      padding: 0;
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+    }
+    .column-topic-item.active {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

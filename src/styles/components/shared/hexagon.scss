@@ -1,0 +1,77 @@
+.hexagon-small {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34.64px;
+  background-color: transparent;
+  margin: 17.32px 0;
+  border-left: solid 2px #fff;
+  border-right: solid 2px #fff;
+}
+
+.hexagon-small:before,
+.hexagon-small:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 42.43px;
+  height: 42.43px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 6.7868px;
+}
+
+.hexagon-small:before {
+  top: -21.2132px;
+  border-top: solid 2.8284px #fff;
+  border-right: solid 2.8284px #fff;
+}
+
+.hexagon-small:after {
+  bottom: -21.2132px;
+  border-bottom: solid 2.8284px #fff;
+  border-left: solid 2.8284px #fff;
+}
+
+.hexagon-small.gray {
+  border-color: #b3b3b3;
+  &:before,
+  &:after {
+    border-color: #b3b3b3;
+  }
+}
+
+.hex-icon-16 {
+  @include hexagon(16px, rgba(139,135,155,1), 0);
+}
+
+a:hover,
+a.active {
+  .hex-icon-16 {
+    @include hexagon(16px, $color-1, 0);
+  }
+}
+
+.hex-icon-14 {
+  @include hexagon(14px, rgba(139,135,155,1), 0);
+}
+
+a:hover,
+a.active {
+  .hex-icon-14 {
+    @include hexagon(14px, $color-1, 0);
+  }
+}
+
+.hex-icon-12 {
+  @include hexagon(16px, #bbbbbb, 0);
+}
+
+a:hover,
+a.active {
+  .hex-icon-12 {
+    @include hexagon(16px, $color-1, 0);
+  }
+}

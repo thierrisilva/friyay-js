@@ -1,0 +1,150 @@
+// http://www.queness.com/post/13901/create-beautiful-hexagon-shapes-with-pure-css3
+
+.hex-grid {
+  margin: 0 auto;
+  padding: 43px 55px;
+  // width: 990px;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+// HEXAGON STARTS HERE
+.hex {
+  background: #f4f4f4 no-repeat 50% 50%;
+  background-size: auto 173px;
+  float: left;
+  height: 86px;
+  margin: 34px 12px;
+  position: relative;
+  text-align: center;
+  width: 150px;
+  zoom: 1;
+
+  .hex-gap {
+    margin-left: 86px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-indent: -9999em;
+    top: 0;
+    width: 100%;
+  }
+
+  .corner-1,
+  .corner-2 {
+    @include backface-visibility(hidden);
+    background: inherit;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  .corner-1 {
+    @include rotate(60deg);
+    z-index: -1;
+  }
+
+  .corner-2 {
+    @include rotate(-60deg);
+  }
+
+  .corner-1::before,
+  .corner-2::before {
+    @include backface-visibility(hidden);
+    background: inherit;
+    background-repeat: no-repeat;
+    content: '';
+    height: 173px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 173px;
+    z-index: 1;
+  }
+
+  .corner-1::before {
+    @include rotate(-60deg);
+    @include translate(-87px, 0);
+    @include transform-origin(0);
+  }
+
+  .corner-2::before {
+    @include rotate(60deg);
+    @include translate(-48px, -11px);
+    bottom: 0;
+  }
+
+  &:nth-child(9n-3) {
+    margin-left: 99px;
+  }
+
+  &.big {
+    background-size: auto 265px; // 173px;
+    display: inline-block;
+    height: 132px; // 86px
+    float: none;
+    margin: 38px 8px;
+    width: 230px; // 150px;
+    z-index: 1;
+
+    .hex-gap {
+      margin-left: 132px; // 86px
+    }
+
+    .corner-1::before,
+    .corner-2::before {
+      height: 265px; // 173px;
+      width: 265px; // 173px;
+    }
+
+    .corner-1::before {
+      @include translate(-133px, 0); // -87px
+    }
+
+    .corner-2::before {
+      @include translate(-48px, -11px);
+    }
+
+    &:nth-child(7n-2) {
+      margin-left: 132px; // 86px
+    }
+
+    .inner {
+      padding: 40px 10px 10px;
+    }
+  }
+
+  .inner {
+    padding: 0 10px;
+
+    ::-webkit-input-placeholder { color: #808080; }
+    ::-moz-placeholder { color: #808080; }
+    :-ms-input-placeholder { color: #808080; }
+    :-moz-placeholder { color: #808080; }
+
+    input[type="text"] {
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+
+  .dropdown-menu {
+    a {
+      display: block;
+      text-indent: 0;
+      position: relative;
+    }
+  }
+}

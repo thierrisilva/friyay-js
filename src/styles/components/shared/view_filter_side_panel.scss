@@ -1,0 +1,95 @@
+
+
+.topic-view-filter-container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  transition: all 0.4s ease-in-out;
+
+  &.in-focus {
+    max-width: 270px;
+    min-width: 270px;
+  }
+}
+
+
+.topic-view-filter {
+  width: 270px;
+  position: relative;
+  height: 100%;
+  background: white;
+  padding: 15px;
+  margin-right: -270px;
+  transition: all 0.4s ease-in-out;
+  color: lighten($gray-light, 20%);
+  z-index: 1000;
+  letter-spacing: 0.5px;
+  .btn:active {
+    box-shadow: none;
+  }
+
+  &.show {
+    .close-topic-view-filter {
+      left: -30px;
+    }
+  }
+}
+.topic-view-filter {
+  //top: 90px;
+  //right: 40px;
+  //transform: translateX(270px);
+  border-left: 1px solid $gray-light-more;
+  a {
+    color: lighten($gray-light, 20%);
+  }
+  label {
+    font-weight: 500;
+  }
+  a:hover,
+  a.active,
+  .active,
+  a:focus {
+    color: $color-1;
+  }
+  .close-topic-view-filter {
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    left: 0;
+  }
+  .badge {
+    border-radius: 0;
+    background-color: #f5f5f5;
+    color: lightgray;
+    font-weight: 300;
+    padding: 6px;
+  }
+  .switch-buttons-group {
+    .btn {
+      background-color: #f5f5f5;
+      border: 1px solid $gray-lighter;
+      flex: 1;
+      font-weight: 400;
+      transition: background-color .2s;
+    }
+    .btn:hover {
+      color: $color-1;
+    }
+    .btn:focus,
+    .btn:active {
+      box-shadow: none;
+      color: #aaa;
+    }
+    .btn:first-child {
+      border-right: none;
+    }
+    .btn.active,
+    .btn.active:hover,
+    {
+      background-color: $color-1;
+      color: white;
+      box-shadow: none;
+    }
+  }
+}

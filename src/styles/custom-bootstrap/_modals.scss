@@ -1,0 +1,88 @@
+.modal {
+  // When fading in the modal, animate it to slide down
+  &.slide .modal-dialog {
+    @include translate(100%, 0);
+    @include transition-transform(0.3s ease-out);
+  }
+  &.in .modal-dialog { @include translate(0, 0) }
+}
+
+// Close icon
+.modal-header .close {
+  font-size: 60px;
+  font-weight: 100;
+  margin-top: -20px;
+  opacity: 1;
+  outline: 0;
+}
+
+.modal-full-auto {
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+
+.modal-full {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.modal-center-large {
+  height: 80%;
+  margin: 5% auto;
+  max-width: 1000px;
+  width: 80%;
+}
+
+.modal-large {
+  height: 100%;
+  margin: 0 0 0 $left-menu-padding;
+  width: auto;
+}
+
+.modal-domain {
+  height: 100%;
+  margin: 0 0 0 40%;
+  width: auto;
+}
+
+@media screen and (max-width: 1226px) {
+  .modal-domain {
+    margin: 0 0 0 30%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .modal-domain {
+    margin: 0 0 0 100px;
+  }
+}
+
+.modal-half {
+  height: 100%;
+  margin: 0 0 0 50%;
+  width: auto;
+}
+
+.modal-small {
+  height: 100%;
+  margin: 0 0 0 70%;
+  width: auto;
+}
+
+.modal-content {
+  box-shadow: none;
+  height: 100%;
+}
+
+#primary-dialog, #secondary-dialog {
+  .modal {
+    z-index: 2050;
+    background: rgba(211,211,211, 0.9);
+  }
+}
+
+.modal-backdrop + .modal-backdrop {
+  z-index: 2050;
+}

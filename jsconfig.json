@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "Enums": ["./src/enums/index"],
+      "Utils": ["./src/utils"],
+      "AppConstants": ["./src/constants/index"],
+      "Actions": ["./src/actions"],
+      "Components": ["./src/components"],
+      "Lib": ["./src/lib"],
+      "Src": ["./src"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "**/vendor/*"
+  ]
+}

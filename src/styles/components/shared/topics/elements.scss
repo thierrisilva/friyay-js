@@ -1,0 +1,17 @@
+.almost-black {
+  color: #222;
+}
+
+.padding-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.topic-star-icon, .edit-link {
+  color: $unstar-active-color;
+  text-decoration: none;
+
+  &.active {
+    color: $color-1;
+  }
+}

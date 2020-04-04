@@ -1,0 +1,385 @@
+.goal-view-container {
+  width: 100%;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+}
+
+.goal-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &_main-section {
+    min-width: 800px !important;
+  }
+}
+
+.goal-view_top-bar {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 50px;
+  padding: 13px 0;
+
+  i {
+    color: $greyButtonColor;
+    font-size: 1em;
+  }
+}
+
+.goal-view-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+.header-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+
+  &--around {
+    justify-content: space-around;
+  }
+}
+
+.goal-view_card-container {
+  margin-bottom: 10px;
+}
+
+.goal-view-content-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 0px;
+  max-height: calc(100vh - 190px);
+  flex: 1 0 0;
+}
+
+.goal-view_card-listing {
+  flex: 1 0 120px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  min-height: 120px;
+  overflow-y: auto;
+  padding-bottom: 120px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mw200 {
+  min-width: 200;
+}
+
+.background-light {
+  background-color: $lightGreyViewPanelBackground;
+}
+
+.bottom-half {
+  border-top: 2px solid $lightGreyViewPanelBackground;
+}
+
+.divider {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.p20 {
+  padding: 20;
+}
+
+.background-purple {
+  background-color: #b766a8;
+}
+
+.goal-view_title {
+  font-weight: 500;
+  margin: 0;
+}
+
+.goal-view-section {
+  color: #555555;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  flex: 1 0 0;
+  .add-card-card_section {
+    .goal-card {
+      a {
+        color: currentColor;
+      }
+      .add-card-card_content {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.goal-view_percentage {
+  background-color: #d8d8d8;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.goal-view_fraction {
+  color: white;
+  font-size: 30px;
+  padding: 0 25px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.divisor {
+  font-weight: 100;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 30px;
+}
+
+.fraction {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.height {
+  height: 500px;
+}
+
+.to-do-card {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.show-bottom {
+  .goal-card__nested-cards-add,
+  .goal-card__nested-cards-caret {
+    visibility: visible;
+  }
+}
+
+.show-caret .goal-card__nested-cards-caret {
+  visibility: visible;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  .goal-card_avatar-container {
+    width: 35px !important;
+    & > .mr10.ml10.link-tooltip-container {
+      margin: 0 5px !important;
+    }
+    & + div.full-width {
+      width: calc(100% - 35px);
+    }
+  }
+}
+
+.right-side.compact-view {
+  width: 20%;
+  justify-content: center;
+
+  .goal-card_avatar-container {
+    margin-right: -15px;
+  }
+}
+
+.avatar-placeholder {
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  display: block;
+  background: #ebebeb;
+  border-radius: 20px;
+}
+
+.left-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(50% - 20px);
+  min-width: 130px;
+  overflow: visible;
+}
+
+.left-side.compact-view {
+  width: 75%;
+}
+
+.goal-card-bottom-sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+
+.goal-card-bottom-sections.larger {
+  width: 35%;
+}
+
+.review-button {
+  background-color: #f3a536;
+  color: white;
+  display: inline-block;
+  padding: 3px 20px 3px 3px;
+}
+
+.done-button {
+  background-color: #618ec8;
+  color: white;
+  display: inline-block;
+  padding: 3px 20px 3px 3px;
+}
+
+.grey-words {
+  color: #ccc;
+}
+
+.to-do-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+}
+
+.bdrr5 {
+  border-radius: 5px;
+}
+
+.bdrr2 {
+  border-radius: 2px;
+}
+
+.bdrr10 {
+  border-radius: 10px;
+}
+
+.mh120 {
+  min-height: 120px;
+}
+
+.p2 {
+  padding: 2px;
+}
+
+.black {
+  color: black;
+}
+
+.w10 {
+  width: 10%;
+}
+
+.to-do-card_btn {
+  font-size: 120%;
+}
+
+.oscroll {
+  overflow: auto;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.prel {
+  position: relative;
+}
+
+.toggle-archive {
+  position: absolute;
+  bottom: 10px;
+  min-width: 50%;
+  width: 100%;
+}
+
+.h550 {
+  height: 550px;
+  align-items: stretch;
+}
+
+.goal-view-top-flex {
+  display: flex;
+  flex: 1 0 0;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+.align-i-stretch {
+  align-items: stretch;
+}
+
+.flex {
+  display: flex;
+}
+
+.pb40 {
+  padding-bottom: 40px;
+}
+
+.goal-view-section-header {
+  min-height: 48px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.top-half {
+  height: 40px;
+}
+
+.goal-view-options.timeline-view__mode-selector {
+  z-index: 20;
+  width: 150px;
+}
+
+.goal-card__nested-cards-add {
+  margin-left: 5px;
+  visibility: hidden;
+}
+
+.goal-card__nested-cards-caret {
+  margin-right: -5px;
+  visibility: hidden;
+}
+
+.goal-card__nested-cards {
+  padding: 0 20px 8px 20px;
+}
+
+.goal-card__nested-card {
+  font-weight: normal;
+}

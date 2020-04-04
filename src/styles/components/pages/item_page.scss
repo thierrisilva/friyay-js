@@ -1,0 +1,132 @@
+.card-page-container {
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  background-color: rgba(248, 248, 248, 0.99);
+  overflow-y: auto;
+  transition: all 0.33s;
+
+  &.minimized {
+    width: 16px;
+    height: 16px;
+    bottom: 16px;
+    right: 8px;
+    opacity: 0;
+  }
+
+  .card-details {
+    flex: 1;
+    height: calc(100vh - 90px);
+    margin: 60px 11% 30px;
+    padding: 30px;
+    .card-details-header {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+    }
+    .card-details-editor_title-input {
+      font-size: 42px;
+    }
+    .card-details-preview {
+      .card-details-preview_content {
+        .card-details-preview_title {
+          font-size: 42px;
+          margin-top: 6px;
+        }
+      }
+    }
+
+    .fr-toolbar {
+      &.custom-theme.fr-top.fixed {
+        position: fixed;
+        top: 64px;
+        width: calc(
+          100vw - 25% - 112px
+        ); // 112px from .card-details margin + .card-details padding
+      }
+    }
+  }
+
+  div {
+    &:nth-last-child(2).card-details {
+      margin: 60px 2% 30px;
+    }
+  }
+
+  .icons-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 16px;
+    right: 85px;
+  }
+
+  .card-nav {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    .card-back {
+      font-size: 16px;
+      color: #4a4a4a;
+      font-weight: bold;
+
+      &:hover {
+        color: $colour-yellow-1;
+      }
+
+      .icon-container {
+        display: inline-flex;
+        vertical-align: sub;
+      }
+      small {
+        font-size: 70%;
+      }
+    }
+
+    a {
+      &:first {
+        left: 16px;
+      }
+      margin: 0 8px;
+    }
+  }
+
+  img.loader {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25%;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .modal-content {
+    box-shadow: none;
+    border: none;
+  }
+  #item-page-section-to-print,
+  #item-page-section-to-print * {
+    visibility: visible;
+  }
+  #item-page-section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 100%;
+    bottom: 0;
+    background-color: white;
+  }
+}
+
+@media screen {
+  #item-page-section-to-print {
+    display: none;
+  }
+}

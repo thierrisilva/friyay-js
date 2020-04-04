@@ -1,0 +1,124 @@
+$right-action-bar-border: #fafafa;
+$rab-item-color: $gray-default;
+
+.right-action-bar {
+  align-items: center;
+  background-color: #fff;
+  border-left: 1px solid $right-action-bar-border;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $right-action-bar-padding;
+  min-height: $right-menu-height;
+  padding-top: 10px;
+  overflow: auto;
+
+  .flex-point-8 {
+    flex: 0.8;
+  }
+
+  .fa-dropbox.connected {
+    color: #007ee5;
+  }
+  .fa-google.connected {
+    color: #f65314;
+  }
+  .link-tooltip-container {
+    .link-tooltip {
+      top: 5px;
+      right: 45px;
+      left: auto;
+    }
+  }
+  .dock-station-icon {
+    bottom: 30px; // Else, icon hides when dock is open
+    .badge {
+      background-color: #b667a7;
+      font-size: 6px;
+      padding: 3px 5px;
+      position: absolute;
+      right: 6px;
+      top: 5px;
+    }
+  }
+}
+
+.rab-item {
+  color: lighten($rab-item-color, 20%);
+  height: 42px;
+  @media screen and (max-height: 680px) {
+    height: 39px;
+  }
+  @media screen and (max-height: 650px) {
+    height: 36px;
+  }
+  @extend .flex-r-center-center;
+
+  &.bottom-minus {
+    padding-top: 2px;
+  }
+
+  .icon {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .hex-icon-16 {
+    background-color: lighten($rab-item-color, 20%);
+  }
+  .hex-icon-16::before {
+    border-bottom-color: lighten($rab-item-color, 20%);
+  }
+  .hex-icon-16::after {
+    border-top-color: lighten($rab-item-color, 20%);
+  }
+
+  &:focus:not(.active) {
+    color: lighten($rab-item-color, 20%);
+  }
+
+  &:hover,
+  &.active {
+    color: $color-1 !important;
+    .hex-icon-16 {
+      background-color: $color-1;
+    }
+    .hex-icon-16::before {
+      border-bottom-color: $color-1;
+    }
+    .hex-icon-16::after {
+      border-top-color: $color-1;
+    }
+  }
+}
+
+.rab-item.rab-item-img {
+  padding: 0;
+  @extend .flex-r-center-center;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.rab-item-divider {
+  border-bottom: 1px solid $right-action-bar-border;
+  height: 0;
+  width: $right-action-bar-padding;
+}
+
+.rab-group {
+  background-color: #fff;
+}
+
+.rab-group-fixed-bottom {
+  bottom: 0;
+  position: fixed;
+}
+
+@import 'right_action_bar/content_panel';

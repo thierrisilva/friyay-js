@@ -1,0 +1,51 @@
+.wiki-item {
+  width: 100%;
+  box-shadow: none !important;
+  background: transparent;
+  margin-bottom: 5px;
+  .material-icons, .glyphicon {
+    font-size: 14px; 
+    color: $gray-default;
+  }
+  a.dropdown {
+    padding: 0 5px;
+    position: relative;
+    top: 4px;
+    svg > g > g {
+      fill: $gray-default;
+    }
+  }
+  a {
+    color: $gray-default;
+    .tip-title {
+      color: rgba(0,0,0,0.7);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .wiki-item-row {
+    > div:first-child {
+      width: calc(100% - 50px);
+      > a:last-child {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+  .wiki-item-row.active {
+    .tip-title-content {
+      span {
+        color: $color-1;
+      }
+    }
+  }
+  .wiki-item-actions {
+    visibility: hidden;
+  }
+}
+
+.wiki-item:hover {
+  .wiki-item-actions {
+    visibility: visible;
+  }
+}

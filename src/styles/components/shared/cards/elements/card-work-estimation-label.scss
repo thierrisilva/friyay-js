@@ -1,0 +1,18 @@
+.card-work-estimation-label {
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+  white-space: nowrap;
+  margin: 0 5px;
+
+  .card-work-estimation-label__icon {
+  }
+
+  .card-work-estimation-label__tooltip {
+    z-index: 20;
+  }
+
+  .card-work-estimation-label__value {
+    margin-left: 5px;
+  }
+}

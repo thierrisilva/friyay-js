@@ -1,0 +1,27 @@
+// Generate the xxlarge columns
+@mixin make-xxlg-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-xxlg-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xxlg-column-offset($columns) {
+  @media (min-width: $screen-xxlg-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xxlg-column-push($columns) {
+  @media (min-width: $screen-xxlg-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xxlg-column-pull($columns) {
+  @media (min-width: $screen-xxlg-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}

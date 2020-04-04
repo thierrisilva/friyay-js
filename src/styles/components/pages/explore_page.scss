@@ -1,0 +1,117 @@
+.explore-modal-header {
+  #explore-modal-label {
+    .header-text {
+      color: $color-1;
+      font-weight: 100;
+      margin-right: 20px;
+    }
+
+    .explore-tabs {
+      position: relative;
+      top: 8px;
+
+      > li {
+        > a {
+          background: none;
+          color: #ccc;
+        }
+      }
+
+      > li.active {
+        > a {
+          background: none;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+.intro-explore-topics,
+.intro-explore-people,
+.explore-modal-body {
+  min-height: 700px;
+
+  .content-header {
+    font-weight: 200;
+  }
+
+  .explore-item {
+    color: #fff;
+
+    .panel-heading {
+      background: none;
+      .panel-heading-title {
+        color: #fff;
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .panel-body {
+      .follow-link {
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+
+    .panel-footer {
+      background: none;
+    }
+  }
+
+  .topic-item-input {
+    border: 1px dashed #b3b3b3;
+    .create-link {
+      color: $text-color;
+      font-size: 16px;
+    }
+  }
+
+  .topic-item {
+    .panel-body {
+      height: 278px;
+      .hexagon-row {
+        margin: 100px auto 15px;
+        width: 200px;
+        .col-sm-4 {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .topic-item {
+    float: left;
+    height: 330px;
+    margin: 0 15px 15px 0;
+    overflow: hidden;
+    width: 250px;
+  }
+
+  .user-item {
+    .panel-body {
+      padding: 20px;
+      .user-link {
+        color: #fff;
+      }
+    }
+  }
+
+  .user-item {
+    float: left;
+    height: 300px;
+    margin: 0 15px 15px 0;
+    overflow: hidden;
+    width: 300px;
+  }
+}
+
+.topic-item.color-1,.user-item.color-1 { background-color: $color-1; border: 1px solid darken($color-1, 10%); }
+.topic-item.color-2,.user-item.color-2 { background-color: $color-2; border: 1px solid darken($color-2, 10%); }
+.topic-item.color-3,.user-item.color-3 { background-color: $color-3; border: 1px solid darken($color-3, 10%); }
+.topic-item.color-4,.user-item.color-4 { background-color: $color-4; border: 1px solid darken($color-4, 10%); }
+.topic-item.color-5,.user-item.color-5 { background-color: $color-5; border: 1px solid darken($color-5, 10%); }
+.topic-item.color-6,.user-item.color-6 { background-color: $color-6; border: 1px solid darken($color-6, 10%); }
+.topic-item.color-7,.user-item.color-7 { background-color: $color-7; border: 1px solid darken($color-7, 10%); }

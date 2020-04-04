@@ -1,0 +1,137 @@
+.cards-container {
+  flex: 1 0 0;
+  // flex-flow: row nowrap;
+  // min-width: 0;
+  // height: calc(100vh - 161px);
+  // min-height: calc(100vh - 161px);
+  // margin-top: -1px;
+
+  &-white {
+    background: white;
+  }
+
+  &-grey {
+    background: $lightGreyViewPanelBackground;
+  }
+
+  // &:hover {
+  //   z-index: 10;
+  // }
+
+  //   &:nth-child(3) {
+  //     min-height: min-content;
+  //   }
+
+  //   & > div {
+  //     overflow-y: visible;
+  //   }
+
+  .placeholder-view {
+    background-color: #fafafa;
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: column nowrap;
+    padding: 0 5px;
+    width: calc(100vh - 40px);
+    height: min-content;
+    max-height: 100%;
+  }
+  .add-card-card_content form {
+    margin-left: 0px;
+    input.form-control {
+      width: inherit;
+    }
+  }
+}
+
+.hex-grid-wrapper {
+  & + .cards-container:nth-child(3) {
+    min-height: auto;
+  }
+}
+
+.card-container__card-placeholder {
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.split-icon-wrapper {
+  padding: 10px 0 0 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.grey-icon-button.card-container__card-panel-toggle {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  color: #e1e1e1 !important;
+  width: 20px;
+}
+
+.grey-icon-button.card-container__card-panel-split-toggle {
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  color: #e1e1e1 !important;
+  width: 20px;
+  visibility: hidden;
+  transition: visibility 1s ease-out;
+}
+
+.splitter-layout-custom {
+  position: inherit !important;
+  // display: block !important;
+  // height: auto !important;
+  // min-height: 100%;
+  // Else, overflows card container
+  //   left: 10px;
+  //   width: calc(100% - 10px) !important;
+  // width: calc(
+  //   100% - 11px
+  // ) !important; // Else, scrollbar not visible on the right
+  .layout-splitter {
+    width: 10px !important;
+    z-index: 2;
+    border-radius: 50px 0 0 50px;
+    background-color: #ececec !important;
+    position: fixed;
+    margin-right: 10px;
+    bottom: 20px;
+    top: 150px;
+    height: auto !important;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-color: #ddd !important;
+    }
+  }
+
+  .layout-pane-primary {
+    height: 100%;
+    // overflow: hidden !important;
+  }
+
+  //secondary pane, card-right-side
+  .layout-pane:not(.layout-pane-primary) {
+    z-index: 1;
+    background: #ffffff;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    margin: 7px;
+    right: 15px;
+    height: calc(100vh - 155px);
+    bottom: 5px;
+    position: fixed;
+    &:hover {
+      .card-container__card-panel-split-toggle {
+        visibility: visible;
+      }
+    }
+  }
+}

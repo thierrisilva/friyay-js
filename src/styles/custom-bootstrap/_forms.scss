@@ -1,0 +1,33 @@
+.concise .form-group {
+  margin-bottom: 5px;
+}
+
+input.form-control.form-control-minimal {
+  height: auto;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-color: transparent;
+  &:focus {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    background-color: transparent;
+  }
+  &:invalid {
+    @include box-shadow(none);
+  }
+  &:focus:invalid {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid $brand-danger;
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  padding: 6px 0;
+}
+
+.form-control[disabled].disabled-transparent {
+  background-color: transparent;
+}

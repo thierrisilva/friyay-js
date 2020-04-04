@@ -1,0 +1,263 @@
+.btn-toggle-subHive-filter {
+  color: #d9d9d9;
+}
+.btn-toggle-subHive-filter:hover {
+  color: $colour-yellow-1;
+}
+
+.standard-background {
+  background-color: white;
+}
+
+.topic-header {
+  // padding: 30px 35px 10px;
+  // position: fixed;
+  right: 15px;
+  transition: width 0.33s, left 0.33s;
+  // height: 101px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  //   border-top: solid 1px #f6f6f6;
+  // z-index: 100;
+
+  &-grey {
+    background: #fafafa;
+  }
+
+  &-white {
+    background: white;
+  }
+  &:hover {
+    .dropdown-menu {
+      // .icon-container {
+      //   display: inline-block;
+      //   color: #a2a2a2;
+      // }
+      & > li > a {
+        display: flex;
+      }
+    }
+  }
+
+  &-top-section {
+    width: 100%;
+    height: 52px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    // color: $colour-grey-dark-2;
+    font-weight: 800;
+    font-size: 2em;
+    margin-left: 0;
+    padding-left: 3px;
+
+    &.workspace-header {
+      margin-left: initial;
+      padding-left: 0px;
+    }
+
+    .topic-header__domain-icon {
+      display: inline-block;
+      border: 1px solid #fafafa;
+      border-radius: 8px;
+      background-color: #b366a4;
+      margin-right: 8px;
+      font-weight: 400;
+      color: #eee;
+      padding: 4px;
+      text-transform: capitalize;
+      font-size: 22px;
+
+      + span {
+        vertical-align: bottom;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .min-menu-bar {
+    position: absolute;
+    margin-left: -30px;
+  }
+
+  .more_vert {
+    color: #d9d9d9;
+    .icon-container {
+      color: #d9d9dd;
+    }
+  }
+
+  .revolving-toggle-button {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+    &:after {
+      border-top-color: #d9d9d9;
+    }
+    &:before {
+      border-bottom-color: #d9d9d9;
+    }
+  }
+
+  .topic-header-main {
+    padding: 30px 35px 10px;
+    .link-tooltip.top {
+      left: auto;
+      right: 0px;
+    }
+    .dropdown-menu {
+      right: 0;
+      min-width: 200px;
+      li > a {
+        display: flex;
+      }
+    }
+    .dropdown-option-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #888;
+      padding-bottom: 5px;
+    }
+    .dropdown-option-item {
+      & > span {
+        padding-left: 8px;
+      }
+
+      .revolving-toggle-button {
+        margin-left: -2px;
+        color: #2a2a2a;
+      }
+    }
+
+    .grey-icon-button {
+      .tiphive-icon {
+        &:hover,
+        &.active {
+          color: $colour-yellow-1;
+        }
+      }
+
+      &.minimalistic {
+        margin-left: -62px;
+        .tiphive-icon {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .h1-container {
+      min-width: 420px;
+    }
+
+    .dots-layer-container {
+      margin-left: auto;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    margin: 4px auto;
+  }
+
+  .update-section {
+    margin-left: -3px;
+    margin-right: 3px;
+  }
+}
+
+.topic-header_button-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: unset;
+
+  .yay-search-form {
+    margin-left: 11px;
+    .icon-container {
+      margin-right: 0;
+    }
+  }
+
+  &.dots-layer-container .dots-layer {
+    width: 100px;
+    margin-left: 85%;
+    right: 0px;
+  }
+  .dropdown-menu {
+    right: 0px;
+    left: auto;
+  }
+
+  .icon-container {
+    margin-right: 13px;
+  }
+
+  .dark-grey-icon-button,
+  .grey-icon-button {
+    width: unset;
+    justify-content: unset;
+  }
+
+  .icon-order-class {
+    .icon-container {
+      margin-right: 5px;
+      margin-left: -5px;
+    }
+  }
+
+  .left-window-toggle {
+    .icon-container {
+      margin-right: 8px;
+    }
+    .tiphive-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .subtopic-toggle {
+    .icon-container {
+      margin-right: 7px;
+      .tiphive-icon {
+        transform: rotate(90deg);
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.yay-search-form {
+  .btn-like-search-form {
+    position: relative;
+    margin-top: 6px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #777;
+    margin-right: 5px;
+    .material-icons.icon-fa {
+      font-size: 16px;
+    }
+
+    & > .icon-container {
+      display: inline-block;
+      color: #56ccf2;
+    }
+  }
+
+  .add-search-input {
+    margin-left: -3.8rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    border: none;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    // color: #555;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.label-tab-content {
+  .labels-box {
+    .list-group-item {
+      padding-left: 10px;
+      input[type="checkbox"]:not(:checked) + label + label {
+        color: darken(#bfbfbf, 5%);
+        font-weight: 300;
+      }
+    }
+  }
+  .list-group-menu-content {
+    max-height: 100%;
+    overflow-y: auto;
+    padding-bottom: 70px;
+  }
+  .label-tab-form {
+    .selectize-input, input.full-border {
+        border: 1px solid #eee;
+        padding: 10px;
+        font-weight: 400;
+    }
+    .close {
+      font-size: 40px;
+      margin: 0;
+    }
+    .panel-footer {
+      border-color: #eee;
+      .btn {
+        margin-top: 0;
+      }
+    }
+  }
+}

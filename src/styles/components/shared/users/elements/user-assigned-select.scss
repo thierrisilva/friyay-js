@@ -1,0 +1,56 @@
+.user-assigned-select {
+  position: relative;
+  width: 250px;
+  height: 37px;
+  border-radius: 2px;
+  border: 1px solid #f2f2f2;
+
+  .user-assigned-select__arrow {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    z-index: -1;
+  }
+
+  .user-assigned-select__option {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 0 25px 0 10px;
+    color: #777;
+    list-style: none;
+
+    &:hover {
+      background: #f2f2f2;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+
+  .user-assigned-select__option-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+  }
+
+  .user-assigned-select__options {
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    z-index: 10;
+    width: 250px;
+    max-height: 200px;
+    padding: 5px 0;
+    border: 1px solid #f2ab13;
+    background: #fff;
+    overflow-y: scroll;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+
+  .user-assigned-select__value {
+    .user-assigned-select__option:hover {
+      background: none;
+    }
+  }
+}

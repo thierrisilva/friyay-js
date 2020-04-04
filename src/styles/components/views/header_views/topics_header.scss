@@ -1,0 +1,40 @@
+.topics-header {
+  align-items: center;
+  color: $colour-grey-dark-2;
+  display: flex;
+  flex: 0 0 0;
+  height: 100px;
+  justify-content: left;
+  min-height: 100px;
+  padding: 20px 20px 20px 35px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  // background: #fff;
+  .dropdown-menu {
+    .icon-container {
+      display: inline-block;
+      color: #a2a2a2;
+    }
+    & > li > a {
+      display: flex;
+    }
+  }
+  & + .content-container .content-main > div {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .icon-container {
+    color: #f2ab13;
+  }
+}
+
+.topics-header_title {
+  color: $colour-grey-dark-2;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 10px 0 0;
+  &:hover {
+    color: $colour-grey-dark-2;
+  }
+}

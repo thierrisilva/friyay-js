@@ -1,0 +1,109 @@
+.dots-layer-container {
+  position: relative;
+  .open {
+    & > .dropdown,
+    & > .dropdown-menu {
+      display: none;
+      pointer-events: none;
+    }
+  }
+  .dot-container {
+    line-height: 43px;
+    .dot {
+      height: 7px;
+      width: 7px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      margin-bottom: 1px;
+    }
+  }
+  .coloured .dot-container {
+    &:nth-child(1) {
+      .dot {
+        background: #7696ba;
+      }
+    }
+    &:nth-child(2) {
+      .dot {
+        background: #6fbf8c;
+      }
+    }
+    &:nth-child(3) {
+      .dot {
+        background: #5d4c82;
+      }
+    }
+    &:nth-child(4) {
+      .dot {
+        background: #aa71a9;
+      }
+    }
+    &:nth-child(5) {
+      .dot {
+        background: #f3a51e;
+      }
+    }
+  }
+  > :not(.dots-layer) {
+    opacity: 0 !important;
+    transition: opacity 0s;
+    z-index: -1;
+  }
+  .dots-layer {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    padding: 2px 0px;
+    margin-top: auto;
+    transition: opacity 0.5s ease-in-out;
+    display: inline-flex;
+    justify-content: space-evenly;
+    background: transparent;
+    border-radius: 10px;
+
+    &.hasUnread {
+      .dot-container:nth-child(3) {
+        line-height: 21px;
+        width: 21px;
+        padding-top: 12px;
+        text-align: center;
+        color: white;
+
+        .dot {
+          height: 21px;
+          width: 21px;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    .dots-layer {
+      opacity: 0;
+      transition: opacity 0s;
+      z-index: -1;
+    }
+    > :not(.dots-layer) {
+      opacity: 1 !important;
+      transition: opacity 0.5s ease-in-out;
+      z-index: 2;
+    }
+    .open {
+      & > .dropdown,
+      & > .dropdown-menu {
+        display: block;
+        pointer-events: all;
+      }
+    }
+  }
+}
+
+.wiki-view_content-container,
+.card-view {
+  .dots-layer {
+    width: 33%;
+  }
+}

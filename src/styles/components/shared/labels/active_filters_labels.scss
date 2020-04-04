@@ -1,0 +1,13 @@
+.active-filters-labels {
+  display: flex;
+
+  .active-filters-labels__chip {
+    margin-left: 6px;
+  }
+
+  .active-filters-labels__label {
+    display: flex;
+    align-items: center;
+    color: #aaaab1;
+  }
+}

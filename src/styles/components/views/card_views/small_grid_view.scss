@@ -1,0 +1,107 @@
+.small-grid-card {
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
+  display: flex;
+  flex: 0 0 180px;
+  flex-flow: column nowrap;
+  height: 180px;
+  width: 220px;
+  .nest-card-zone {
+    position: absolute;
+    right: 15px;
+    display: none;
+  }
+  &:hover {
+    .nest-card-zone {
+      display: inline;
+    }
+  }
+
+  .nested-card-summary {
+    overflow: auto;
+    flex-grow: 1;
+    padding: 0px 0px 0 10px;
+  }
+  .add-card-card_content {
+    padding: 10px;
+    wdith: 100%;
+  }
+  .grid-footer-wrapper {
+    padding: 0;
+    margin: 0 -15px;
+    transform: scale(0.8);
+    .footer-row {
+      margin: 0;
+    }
+  }
+}
+
+.custom-drag-preview .small-grid-card {
+  @extend .dragging-shadow;
+  opacity: 0.5;
+  background: black;
+  transform: scale(0.9);
+}
+
+.small-grid-card_section {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: 30px;
+  padding: 0 10px;
+  position: relative;
+
+  &.bottom {
+    padding-right: 0;
+
+    .card-labels {
+      width: 87px;
+    }
+
+    .card-label {
+      height: 24px;
+      width: 75px;
+      top: 0.25em;
+    }
+  }
+
+  &.creator {
+    color: $colour-grey-light-4;
+    font-size: 13px;
+    justify-content: space-between;
+    min-height: 25px;
+  }
+
+  &.title {
+    align-items: flex-start;
+    flex: 0 1 0;
+    flex-flow: row;
+  }
+
+  .grid-card_content-doc-links {
+    width: 100%;
+    min-height: 53px;
+    padding: 0 5px;
+    align-items: flex-end;
+  }
+}
+
+.small-grid-card_creator {
+  color: $colour-grey-1;
+}
+
+.attachment-optionsmallgrid-view {
+  height: 50px;
+  border: 2px dashed #d6d6d6;
+  margin: auto;
+  margin-top: 30px;
+  width: 70%;
+  margin-bottom: 30px;
+  color: #d6d6d6;
+  line-height: 50px;
+  font-weight: bolder;
+  text-align: center;
+}

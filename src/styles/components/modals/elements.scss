@@ -1,0 +1,18 @@
+.modal-tabs_container {
+  align-items: center;
+  background-color: $colour-grey-light-2;
+  display: flex;
+  flex: 0 0 auto;
+  height: 40px;
+  width: 100%
+};
+
+
+.modal-tab {
+  @extend .dark-grey-link;
+  color: $colour-grey-dark-2;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 100px;
+  padding: 0px 10px;
+};

@@ -1,0 +1,49 @@
+.notification-indicator_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .glyphicon {
+    font-size: 18px;
+  }
+
+  &.open {
+    background-color: $colour-purple-1;
+
+    .notification-indicator,
+    .notification-indicator_count {
+      color: $colour-grey-dark-1;
+    }
+  }
+}
+
+.notification-indicator_count {
+  padding-left: 4px;
+  color: #b667a7;
+}
+
+.notification-indicator {
+  position: relative;
+  color: $colour-purple-1;
+  padding: 0 5px;
+  height: 50px;
+  @extend .flex-r-center;
+
+  .badge {
+    background-color: #b667a7;
+    font-size: 6px;
+    padding: 3px 5px;
+    position: absolute;
+    right: 1px;
+    top: 12px;
+  }
+}
+
+.notification-indicator_dropdown {
+  left: auto;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0;
+  right: 0;
+  width: 400px;
+}

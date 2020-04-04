@@ -1,0 +1,65 @@
+.left-menu-people {
+  align-items: stretch;
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column nowrap;
+  max-height: 30px;
+  text-replace: all 0.4s ease-in-out;
+  width: 100%;
+
+  .left-menu_content-row-header {
+    padding-left: 5px;
+    a{
+      margin-left: 15px !important;
+      &:nth-child(3){
+        margin-left: 5px !important;
+      }
+      &.mlauto {
+        margin-left: auto !important;
+      }
+    }
+  }
+
+
+  &.presented {
+    max-height: 100vh;
+
+    .left-menu-people_expand-icon {
+      display: none !important;
+    }
+    .left-menu-people_collapse-icon {
+      display: flex !important;
+    }
+  }
+}
+
+
+.left-menu-people_user-icon {
+  width: 20px !important;
+}
+
+.left-menu-people_expand-icon {
+  width: 20px !important;
+  margin-left: 0px;
+}
+
+.left-menu-people_collapse-icon {
+  display: none !important;
+  width: 20px !important;
+}
+
+
+.left-menu-people_list {
+  align-items: stretch;
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  min-height: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.ml0 {
+  margin-left: 0;
+}

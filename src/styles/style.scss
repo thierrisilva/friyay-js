@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Damion');
+
+html {
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+a {
+  cursor: pointer;
+  color: currentColor;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none !important;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.th-inline {
+  display: inline !important;
+}
+
+.ignore-click {
+  pointer-events: none;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.text-light-muted {
+  color: #999;
+
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+a.gray-link {
+  color: $gray-75;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.btn-th-link-gray {
+  cursor: pointer;
+  color: #ddd;
+}
+.btn-th-link:hover {
+  color: darken(#ddd, 5%);
+}
+.btn-th-link {
+  cursor: pointer;
+  color: $color-1;
+  @extend .flex-r-center;
+}
+.btn-th-link:active,
+.btn-th-link:focus {
+  box-shadow: none;
+}
+.btn-th-link:hover {
+  color: darken($color-1, 10%);
+}
+
+.joyride-overlay {
+  z-index: 9999 !important;
+  .joyride-tooltip__header {
+    border-color: $color-8 !important;
+  }
+  .joyride-tooltip__button--primary {
+    font-weight: 400;
+    background: white !important;
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 1.5px #5fafd9;
+    border: none;
+    padding: 8px 10px;
+    span {
+      color: $brand-primary !important;
+    }
+  }
+  .joyride-tooltip__button--primary:hover {
+    background: lighten($brand-primary, 45%);
+    color: $brand-primary;
+  }
+  .joyride-tooltip__button--secondary {
+    color: $brand-primary;
+  }
+  .joyride-hole {
+    background: transparent;
+  }
+  .joyride-tooltip__button--skip {
+    margin-top: 10px;
+  }
+}
+
+.disappear {
+  display: none;
+}
+
+/* New CSS */
+input::placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+.padding0 {
+  padding: 0 !important;
+}
+.margin50 {
+  margin: 0 50px;
+}
+.marginTop20 {
+  margin: 20px 0 0 0;
+}
+.marginTop30 {
+  margin: 30px 0 0 0;
+}
+.width95 {
+  width: 95%;
+  margin: 0 auto;
+}
+.yellowShade {
+  color: #ffc107;
+}
+.greenShade {
+  color: #4dbd74;
+}
+.pinkShade {
+  color: #e83e8c;
+}
+.blueShade {
+  color: #63c2de;
+}
+.purpleShade {
+  color: #6f42c1;
+}
+.noBorder {
+  border: none !important;
+}
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+.flexSpaceInBetween {
+  justify-content: space-between !important;
+}
+
+//Generic style for all dropdown menus
+.dropdown-menu {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+.invite-form-dropdown-menu {
+  padding: 0;
+}

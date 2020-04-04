@@ -1,0 +1,641 @@
+$cell-flex-map: (
+  title: 0 0 350px,
+  add: 0 0 55px,
+  actual-work: 0 0 150px,
+  completion: 0 0 350px,
+  completion-date: 0 0 220px,
+  confidence-range: 0 0 400px,
+  creation-date: 0 0 220px,
+  custom: 0 0 250px,
+  due-date: 0 0 220px,
+  estimated-work: 0 0 200px,
+  expected-completion-date: 0 0 270px,
+  priority: 0 0 272px,
+  start-date: 0 0 220px,
+  variance: 0 0 150px,
+  body: 0 0 400px,
+  assignee: 0 0 250px,
+  label: 0 0 400px,
+  files: 0 0 300px,
+  links: 0 0 250px,
+  images: 0 0 250px,
+  video: 0 0 250px,
+  yays: 0 0 220px
+);
+
+$rw-width-map: (
+  title: 350px,
+  add: 55px,
+  actual-work: 150px,
+  completion: 350px,
+  completion-date: 220px,
+  confidence-range: 400px,
+  creation-date: 220px,
+  custom: 250px,
+  due-date: 220px,
+  estimated-work: 200px,
+  expected-completion-date: 270px,
+  priority: 272px,
+  start-date: 220px,
+  variance: 150px,
+  body: 400px,
+  assignee: 250px,
+  label: 400px,
+  files: 300px,
+  links: 250px,
+  images: 250px,
+  video: 250px,
+  yays: 220px
+);
+
+$view-top-bar-height: 50px;
+
+.sheet-view {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  // position: relative;
+  // background: white;
+  left: 4px;
+  padding-bottom: 20px;
+
+  .sheet-view__add-btn {
+    display: none;
+    margin-right: 10px;
+    padding: 0;
+  }
+  .sheet-view-add-card-input {
+    border-bottom: none;
+  }
+
+  .sheet-view__add-column-btn {
+    margin: 0 -5px;
+
+    &:hover {
+      color: #666;
+      cursor: pointer;
+    }
+  }
+
+  .sheet-view__card {
+    font-weight: 400;
+    display: flex;
+
+    .text-muted {
+      color: currentColor !important;
+    }
+
+    &:hover {
+      .sheet-view__card-title-edit-btn {
+        display: initial;
+      }
+
+      .sheet-view__card-nested-cards-add,
+      .sheet-view__card-nested-cards-caret {
+        visibility: visible;
+      }
+    }
+
+    &.show-caret {
+      .sheet-view__card-nested-cards-caret {
+        visibility: visible;
+      }
+    }
+    .add-card-card_content {
+      width: 100%;
+      form {
+        margin-left: 0px;
+      }
+    }
+
+    .nest-card-zone {
+      height: 55px;
+      margin-top: -20px;
+      margin-bottom: -20px;
+      padding-top: 15px;
+    }
+  }
+
+  .sheet-view__card-nested-cards-add {
+    visibility: hidden;
+    margin-left: 15px;
+  }
+
+  .sheet-view__card-nested-cards-caret {
+    margin-right: -3px;
+    visibility: hidden;
+  }
+
+  .sheet-view__card-placeholder {
+    padding: 15px 20px;
+  }
+  .dmLoader + .sheet-view__card-placeholder,
+  .loading-indicator-container + .sheet-view__card-placeholder {
+    display: none;
+  }
+
+  .sheet-view__card-title {
+    display: flex;
+    align-items: center;
+
+    .card-title {
+      color: currentColor !important;
+    }
+  }
+
+  .sheet-view__card-title-edit {
+    margin-right: 10px;
+  }
+
+  .sheet-view__card-title-edit-btn {
+    display: none;
+    margin-left: 10px;
+    margin-right: -7px;
+  }
+
+  .sheet-view__cell {
+    display: flex;
+    align-items: center;
+    flex: 0 0 400px;
+    position: relative;
+    padding: 10px 20px;
+    overflow: visible;
+
+    &--variance {
+      &:last-child {
+        border-right: 1px solid #eee;
+      }
+      &:first-child {
+        border-left: 1px solid #eee;
+      }
+    }
+
+    @each $modifier, $flex in $cell-flex-map {
+      &.sheet-view__cell--#{$modifier} {
+        flex: $flex;
+      }
+    }
+
+    .add-card-or-subtopic_button {
+      padding: 10px 0;
+    }
+  }
+
+  .sheet-view__cell.sheet-view__cell--add {
+    overflow: visible;
+    border-right: 1px solid #eee;
+  }
+
+  .sheet-view__cell-remove-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -12px;
+    padding: 5px;
+    font-size: 16px;
+    color: #aaa;
+
+    &:hover {
+      cursor: pointer;
+      color: #666;
+    }
+  }
+
+  .sheet-view__cell-title {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .sheet-view__content {
+    flex: 0 0 0;
+    width: max-content;
+    overflow: visible;
+
+    .sheet-view__grid {
+      margin-top: -1px;
+      & > div {
+        flex: 1;
+      }
+      .sheet-view__cell {
+        border-left: 1px solid #eee;
+        border-top: 1px solid #eee;
+        &:first-child {
+          justify-content: space-between;
+          padding-right: 10px;
+          border-left: 0;
+        }
+      }
+    }
+  }
+
+  .sheet-view__dropdown {
+    position: absolute;
+    top: 42px;
+    right: 5px;
+    z-index: 20;
+    width: 250px;
+    max-height: 200px;
+    padding: 5px 0;
+    border: 1px solid #f2ab13;
+    background: #fff;
+    overflow-y: scroll;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+
+  .sheet-view__dropdown-item {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 0 25px 0 10px;
+    color: #777;
+    font-weight: normal;
+    list-style: none;
+
+    &:hover {
+      background: #f2f2f2;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+
+  .sheet-view__dropdown-item--search-input {
+    padding-right: 15px !important;
+  }
+
+  .sheet-view__footer {
+    flex: 0 0 auto;
+    width: 100%;
+    font-weight: bold;
+    .sheet-view__grid {
+      min-height: 50px;
+      .sheet-view__cell {
+        padding: 0px 20px;
+        border: 1px solid #eee;
+        border-right: 0;
+        &:last-child {
+          border-right: 1px solid #eee;
+        }
+        &:first-child {
+          border-left: 0;
+        }
+      }
+    }
+  }
+
+  .sheet-view__grid {
+    display: flex;
+    // margin: 0 10px;
+    .material-icons.sheet-view__sort-btn {
+      margin-right: auto;
+    }
+  }
+
+  .sheet-view__header {
+    flex: 0 0 auto;
+    width: min-content;
+    font-weight: bold;
+    z-index: 1;
+    // position: fixed;
+
+    .sheet-view__cell {
+      padding: 0px 20px;
+      height: 100%;
+    }
+
+    .resize-wrapper {
+      border-left: 1px solid #eee;
+      border-top: 1px solid #eee;
+      // background-color: #fff;
+      border-bottom: 1px solid #eee;
+      height: 42px !important;
+      &:first-child {
+        border-left: 0;
+      }
+    }
+    .add-card-or-subtopic {
+      padding-left: 10px;
+    }
+  }
+
+  .sheet-view__save-btn {
+    position: relative;
+    font-size: 22px;
+    color: #999;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .sheet-view__sort-btn {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  .sheet-view__title-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    .add-card-card_section {
+      margin-top: 0px;
+      height: 45px;
+    }
+    .add-subtopic-card_content {
+      flex: 1;
+    }
+  }
+
+  .sheet-view__topic-header {
+    display: flex;
+    height: 45px;
+
+    &:hover {
+      .sheet-view__add-btn {
+        display: initial;
+      }
+      .add-card-or-subtopic.dropdown,
+      .sheet-view__topic-title-edit-btn {
+        display: initial;
+        min-height: 20px;
+        .add-card-or-subtopic_button {
+          padding: 0;
+        }
+      }
+    }
+
+    .sheet-view__cell {
+      // background-color: #fafafa;
+    }
+    .add-card-or-subtopic.dropdown,
+    .sheet-view__topic-title-edit-btn {
+      display: none;
+    }
+    .fa {
+      cursor: pointer;
+    }
+  }
+
+  .sheet-view__topic-section {
+    flex: 1 0 0;
+
+    div.is-dragging {
+      background: #fafafa;
+    }
+    & > div:last-child {
+      .sheet-view__cell {
+        border-bottom: 1px solid #eee;
+      }
+    }
+  }
+
+  .sheet-view__topic-title {
+    font-weight: 800;
+    color: currentColor !important;
+  }
+
+  .sheet-view__cell--estimated-work,
+  .sheet-view__cell--actual-work {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-around;
+  }
+
+  .sheet-view__cell--images {
+    justify-content: start;
+    padding: 0px 15px;
+
+    .image-with-loading {
+      height: 30px;
+      width: 50px;
+      margin: 0px 2px;
+      border: 1px solid #eeeeee;
+      border-radius: 0.5px;
+    }
+
+    .image-with-loading:not(:first-child) {
+      margin-left: 5px;
+    }
+
+    .image-with-loading__msg--loading {
+      display: none;
+    }
+  }
+}
+
+.sheet-view-subtopic-header {
+  font-weight: bold;
+}
+
+.sheet-view-dialog-input {
+  width: 100%;
+  height: 34px;
+  margin: 5px 0;
+  padding: 0 7px;
+  border: none;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+.sheet-view {
+  .sheet-view__date {
+    margin: -6px -20px -6px 0;
+
+    &.sheet-view__date--wide .DateInput {
+      width: 195px;
+    }
+    .DateInput_input {
+      padding: 0;
+    }
+    .SingleDatePickerInput_clearDate {
+      margin: 0 0 1px 12px;
+    }
+  }
+
+  .sheet-view__input {
+    width: 170px;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 2px;
+    background: #f8f8f8;
+    color: #333;
+  }
+
+  .sheet-view__label {
+    color: #555;
+  }
+
+  .sheet-view__variance {
+    // color: #555;
+
+    &.sheet-view__variance--less {
+      // color: #af69a0;
+    }
+    &.sheet-view__variance--more {
+      // color: #6b94c4;
+    }
+  }
+
+  .sheet-view__work-input {
+    width: 40px;
+    height: 30px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 2px;
+    // background: #f8f8f8;
+    background: none;
+    // color: #333;
+    text-align: right;
+    flex-grow: 1;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.sheet-view-card-preview {
+  @extend .dragging-shadow;
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.sheet-view__card-label-select {
+  width: 100%;
+}
+
+.sheet-view__card-cell-body {
+  // editor style override
+  .fr-box {
+    .fr-top .fr-wrapper {
+      box-shadow: none !important;
+    }
+
+    .fr-toolbar {
+      border: none !important;
+      box-shadow: none !important;
+      margin: 0 -15px;
+    }
+
+    .show-placeholder {
+      box-shadow: none !important;
+    }
+
+    .fr-wrapper {
+      overflow: hidden !important;
+      box-shadow: none !important;
+    }
+
+    .fr-wrapper + div {
+      display: none !important;
+    }
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.sheet-view__cell--topics {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.resize-wrapper__handle-wrapper > div {
+  z-index: 3;
+}
+
+.sheet-view__cell--body {
+  overflow-x: scroll !important;
+  & > div {
+    overflow-x: scroll !important;
+  }
+}
+
+.sheet-view__cell--label {
+  padding: 3px !important;
+}
+
+.sheet-view__cell--links {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+
+  .list-group {
+    margin-bottom: 0px;
+  }
+
+  .group-item-tip-link {
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-bottom: 2px;
+    .avatar-url,
+    .tip-link-icon {
+      width: 35px;
+      height: 35px;
+      background-size: cover;
+    }
+  }
+}
+
+.sheet-view__cell--files-icon {
+  font-size: 1.5em;
+  color: #bbb;
+}
+
+.custom-drag-preview {
+  .sheet-view__topic-header {
+    padding: 0 20px;
+    .sheet-view__cell {
+      .sheet-view__title-wrapper {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.sheet-view__title-wrapper {
+  .nest-card-zone {
+    height: 50px;
+    margin-top: -10px;
+    padding-top: 13px;
+    margin-bottom: -10px;
+  }
+}
+
+.resize-wrapper {
+  display: inline;
+
+  @each $modifier, $startWidth in $rw-width-map {
+    &.rw--#{$modifier} {
+      width: $startWidth;
+    }
+  }
+  &:first-child {
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+  span {
+    .icon-container {
+      height: 10px;
+      width: 11px;
+      visibility: hidden;
+      i.icon-fa {
+        font-size: 14px;
+        color: #f2ab13;
+      }
+    }
+    div:hover {
+      .icon-container {
+        visibility: visible;
+      }
+    }
+  }
+}
+.estimation-view {
+  .rw--variance {
+    border-right: 1px solid #eee;
+  }
+}

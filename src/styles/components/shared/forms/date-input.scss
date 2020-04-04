@@ -1,0 +1,34 @@
+.date-input {
+  .DateInput {
+    width: unset;
+    background: none;
+  }
+  .DateInput_input {
+    padding: 8px;
+    // border: 1px solid currentColor;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+  }
+  .DateInput_input__focused {
+    border-bottom: 2px solid transparent;
+  }
+  .SingleDatePickerInput {
+    border-color: #ccc;
+    border-radius: 2px;
+    background: none;
+    &_calendarIcon_svg {
+      fill: currentColor;
+    }
+  }
+  .SingleDatePickerInput_clearDate {
+    position: static;
+    margin: 0 5px 1px 9px;
+    background: none;
+    transform: none;
+  }
+  .SingleDatePickerInput__showClearDate {
+    padding: 0;
+  }
+}

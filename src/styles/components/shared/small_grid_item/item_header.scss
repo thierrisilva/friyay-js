@@ -1,0 +1,40 @@
+.item-header {
+	font-size: 12px;
+	height: 45px;
+	line-height: 1.2em;
+	margin: 10px 0 0;
+	padding: 0;
+
+	.item-avatar {
+		border-radius: 18px;
+		height: 30px;
+		margin-right: 8px;
+	}
+
+	.item-user-name {
+		text-transform: capitalize;
+		font-weight: 400;
+		color: $gray;
+	}
+
+	.item-user-name:hover {
+		color: darken(#999, 15%);
+	}
+
+	.item-topic-content {
+		position: relative;
+		top: 5px;
+
+		a {
+			color: #888;
+			&:hover {
+				color: #555;
+			}
+		}
+	}
+}
+
+.item-user-leader {
+		font-weight: 400;
+		color: #a8a8a8;
+	}

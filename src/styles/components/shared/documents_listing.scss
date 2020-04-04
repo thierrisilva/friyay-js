@@ -1,0 +1,128 @@
+.documents-list-group {
+  margin-bottom: 20px;
+
+  .group-item-document {
+    background-color: $gray-lightest;
+    padding: 20px;
+    overflow: hidden;
+    border-color: $gray-light-more;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 24px;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.grid-item-content .documents-list-group {
+  .group-item-document {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+
+    .line-clamp-wrapper {
+      height: 35px;
+      overflow: hidden;
+      padding: 0 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .line-clamp {
+      width: 100%;
+      line-height: 1.4;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    i {
+      margin-right: 2rem;
+      margin-left: 1rem;
+    }
+
+    .fa {
+      font-size: 40px;
+
+      &.fa-file-pdf-o {
+        color: #D0021B;
+      }
+
+      &.fa-file-excel-o {
+        color: #6bc289;
+      }
+
+      &.fa-file-word-o {
+        color: #618cc8;
+      }
+
+      &.fa-file-powerpoint-o {
+        color: #ee9843;
+      }
+    }
+  }
+
+  &.collapsed {
+    position: absolute;
+    bottom: 75px;
+    z-index: 5;
+    width: 100%;
+    background: white;
+
+    .link-tooltip-container {
+      position: relative;
+    }
+
+    .link-tooltip {
+      z-index: 10;
+      display: none;
+      bottom: 50px;
+      left: 0;
+      width: 170px;
+      position: absolute;
+      top: auto;
+    }
+
+    .link-tooltip-container:hover .link-tooltip {
+      display: inline;
+
+      a {
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        color: white;
+      }
+    }
+
+    .group-item-document {
+      display: block;
+      background-color: white;
+      padding: 15px 0 15px 15px;
+      border: 0 none;
+      float: left;
+      overflow: visible;
+
+      .fa {
+        margin: 0;
+        font-size: 24px;
+        color: silver;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8) {
+        .link-tooltip {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.topic-list-view {
+  // background-color: #fff;
+  // border-bottom: 1px solid $colour-grey-light-1;
+  //   overflow-y: auto;
+  padding: 5px 40px;
+  width: 100%;
+  &-grey {
+    background: #fafafa;
+  }
+
+  &-white {
+    background: white;
+  }
+}
+
+.topic-list-card {
+  align-items: center;
+  display: flex;
+  flex: 0 0 0;
+  height: 40px;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 0px;
+
+  &.is-over {
+    box-shadow: inset 0px 0px 1px 2px $colour-yellow-1;
+  }
+  .add-card-card_content {
+    justify-content: start;
+  }
+
+  a {
+    color: currentColor;
+  }
+}

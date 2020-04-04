@@ -1,0 +1,154 @@
+.ts-ui-view-tab {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .icon-wrapper {
+    position: absolute;
+    bottom: -11px;
+    padding: 10px;
+    left: -70px;
+    padding: 17px 15px;
+    z-index: 1;
+    color: #fff;
+  }
+  .view-carousel-icon-button-wrapper {
+    background: #f2994a;
+  }
+  .priority-flag-icon-button-wrapper {
+    background: #eb5757;
+  }
+  .share-icon-button-wrapper {
+    background: #56ccf2;
+  }
+  .assignment-icon-button-wrapper {
+    background: #f2c94c;
+  }
+  .label-icon-button-wrapper {
+    background: #bb6bd9;
+  }
+  .timeline-start-wrapper {
+    background: #56ccf2;
+    padding: 21px 15px;
+  }
+  .timeline-due-wrapper {
+    background: #6fcf97;
+    padding: 21px 15px;
+  }
+  .icon-adjustment {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .start-date {
+    margin-right: 70px;
+  }
+  .due-date,
+  .start-date {
+    display: flex;
+    width: 315px;
+    .SingleDatePicker {
+      flex: 1;
+    }
+    .DateInput_input {
+      text-align: center; //override alignment of text
+    }
+    .SingleDatePickerInput_calendarIcon {
+      position: absolute; // override alignment of calendar icon
+    }
+    .SingleDatePickerInput {
+      border: none !important; //override default border of date input
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      color: #b2b2b2;
+      display: flex;
+    }
+    .SingleDatePicker_picker {
+      z-index: 2; //fix picker going behind other element
+    }
+  }
+  .priority-item {
+    padding: 0px 20px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  //override share menu
+  .sharing-select-menu {
+    width: 30vw;
+    height: 29px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    .selectize-input {
+      border: none;
+      height: 30px;
+      overflow: auto;
+    }
+    .form-group {
+      flex: 1;
+    }
+    .dropdown-content {
+      position: absolute;
+      top: 33px;
+      right: 0;
+      z-index: 2;
+      left: 0;
+    }
+  }
+
+  //override view selector class
+  .view-selector {
+    position: absolute;
+    top: 30px;
+    max-height: 500px;
+    right: -10px;
+    z-index: 5;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 1px #ccc;
+  }
+  .select-input {
+    width: 35vw;
+    height: 33px;
+    margin-top: -8px;
+    > div:first-of-type {
+      border: none;
+      box-shadow: none;
+      height: inherit;
+      > div {
+        height: inherit;
+        overflow: hidden;
+      }
+    }
+  }
+  .view-name-wrapper {
+    display: flex;
+    width: 350px;
+  }
+  .view-name {
+    flex: 1;
+    display: flex;
+  }
+}
+
+.ts-ui-editor-wrapper {
+  position: fixed;
+  right: 37px;
+  bottom: 37px;
+  background: #fff;
+  width: 50vw;
+  top: 142px;
+  border: 1px solid #dedede;
+  border-top-right-radius: 20px;
+  padding: 30px 10px 10px;
+  overflow: auto;
+  z-index: 1;
+  cursor: auto;
+  .view-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    width: 100%;
+    height: 100%;
+  }
+}

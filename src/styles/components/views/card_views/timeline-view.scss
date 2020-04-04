@@ -1,0 +1,110 @@
+.timeline-view {
+  display: flex;
+  flex: 1 0 0;
+  // height: calc(100vh - 160px);
+  padding-top: 8px;
+  padding-left: 10px;
+  //height: 100%; // This causes left list to extend below screen.  The add card card cannot be reached
+
+  .timeline-view__actions {
+    display: flex;
+    padding: 5px 15px 15px 15px;
+  }
+
+  .timeline-view__actions-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .timeline-view__assign-icon {
+  }
+
+  .timeline-view__assign-panel {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .timeline-view__assign-recent {
+  }
+
+  .timeline-view__assign-select {
+    margin-right: 20px;
+  }
+
+  .timeline-view__assign-toggle {
+    position: relative;
+    top: 4px;
+    margin-left: 20px;
+    padding: 0;
+    border: 0;
+    background: none;
+
+    &.timeline-view__assign-toggle--active {
+      color: $color-1;
+    }
+  }
+
+  .timeline-view__content {
+    // min-width: calc(100% - 300px);
+    width: 100%;
+    height: calc(100vh - 149px);
+    overflow: auto;
+  }
+
+  .timeline-view__drop-zone {
+    flex-grow: 1;
+    padding: 0 10px 0 0;
+    margin: 0px 0 10px;
+    overflow: scroll;
+
+    &.highlight-drop-zone {
+      background-color: #eee;
+    }
+  }
+
+  .timeline-view__mode-selector {
+    margin-right: 10px;
+    z-index: 20;
+  }
+
+  .timeline-view__no-due-card {
+    margin-bottom: 5px;
+  }
+
+  .timeline-view__no-due-header {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #aaa;
+    line-height: 62px;
+    min-height: 62px;
+  }
+
+  .timeline-view__no-due-panel {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    // background-color: $lightGreyViewPanelBackground;
+    overflow: auto;
+    height: calc(100vh - 150px);
+  }
+
+  .timeline-view__timeline {
+    height: calc(100% - 67px);
+  }
+
+  .timeline-view__timeframe {
+    position: relative;
+    // margin-left: 20px;
+  }
+}
+
+.custom-drag-preview {
+  .timeline-card__wrapper {
+    background: transparent;
+  }
+}

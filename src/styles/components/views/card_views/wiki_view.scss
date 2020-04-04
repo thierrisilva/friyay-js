@@ -1,0 +1,264 @@
+.wiki-view {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: column nowrap;
+  min-width: 0;
+  // background-color: $colour-grey-light-1;
+
+  @media (min-width: 750px) {
+    flex-flow: row nowrap;
+  }
+}
+
+.wiki-view_tree {
+  width: 0;
+  margin: 0 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  height: calc(100vh - 150px);
+  // background: $colour-grey-light-1;
+
+  &.presented {
+    width: 250px;
+  }
+  .add-card-or-subtopic {
+    background-color: $colour-grey-light-1;
+  }
+}
+
+.wiki-view_tree-button {
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  transition: left 0.33s;
+  color: #bbb;
+
+  &.tree-shown {
+    left: 130px;
+  }
+}
+
+.wiki-view_small-screen {
+  background-color: $colour-grey-light-4;
+  display: flex;
+  height: 1px;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 750px) {
+    display: none;
+  }
+}
+
+.wiki-view_content-container {
+  border-radius: 20px;
+  display: block;
+  flex: 1 1 0;
+  overflow-y: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  background-color: $colour-grey-light-1;
+  transition: margin 0.3s ease;
+  height: calc(100vh - 160px);
+  .no-yay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-details {
+    padding: 30px;
+
+    .fr-toolbar {
+      &.custom-theme.fr-top.fixed {
+        position: fixed;
+        top: 190px;
+      }
+    }
+  }
+}
+
+.wiki-list_container {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wiki-list {
+  // background-color: $colour-grey-light-1;
+  flex: 1;
+  // padding-bottom: 50px;
+  .wikilist-topic-segment_topic-content {
+    .wikilist-topic-segment_topic-content {
+      margin-left: 15px;
+      .wikilist-topic-segment_topic-content {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.wiki-list-no-items-label {
+  color: $colour-grey-light-3;
+  font-style: italic;
+  font-size: 12px;
+  margin: 5px 0px 5px 30px;
+}
+
+.wikilist-topic-segment {
+  width: 100%;
+  padding-left: 4px;
+  .wikilist-topic-segment {
+    margin-left: -4px;
+  }
+}
+
+.wikilist-topic-segment_title-container {
+  align-items: center;
+  display: flex;
+  height: 35px;
+  .icon-container,
+  a.grey-icon-button {
+    width: 20px;
+  }
+  & > div > .grey-icon-button {
+    .fa {
+      font-size: 17px;
+    }
+  }
+  .nest-card-zone {
+    height: 50px;
+    margin-left: -5px;
+    padding-top: 13px;
+  }
+}
+
+.wikilist-topic-segment_topic-title {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-left: -2px;
+
+  .wikilist-topic-segment_buttons {
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .wikilist-topic-segment_buttons {
+      visibility: visible;
+    }
+  }
+}
+
+.wikilist-topic-segment_title {
+  @extend .ellipsize-text;
+  // @extend .dark-grey-link;
+  color: currentColor;
+  font-weight: 400;
+}
+
+.wikilist-topic-segment_topic-dropdown {
+  width: 100%;
+}
+
+.wikilist-topic-segment_topic-icon {
+  margin-right: 5px;
+  transform: scaleY(1.2);
+  color: #e1e1e1;
+}
+
+.wikilist-topic-segment_topic-content {
+  display: none;
+
+  &.is-presented {
+    display: block;
+    margin-right: 5px;
+  }
+}
+
+.wiki-list_topic-dropzone {
+  min-height: 10px;
+  width: 100%;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.wiki-view_topic_drag-preview {
+  @extend .dragging-shadow;
+  align-items: center;
+  background-color: $colour-grey-light-1;
+  display: flex;
+  margin-left: 25px;
+  padding: 5px;
+  width: 200px;
+}
+
+.wiki-card {
+  align-items: center;
+  display: flex;
+  padding: 5px 0px;
+  width: 100%;
+  // margin-left: -5px;
+
+  .card-title {
+    color: currentColor;
+  }
+
+  .wiki-card_options {
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .wiki-card_options {
+      visibility: visible;
+    }
+  }
+}
+.custom-drag-preview .wiki-card {
+  @extend .dragging-shadow;
+  width: 200px;
+}
+
+.wiki-view_card-container {
+  margin-left: -5px;
+}
+
+.wiki-card_title-container {
+  flex-grow: 1;
+}
+
+.wiki-card_title {
+  // color: $colour-grey-dark-3;
+  font-weight: 400 !important;
+
+  &.is-selected {
+    color: $colour-yellow-1;
+    font-weight: 500 !important;
+  }
+}
+
+.wiki-content-topic-list {
+  flex-direction: column;
+  padding: 4em 6em;
+
+  h3 {
+    font-weight: bold;
+  }
+
+  .wiki-content-topic-item {
+    flex-direction: row;
+    display: flex;
+  }
+}

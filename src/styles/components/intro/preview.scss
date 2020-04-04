@@ -1,0 +1,123 @@
+.preview-container {
+  background-color: #ffffff;
+  .title {
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+  }
+  .preview-img {
+    max-height: calc(100vh - 300px);
+    max-width: 630px;
+    margin: auto;
+    border: solid 10px transparent;
+    border-radius: 10px;
+  }
+  a {
+    width: 420px;
+    padding: 0 !important;
+    button {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      height: 110px;
+      border: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 500px;
+      background: url('../../../../public/images/buttons/3.png');
+      background-size: contain;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      transition: all 0.3s ease-in-out;
+      p {
+        color: #fff;
+        letter-spacing: 0.5px;
+        margin: 10px 0 0 0;
+        i {
+          transition: all 0.3s ease-in-out;
+          margin-left: 7px;
+        }
+      }
+      p:hover i {
+        margin-left: 15px;
+      }
+    }
+  }
+  .additionalTextContent {
+    margin-bottom: 50px;
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #666;
+    }
+  }
+}
+
+.showCreateTopicPageButton {
+  background: url('../../../../public/images/buttons/4.png') !important;
+  p {
+    margin: 0px !important;
+  }
+}
+
+.buttonShape6 {
+  background: url('../../../../public/images/buttons/6_and_7.png') !important;
+  background-size: unset !important;
+  height: 110px;
+  p {
+    margin: 0px !important;
+  }
+}
+
+#intoSliderCarousel {
+  max-width: calc(100% - 90px);
+  .carousel-inner {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    .item {
+      img {
+        width: 100%;
+        max-height: calc(100vh - 370px);
+      }
+    }
+  }
+  .carousel-control {
+    color: #999999;
+    opacity: 1;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 35px;
+    &.left {
+      left: -60px;
+    }
+    &.right {
+      right: -60px;
+    }
+  }
+  .carousel-indicators {
+    bottom: unset;
+    margin-top: 10px;
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    li {
+      background: #f1f1f1;
+      margin: 0 3px;
+    }
+    li.active {
+      background: #ffc107;
+    }
+  }
+}
